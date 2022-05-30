@@ -1,0 +1,10 @@
+57.0
+800
+60
+80
+--------------------------------------------
+high voltage               5 ~ 60
+peak sum width             8 ~ 2040 ns
+pulse risetime             8 ~ 120 ns
+PSD delay                  0 ~ 504 ns
+

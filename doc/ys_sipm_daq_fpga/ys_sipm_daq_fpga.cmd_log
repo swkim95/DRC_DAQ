@@ -1,0 +1,33 @@
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ys_sipm_daq_fpga.ucf -p xc7k70t-fbg484-1 ys_sipm_daq_fpga.ngc ys_sipm_daq_fpga.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ys_sipm_daq_fpga.ucf -p xc7k70t-fbg484-1 ys_sipm_daq_fpga.ngc ys_sipm_daq_fpga.ngd  
+map -intstyle ise -p xc7k70t-fbg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ngd ys_sipm_daq_fpga.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ys_sipm_daq_fpga.ucf -p xc7k70t-fbg484-1 ys_sipm_daq_fpga.ngc ys_sipm_daq_fpga.ngd  
+map -intstyle ise -p xc7k70t-fbg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ngd ys_sipm_daq_fpga.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ys_sipm_daq_fpga.ucf -p xc7k70t-fbg484-1 ys_sipm_daq_fpga.ngc ys_sipm_daq_fpga.ngd  
+map -intstyle ise -p xc7k70t-fbg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ngd ys_sipm_daq_fpga.pcf 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ys_sipm_daq_fpga.ucf -p xc7k70t-fbg484-1 ys_sipm_daq_fpga.ngc ys_sipm_daq_fpga.ngd  
+map -intstyle ise -p xc7k70t-fbg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ngd ys_sipm_daq_fpga.pcf 
+par -w -intstyle ise -ol high -mt off ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ncd ys_sipm_daq_fpga.pcf 
+par -w -intstyle ise -ol std -mt off ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ncd ys_sipm_daq_fpga.pcf 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ys_sipm_daq_fpga.ucf -p xc7k70t-fbg484-1 ys_sipm_daq_fpga.ngc ys_sipm_daq_fpga.ngd  
+map -intstyle ise -p xc7k70t-fbg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ngd ys_sipm_daq_fpga.pcf 
+par -w -intstyle ise -ol std -mt off ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ncd ys_sipm_daq_fpga.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml ys_sipm_daq_fpga.twx ys_sipm_daq_fpga.ncd -o ys_sipm_daq_fpga.twr ys_sipm_daq_fpga.pcf -ucf ys_sipm_daq_fpga.ucf 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_fpga/ys_sipm_daq_fpga.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ys_sipm_daq_fpga.ucf -p xc7k70t-fbg484-1 ys_sipm_daq_fpga.ngc ys_sipm_daq_fpga.ngd  
+map -intstyle ise -p xc7k70t-fbg484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ngd ys_sipm_daq_fpga.pcf 
+par -w -intstyle ise -ol std -mt off ys_sipm_daq_fpga_map.ncd ys_sipm_daq_fpga.ncd ys_sipm_daq_fpga.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml ys_sipm_daq_fpga.twx ys_sipm_daq_fpga.ncd -o ys_sipm_daq_fpga.twr ys_sipm_daq_fpga.pcf -ucf ys_sipm_daq_fpga.ucf 
+bitgen -intstyle ise -f ys_sipm_daq_fpga.ut ys_sipm_daq_fpga.ncd 

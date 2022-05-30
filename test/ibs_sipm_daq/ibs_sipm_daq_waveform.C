@@ -1,0 +1,78 @@
+void ibs_sipm_daq_waveform()
+{
+  // setting
+  float hv = 55.0;          // high voltage, 4.5 ~ 60.0
+  int thr = 1000;            // discriminator threshold, 1 ~ 65535, pulse area for 320 ns width
+  int trig_mode = 0;        // trigger mode, normally 0, 1 for software trigger
+  
+  // variables
+  char filename[256];
+  sprintf(filename, "waveform.dat");  // data file name
+  int nevt = 100;                     // number of events
+  short data[256];
+  int evt;
+  TCanvas *c1;
+  TH1F *plot;
+  int tcp_Handle;
+  FILE *fp;
+  int i;
+  
+  // Loading library
+  gSystem->Load("libNoticeIBS_SIPM_DAQROOT.so");			
+
+  // define class
+  NKIBS_SIPM_DAQ *daq = new NKIBS_SIPM_DAQ;
+   
+  c1 = new TCanvas("c1", "IBS_SIPM_DAQ", 800, 400);
+  plot = new TH1F("plot", "Waveform", 256, 0, 256 * 20);
+  plot->SetStats(0);
+
+  // open DAQ
+  tcp_Handle = daq->IBS_SIPM_DAQopen();
+
+  // reset DAQ
+  daq->IBS_SIPM_DAQreset(tcp_Handle);
+
+  // set high voltage
+  daq->IBS_SIPM_DAQwrite_HV(tcp_Handle, hv);
+  
+  // set threshold
+  daq->IBS_SIPM_DAQwrite_THR(tcp_Handle, thr);
+
+  // readback settings
+  printf("High voltage = %f\n", daq->IBS_SIPM_DAQread_HV(tcp_Handle));
+  printf("Threshold = %d\n", daq->IBS_SIPM_DAQread_THR(tcp_Handle));
+  printf("Temperature = %f\n", daq->IBS_SIPM_DAQread_TEMP(tcp_Handle));
+  printf("Pedestal = %d\n", daq->IBS_SIPM_DAQread_PED(tcp_Handle));
+  
+  // open data file
+  fp = fopen(filename, "wb");
+
+  for (evt = 0; evt < nevt; evt++) {
+    // read monitor data
+    daq->IBS_SIPM_DAQread_MON(tcp_Handle, trig_mode, data);
+    
+    // write to file
+    fwrite(data, 2, 256, fp);
+    
+    // plot waveform
+    plot->Reset();
+    for (i = 0; i < 256; i++)
+      plot->Fill(i * 20, data[i]);
+    plot->Draw();
+    c1->Modified();
+    c1->Update();
+
+    printf("%d / %d is taken.\n", evt + 1, nevt);
+  }
+
+  // close data file
+  fclose(fp);
+
+  // close DAQ    
+  daq->IBS_SIPM_DAQclose(tcp_Handle);
+}
+
+
+
+  

@@ -1,0 +1,2699 @@
+Release 14.3 - xst P.40xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ys_sipm_daq_fpga.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ys_sipm_daq_fpga.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ys_sipm_daq_fpga"
+Output Format                      : NGC
+Target Device                      : xc7k70t-1-fbg484
+
+---- Source Options
+Top Module Name                    : ys_sipm_daq_fpga
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : NO
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\ys_sipm_daq_fpga_type.vhd" into library work
+Parsing package <ys_sipm_daq_fpga_type>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\one_shot_inter_clock.vhd" into library work
+Parsing entity <one_shot_inter_clock>.
+Parsing architecture <Behavioral> of entity <one_shot_inter_clock>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\encoder_8b10b.vhd" into library work
+Parsing entity <encoder_8b10b>.
+Parsing architecture <Behavioral> of entity <encoder_8b10b>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\decoder_10b8b.vhd" into library work
+Parsing entity <decoder_10b8b>.
+Parsing architecture <Behavioral> of entity <decoder_10b8b>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\write_ep2.vhd" into library work
+Parsing entity <write_ep2>.
+Parsing architecture <Behavioral> of entity <write_ep2>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\usb_data_readout.vhd" into library work
+Parsing entity <usb_data_readout>.
+Parsing architecture <Behavioral> of entity <usb_data_readout>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\usb_control.vhd" into library work
+Parsing entity <usb_control>.
+Parsing architecture <Behavioral> of entity <usb_control>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\trig_pattern_capture.vhd" into library work
+Parsing entity <trig_pattern_capture>.
+Parsing architecture <Behavioral> of entity <trig_pattern_capture>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_write.vhd" into library work
+Parsing entity <tcb_write>.
+Parsing architecture <Behavioral> of entity <tcb_write>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_transmitter.vhd" into library work
+Parsing entity <tcb_transmitter>.
+Parsing architecture <Behavioral> of entity <tcb_transmitter>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_sync.vhd" into library work
+Parsing entity <tcb_sync>.
+Parsing architecture <Behavioral> of entity <tcb_sync>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_serializer.vhd" into library work
+Parsing entity <tcb_serializer>.
+Parsing architecture <Behavioral> of entity <tcb_serializer>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_receiver.vhd" into library work
+Parsing entity <tcb_receiver>.
+Parsing architecture <Behavioral> of entity <tcb_receiver>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_read.vhd" into library work
+Parsing entity <tcb_read>.
+Parsing architecture <Behavioral> of entity <tcb_read>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_deserializer.vhd" into library work
+Parsing entity <tcb_deserializer>.
+Parsing architecture <Behavioral> of entity <tcb_deserializer>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\read_ep6.vhd" into library work
+Parsing entity <read_ep6>.
+Parsing architecture <Behavioral> of entity <read_ep6>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\fifo_counter.vhd" into library work
+Parsing entity <fifo_counter>.
+Parsing architecture <Behavioral> of entity <fifo_counter>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_status.vhd" into library work
+Parsing entity <drs_ctrl_status>.
+Parsing architecture <Behavioral> of entity <drs_ctrl_status>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_setup.vhd" into library work
+Parsing entity <drs_ctrl_setup>.
+Parsing architecture <Behavioral> of entity <drs_ctrl_setup>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_init.vhd" into library work
+Parsing entity <drs_ctrl_init>.
+Parsing architecture <Behavioral> of entity <drs_ctrl_init>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_daq.vhd" into library work
+Parsing entity <drs_ctrl_daq>.
+Parsing architecture <Behavioral> of entity <drs_ctrl_daq>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_write.vhd" into library work
+Parsing entity <dram_write>.
+Parsing architecture <Behavioral> of entity <dram_write>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_timing.vhd" into library work
+Parsing entity <dram_timing>.
+Parsing architecture <Behavioral> of entity <dram_timing>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_signal.vhd" into library work
+Parsing entity <dram_signal>.
+Parsing architecture <Behavioral> of entity <dram_signal>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_refresh.vhd" into library work
+Parsing entity <dram_refresh>.
+Parsing architecture <Behavioral> of entity <dram_refresh>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_read.vhd" into library work
+Parsing entity <dram_read>.
+Parsing architecture <Behavioral> of entity <dram_read>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_mds.vhd" into library work
+Parsing entity <dram_mds>.
+Parsing architecture <Behavioral> of entity <dram_mds>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_md.vhd" into library work
+Parsing entity <dram_md>.
+Parsing architecture <Behavioral> of entity <dram_md>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_init.vhd" into library work
+Parsing entity <dram_init>.
+Parsing architecture <Behavioral> of entity <dram_init>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_alignment.vhd" into library work
+Parsing entity <dram_alignment>.
+Parsing architecture <Behavioral> of entity <dram_alignment>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\daq_control.vhd" into library work
+Parsing entity <daq_control>.
+Parsing architecture <Behavioral> of entity <daq_control>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dac_thr_ctrl.vhd" into library work
+Parsing entity <dac_thr_ctrl>.
+Parsing architecture <Behavioral> of entity <dac_thr_ctrl>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dac_hv_ctrl.vhd" into library work
+Parsing entity <dac_hv_ctrl>.
+Parsing architecture <Behavioral> of entity <dac_hv_ctrl>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dac_drs_ctrl.vhd" into library work
+Parsing entity <dac_drs_ctrl>.
+Parsing architecture <Behavioral> of entity <dac_drs_ctrl>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\cpld_spi_set_mux.vhd" into library work
+Parsing entity <cpld_spi_set_mux>.
+Parsing architecture <Behavioral> of entity <cpld_spi_set_mux>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\cpld_spi_output.vhd" into library work
+Parsing entity <cpld_spi_output>.
+Parsing architecture <Behavioral> of entity <cpld_spi_output>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_input.vhd" into library work
+Parsing entity <adc_input>.
+Parsing architecture <Behavioral> of entity <adc_input>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_capture_ch.vhd" into library work
+Parsing entity <adc_capture_ch>.
+Parsing architecture <Behavioral> of entity <adc_capture_ch>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\usb_interface.vhd" into library work
+Parsing entity <usb_interface>.
+Parsing architecture <Behavioral> of entity <usb_interface>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\trigger.vhd" into library work
+Parsing entity <trigger>.
+Parsing architecture <Behavioral> of entity <trigger>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\temperature_monitor.vhd" into library work
+Parsing entity <temperature_monitor>.
+Parsing architecture <Behavioral> of entity <temperature_monitor>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_link.vhd" into library work
+Parsing entity <tcb_link>.
+Parsing architecture <Behavioral> of entity <tcb_link>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\register_readout.vhd" into library work
+Parsing entity <register_readout>.
+Parsing architecture <Behavioral> of entity <register_readout>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_fifo.vhd" into library work
+Parsing entity <drs_fifo>.
+Parsing architecture <Behavioral> of entity <drs_fifo>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_control.vhd" into library work
+Parsing entity <drs_control>.
+Parsing architecture <Behavioral> of entity <drs_control>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_calibration.vhd" into library work
+Parsing entity <drs_calibration>.
+Parsing architecture <Behavioral> of entity <drs_calibration>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_fifo.vhd" into library work
+Parsing entity <dram_fifo>.
+Parsing architecture <Behavioral> of entity <dram_fifo>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_controller.vhd" into library work
+Parsing entity <dram_controller>.
+Parsing architecture <Behavioral> of entity <dram_controller>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\download_mid.vhd" into library work
+Parsing entity <download_mid>.
+Parsing architecture <Behavioral> of entity <download_mid>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\data_fifo.vhd" into library work
+Parsing entity <data_fifo>.
+Parsing architecture <Behavioral> of entity <data_fifo>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\data_acquisition.vhd" into library work
+Parsing entity <data_acquisition>.
+Parsing architecture <Behavioral> of entity <data_acquisition>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\cpld_spi_ctrl.vhd" into library work
+Parsing entity <cpld_spi_ctrl>.
+Parsing architecture <Behavioral> of entity <cpld_spi_ctrl>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\commands.vhd" into library work
+Parsing entity <commands>.
+Parsing architecture <Behavioral> of entity <commands>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\clocks.vhd" into library work
+Parsing entity <clocks>.
+Parsing architecture <Behavioral> of entity <clocks>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_setup.vhd" into library work
+Parsing entity <adc_setup>.
+Parsing architecture <Behavioral> of entity <adc_setup>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_capture.vhd" into library work
+Parsing entity <adc_capture>.
+Parsing architecture <Behavioral> of entity <adc_capture>.
+Parsing VHDL file "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\ys_sipm_daq_fpga.vhd" into library work
+Parsing entity <ys_sipm_daq_fpga>.
+Parsing architecture <Behavioral> of entity <ys_sipm_daq_fpga>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <ys_sipm_daq_fpga> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <clocks> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_link> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_sync> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_deserializer> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <decoder_10b8b> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_receiver> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_read> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_serializer> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_transmitter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <encoder_8b10b> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tcb_write> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <download_mid> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <cpld_spi_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <cpld_spi_set_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dac_hv_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dac_thr_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dac_drs_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <cpld_spi_output> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <temperature_monitor> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adc_setup> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adc_capture> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adc_input> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adc_capture_ch> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <trigger> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <trig_pattern_capture> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <drs_control> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <drs_ctrl_status> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <drs_ctrl_setup> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <drs_ctrl_init> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <drs_ctrl_daq> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <drs_calibration> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <drs_fifo> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <data_acquisition> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <daq_control> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <fifo_counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <one_shot_inter_clock> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_fifo> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_controller> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_timing> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_write> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_read> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_refresh> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_init> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_signal> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_md> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_mds> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dram_alignment> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <data_fifo> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <usb_interface> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <usb_control> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <read_ep6> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <write_ep2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <usb_data_readout> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <commands> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <register_readout> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ys_sipm_daq_fpga>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\ys_sipm_daq_fpga.vhd".
+    Summary:
+	no macro.
+Unit <ys_sipm_daq_fpga> synthesized.
+
+Synthesizing Unit <clocks>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\clocks.vhd".
+    Found 1-bit register for signal <reset_idelayctrl>.
+    Found 1-bit register for signal <reset_serdes_md_reg>.
+    Found 1-bit register for signal <reset_serdes_mds_reg>.
+    Found 1-bit register for signal <reset_mmcm>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <clocks> synthesized.
+
+Synthesizing Unit <tcb_link>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_link.vhd".
+    Summary:
+	no macro.
+Unit <tcb_link> synthesized.
+
+Synthesizing Unit <tcb_sync>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_sync.vhd".
+    Found 2-bit register for signal <bd_trig>.
+    Found 4-bit register for signal <cd_timer>.
+    Found 4-bit register for signal <cd_trig>.
+    Found 4-bit register for signal <acen>.
+    Found 10-bit register for signal <atimer>.
+    Found 1-bit register for signal <aclr>.
+    Found 10-bit register for signal <acnt<3>>.
+    Found 10-bit register for signal <acnt<2>>.
+    Found 10-bit register for signal <acnt<1>>.
+    Found 10-bit register for signal <acnt<0>>.
+    Found 10-bit register for signal <lacnt<3>>.
+    Found 10-bit register for signal <lacnt<2>>.
+    Found 10-bit register for signal <lacnt<1>>.
+    Found 10-bit register for signal <lacnt<0>>.
+    Found 6-bit register for signal <acomp>.
+    Found 2-bit register for signal <mux>.
+    Found 2-bit register for signal <sidat_reg>.
+    Found 1-bit register for signal <dsidat<0>>.
+    Found 9-bit register for signal <comp>.
+    Found 1-bit register for signal <match>.
+    Found 7-bit register for signal <timer>.
+    Found 1-bit register for signal <enmat>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <cen>.
+    Found 10-bit register for signal <cnt>.
+    Found 1-bit register for signal <ensync>.
+    Found 1-bit register for signal <linkok_reg>.
+    Found 7-bit register for signal <fcnt_reg>.
+    Found 1-bit register for signal <fclr>.
+    Found 2-bit register for signal <bd_timer>.
+    Found 10-bit adder for signal <atimer[9]_GND_29_o_add_2_OUT> created at line 111.
+    Found 10-bit adder for signal <acnt[0][9]_GND_29_o_add_4_OUT> created at line 120.
+    Found 10-bit adder for signal <acnt[1][9]_GND_29_o_add_7_OUT> created at line 126.
+    Found 10-bit adder for signal <acnt[2][9]_GND_29_o_add_10_OUT> created at line 132.
+    Found 10-bit adder for signal <acnt[3][9]_GND_29_o_add_13_OUT> created at line 138.
+    Found 7-bit adder for signal <timer[6]_GND_29_o_add_26_OUT> created at line 198.
+    Found 10-bit adder for signal <cnt[9]_GND_29_o_add_28_OUT> created at line 211.
+    Found 7-bit adder for signal <fcnt_reg[6]_GND_29_o_add_31_OUT> created at line 229.
+    Found 2-bit 4-to-1 multiplexer for signal <isidat> created at line 47.
+    Found 10-bit comparator lessequal for signal <n0032> created at line 145
+    Found 10-bit comparator lessequal for signal <n0034> created at line 151
+    Found 10-bit comparator lessequal for signal <n0036> created at line 157
+    Found 10-bit comparator lessequal for signal <n0038> created at line 163
+    Found 10-bit comparator lessequal for signal <n0040> created at line 169
+    Found 10-bit comparator lessequal for signal <n0042> created at line 175
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred 158 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <tcb_sync> synthesized.
+
+Synthesizing Unit <tcb_deserializer>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_deserializer.vhd".
+INFO:Xst:3210 - "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_deserializer.vhd" line 114: Output port <charisk> of the instance <u2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_deserializer.vhd" line 114: Output port <dispplus> of the instance <u2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_deserializer.vhd" line 114: Output port <dispminus> of the instance <u2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_deserializer.vhd" line 114: Output port <notintable> of the instance <u2> is unconnected or connected to loadless signal.
+    Found 10-bit register for signal <pardat_trig>.
+    Found 1-bit register for signal <getdat>.
+    Found 8-bit register for signal <tcbin_timer_reg>.
+    Found 8-bit register for signal <tcbin_trig_reg>.
+    Found 1-bit register for signal <pcharisk>.
+    Found 1-bit register for signal <pdispplus>.
+    Found 1-bit register for signal <pdispminus>.
+    Found 1-bit register for signal <pnotintable>.
+    Found 1-bit register for signal <olddispp>.
+    Found 1-bit register for signal <olddispm>.
+    Found 1-bit register for signal <chkerr>.
+    Found 1-bit register for signal <selk>.
+    Found 1-bit register for signal <linkerr_reg>.
+    Found 10-bit register for signal <pardat_timer>.
+    Summary:
+	inferred  46 D-type flip-flop(s).
+Unit <tcb_deserializer> synthesized.
+
+Synthesizing Unit <decoder_10b8b>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\decoder_10b8b.vhd".
+    Summary:
+	no macro.
+Unit <decoder_10b8b> synthesized.
+
+Synthesizing Unit <tcb_receiver>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_receiver.vhd".
+    Found 6-bit register for signal <endata>.
+    Found 8-bit register for signal <tcb_mid_reg>.
+    Found 5-bit register for signal <tcb_com_reg>.
+    Found 48-bit register for signal <tcb_din_timer_reg>.
+    Found 6-bit register for signal <tcb_din_trig_addr_reg>.
+    Found 2-bit register for signal <tcb_din_trig_type_reg>.
+    Found 5-bit register for signal <tcb_din_trig_ch_reg>.
+    Found 28-bit register for signal <tcb_din_trig_data_reg>.
+    Found 1-bit register for signal <tcb_recv_reg>.
+    Found 1-bit register for signal <enmid>.
+    Summary:
+	inferred 110 D-type flip-flop(s).
+	inferred  76 Multiplexer(s).
+Unit <tcb_receiver> synthesized.
+
+Synthesizing Unit <tcb_read>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_read.vhd".
+    Found 7-bit register for signal <local_ftime_reg>.
+    Found 1-bit register for signal <encom>.
+    Found 1-bit register for signal <sendcom_reg>.
+    Found 5-bit register for signal <command_reg>.
+    Found 1-bit register for signal <midmat>.
+    Found 1-bit register for signal <enwrite>.
+    Found 1-bit register for signal <denwrite>.
+    Found 1-bit register for signal <reg_wr_reg>.
+    Found 1-bit register for signal <reg_rd_reg>.
+    Found 5-bit register for signal <reg_wch_reg>.
+    Found 6-bit register for signal <reg_waddr_reg>.
+    Found 28-bit register for signal <reg_wdata_reg>.
+    Found 5-bit register for signal <reg_rch_reg>.
+    Found 5-bit register for signal <reg_raddr_reg>.
+    Found 1-bit register for signal <reg_latch_reg>.
+    Found 1-bit register for signal <cen>.
+    Found 7-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 48-bit register for signal <trig_sr>.
+    Found 1-bit register for signal <get_type>.
+    Found 1-bit register for signal <get_ftime>.
+    Found 1-bit register for signal <get_ctime>.
+    Found 1-bit register for signal <get_trg_n>.
+    Found 1-bit register for signal <get_run_n>.
+    Found 2-bit register for signal <trig_type_reg>.
+    Found 7-bit register for signal <trig_ftime_reg>.
+    Found 48-bit register for signal <trig_ctime_reg>.
+    Found 32-bit register for signal <trig_number_reg>.
+    Found 16-bit register for signal <run_number_reg>.
+    Found 1-bit register for signal <triged_reg>.
+    Found 1-bit register for signal <padc_clk>.
+    Found 4-bit register for signal <adc_clk>.
+    Found 1-bit register for signal <adc_en_reg>.
+    Found 1-bit register for signal <pdrs_clk>.
+    Found 4-bit register for signal <drs_clk>.
+    Found 48-bit register for signal <local_ctime_reg>.
+    Found 7-bit adder for signal <local_ftime_reg[6]_GND_51_o_add_1_OUT> created at line 104.
+    Found 7-bit adder for signal <cnt[6]_GND_51_o_add_10_OUT> created at line 148.
+    Found 8-bit comparator equal for signal <tcb_mid[7]_mod_mid[7]_equal_5_o> created at line 114
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 296 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <tcb_read> synthesized.
+
+Synthesizing Unit <tcb_serializer>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_serializer.vhd".
+    Set property "IOB = TRUE" for signal <adc_trig>.
+    Found 1-bit register for signal <d2linkok>.
+    Found 1-bit register for signal <load>.
+    Found 10-bit register for signal <serdat>.
+    Found 1-bit register for signal <adc_trig>.
+    Found 1-bit register for signal <dlinkok>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <tcb_serializer> synthesized.
+
+Synthesizing Unit <tcb_transmitter>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_transmitter.vhd".
+    Found 1-bit register for signal <addmux>.
+    Found 1-bit register for signal <daddmux>.
+    Found 4-bit register for signal <muxcnt>.
+    Found 1-bit register for signal <charisk>.
+    Found 1-bit register for signal <disparity>.
+    Found 8-bit register for signal <sdout>.
+    Found 1-bit register for signal <clr>.
+    Found 4-bit adder for signal <muxcnt[3]_GND_53_o_add_0_OUT> created at line 55.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0066> created at line 38.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <tcb_transmitter> synthesized.
+
+Synthesizing Unit <encoder_8b10b>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\encoder_8b10b.vhd".
+    Summary:
+	no macro.
+Unit <encoder_8b10b> synthesized.
+
+Synthesizing Unit <tcb_write>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\tcb_write.vhd".
+    Found 1-bit register for signal <enread>.
+    Found 1-bit register for signal <mod_type_reg>.
+    Found 32-bit register for signal <mod_din_reg>.
+    Found 1-bit register for signal <cen>.
+    Found 3-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 7-bit register for signal <trig_sr>.
+    Found 1-bit register for signal <sendpkt>.
+    Found 3-bit adder for signal <cnt[2]_GND_65_o_add_1_OUT> created at line 61.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <tcb_write> synthesized.
+
+Synthesizing Unit <download_mid>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\download_mid.vhd".
+    Set property "IOB = TRUE" for signal <mid_sel>.
+    Set property "IOB = TRUE" for signal <mid_sck>.
+    Set property "IOB = TRUE" for signal <mid_sdi>.
+    Found 1-bit register for signal <cal_wen_reg>.
+    Found 1-bit register for signal <mid_sdi>.
+    Found 1-bit register for signal <cal_sdi_reg>.
+    Found 1-bit register for signal <mid_sck>.
+    Found 1-bit register for signal <dmid_sck>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <cal_sck_reg>.
+    Found 24-bit register for signal <pdat>.
+    Found 8-bit register for signal <mod_mid_reg>.
+    Found 1-bit register for signal <link_enable_reg>.
+    Found 1-bit register for signal <mid_sel>.
+INFO:Xst:2774 - HDL ADVISOR - IOB property attached to signal mid_sel may hinder XST clustering optimizations.
+    Summary:
+	inferred  41 D-type flip-flop(s).
+Unit <download_mid> synthesized.
+
+Synthesizing Unit <cpld_spi_ctrl>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\cpld_spi_ctrl.vhd".
+    Summary:
+	no macro.
+Unit <cpld_spi_ctrl> synthesized.
+
+Synthesizing Unit <cpld_spi_set_mux>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\cpld_spi_set_mux.vhd".
+    Found 4-bit register for signal <dac_mux>.
+    Found 2-bit register for signal <hv_data_mux>.
+    Found 5-bit register for signal <thr_data_mux>.
+    Found 3-bit register for signal <thr_dac_ch_reg>.
+    Found 8-bit register for signal <hv_dac_data_reg>.
+    Found 12-bit register for signal <thr_dac_data_reg>.
+    Found 1-bit register for signal <cen>.
+    Found 6-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <shift>.
+    Found 4-bit register for signal <sdat>.
+    Found 1-bit register for signal <mux_sck_reg>.
+    Found 1-bit register for signal <hv_dac_write_reg>.
+    Found 1-bit register for signal <thr_dac_write_reg>.
+    Found 1-bit register for signal <drs_dac_write_reg>.
+    Found 1-bit register for signal <load>.
+    Found 6-bit adder for signal <cnt[5]_GND_68_o_add_4_OUT> created at line 139.
+    Found 8-bit 4-to-1 multiplexer for signal <ihv_dac_data> created at line 40.
+    Found 12-bit 32-to-1 multiplexer for signal <ithr_dac_data> created at line 41.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  52 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <cpld_spi_set_mux> synthesized.
+
+Synthesizing Unit <dac_hv_ctrl>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dac_hv_ctrl.vhd".
+    Found 10-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <shift>.
+    Found 8-bit register for signal <sd>.
+    Found 1-bit register for signal <dac_hv_cs_reg>.
+    Found 1-bit register for signal <dac_hv_sck_reg>.
+    Found 1-bit register for signal <dac_hv_sdi_reg>.
+    Found 1-bit register for signal <cen>.
+    Found 10-bit adder for signal <cnt[9]_GND_69_o_add_0_OUT> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <dac_hv_ctrl> synthesized.
+
+Synthesizing Unit <dac_thr_ctrl>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dac_thr_ctrl.vhd".
+    Found 1-bit register for signal <sdac>.
+    Found 1-bit register for signal <cen>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <shift>.
+    Found 48-bit register for signal <sdat>.
+    Found 1-bit register for signal <dac_thr_cs_reg>.
+    Found 1-bit register for signal <dac_thr_sck_reg>.
+    Found 1-bit register for signal <dac_thr_sdi_reg>.
+    Found 2-bit register for signal <rcnt>.
+    Found 1-bit register for signal <dclr>.
+    Found 1-bit register for signal <d2clr>.
+    Found 1-bit register for signal <rcen>.
+    Found 1-bit register for signal <rclr>.
+    Found 1-bit register for signal <load>.
+    Found 8-bit adder for signal <cnt[7]_GND_70_o_add_0_OUT> created at line 56.
+    Found 2-bit adder for signal <rcnt[1]_GND_70_o_add_5_OUT> created at line 77.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  70 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <dac_thr_ctrl> synthesized.
+
+Synthesizing Unit <dac_drs_ctrl>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dac_drs_ctrl.vhd".
+    Found 10-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <sdcs>.
+    Found 1-bit register for signal <edcs>.
+    Found 1-bit register for signal <load>.
+    Found 1-bit register for signal <shift>.
+    Found 1-bit register for signal <dac_drs_cs_reg>.
+    Found 1-bit register for signal <dac_drs_sck_reg>.
+    Found 48-bit register for signal <sdat>.
+    Found 1-bit register for signal <cen>.
+    Found 10-bit adder for signal <cnt[9]_GND_71_o_add_0_OUT> created at line 46.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  66 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <dac_drs_ctrl> synthesized.
+
+Synthesizing Unit <cpld_spi_output>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\cpld_spi_output.vhd".
+    Set property "IOB = TRUE" for signal <cpld_cs>.
+    Set property "IOB = TRUE" for signal <cpld_sck>.
+    Set property "IOB = TRUE" for signal <cpld_sdi>.
+    Found 1-bit register for signal <pcpld_sck>.
+    Found 1-bit register for signal <pcpld_sdi>.
+    Found 1-bit register for signal <cpld_cs>.
+    Found 1-bit register for signal <cpld_sck>.
+    Found 1-bit register for signal <cpld_sdi>.
+    Found 1-bit register for signal <pcpld_cs>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <cpld_spi_output> synthesized.
+
+Synthesizing Unit <temperature_monitor>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\temperature_monitor.vhd".
+    Set property "IOB = TRUE" for signal <temp_scl>.
+    Set property "IOB = TRUE" for signal <temp_sda_out>.
+    Set property "IOB = TRUE" for signal <temp_sda_in>.
+    Found 1-bit register for signal <start_read>.
+    Found 1-bit register for signal <cen>.
+    Found 15-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <ptemp_scl>.
+    Found 1-bit register for signal <temp_scl>.
+    Found 1-bit register for signal <ptemp_sda_out>.
+    Found 1-bit register for signal <temp_sda_out>.
+    Found 1-bit register for signal <shift>.
+    Found 1-bit register for signal <temp_sda_in>.
+    Found 12-bit register for signal <sdat>.
+    Found 12-bit register for signal <temp_pdat>.
+    Found 12-bit register for signal <temp_data_reg>.
+    Found 27-bit register for signal <read_cnt>.
+    Found 27-bit adder for signal <read_cnt[26]_GND_73_o_add_0_OUT> created at line 52.
+    Found 15-bit adder for signal <cnt[14]_GND_73_o_add_2_OUT> created at line 72.
+INFO:Xst:2774 - HDL ADVISOR - IOB property attached to signal temp_sda_in may hinder XST clustering optimizations.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  87 D-type flip-flop(s).
+Unit <temperature_monitor> synthesized.
+
+Synthesizing Unit <adc_setup>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_setup.vhd".
+    Set property "IOB = TRUE" for signal <adc_cs>.
+    Set property "IOB = TRUE" for signal <adc_sck>.
+    Set property "IOB = TRUE" for signal <adc_sdi>.
+    Set property "IOB = TRUE" for signal <adc_sde>.
+    Found 7-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <padc_cs>.
+    Found 4-bit register for signal <adc_cs>.
+    Found 1-bit register for signal <padc_sde>.
+    Found 4-bit register for signal <adc_sde>.
+    Found 1-bit register for signal <padc_sck>.
+    Found 4-bit register for signal <adc_sck>.
+    Found 1-bit register for signal <load>.
+    Found 1-bit register for signal <shift>.
+    Found 24-bit register for signal <sd>.
+    Found 4-bit register for signal <adc_sdi>.
+    Found 1-bit register for signal <cen>.
+    Found 7-bit adder for signal <cnt[6]_GND_75_o_add_0_OUT> created at line 54.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <adc_setup> synthesized.
+
+Synthesizing Unit <adc_capture>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_capture.vhd".
+    Summary:
+	no macro.
+Unit <adc_capture> synthesized.
+
+Synthesizing Unit <adc_input>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_input.vhd".
+    Summary:
+	no macro.
+Unit <adc_input> synthesized.
+
+Synthesizing Unit <adc_capture_ch>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\adc_capture_ch.vhd".
+    Set property "IOB = TRUE" for signal <xd>.
+    Found 1-bit register for signal <dxd>.
+    Found 2-bit register for signal <cd>.
+    Found 12-bit register for signal <sd>.
+    Found 12-bit register for signal <adc_data_reg>.
+    Found 1-bit register for signal <xd>.
+    Summary:
+	inferred  28 D-type flip-flop(s).
+Unit <adc_capture_ch> synthesized.
+
+Synthesizing Unit <trigger>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\trigger.vhd".
+    Set property "IOB = TRUE" for signal <disc>.
+    Found 32-bit register for signal <ddisc>.
+    Found 32-bit register for signal <trig_ch>.
+    Found 1-bit register for signal <local_trig_reg>.
+    Found 32-bit register for signal <disc>.
+INFO:Xst:2774 - HDL ADVISOR - IOB property attached to signal disc may hinder XST clustering optimizations.
+    Summary:
+	inferred  97 D-type flip-flop(s).
+Unit <trigger> synthesized.
+
+Synthesizing Unit <trig_pattern_capture>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\trig_pattern_capture.vhd".
+    Found 5-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <trig_pattern_reg>.
+    Found 5-bit adder for signal <cnt[4]_GND_80_o_add_0_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   7 D-type flip-flop(s).
+Unit <trig_pattern_capture> synthesized.
+
+Synthesizing Unit <drs_control>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_control.vhd".
+    Set property "IOB = TRUE" for signal <drs_denable>.
+    Set property "IOB = TRUE" for signal <drs_srclk>.
+    Set property "IOB = TRUE" for signal <drs_srin>.
+    Set property "IOB = TRUE" for signal <drs_a<3>>.
+    Set property "IOB = TRUE" for signal <drs_a<2>>.
+    Set property "IOB = TRUE" for signal <drs_a<1>>.
+    Set property "IOB = TRUE" for signal <drs_a<0>>.
+    Found 4-bit register for signal <drs_denable>.
+    Found 4-bit register for signal <drs_srclk>.
+    Found 4-bit register for signal <drs_srin>.
+    Found 3-bit register for signal <drs_a<3>>.
+    Found 3-bit register for signal <drs_a<2>>.
+    Found 3-bit register for signal <drs_a<1>>.
+    Found 3-bit register for signal <drs_a<0>>.
+    Found 1-bit register for signal <ddrs_on>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <drs_control> synthesized.
+
+Synthesizing Unit <drs_ctrl_status>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_status.vhd".
+    Set property "IOB = TRUE" for signal <drs_pll_lock>.
+    Found 4-bit register for signal <drs_pll_locked_reg>.
+    Found 4-bit register for signal <drs_pll_lock>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <drs_ctrl_status> synthesized.
+
+Synthesizing Unit <drs_ctrl_setup>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_setup.vhd".
+    Found 1-bit register for signal <scen>.
+    Found 1-bit register for signal <cen>.
+    Found 6-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 3-bit register for signal <drs_su_a_reg>.
+    Found 1-bit register for signal <drs_su_srclk_reg>.
+    Found 1-bit register for signal <drs_init_reg>.
+    Found 1-bit register for signal <ddrs_on>.
+    Found 6-bit adder for signal <cnt[5]_GND_83_o_add_0_OUT> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+Unit <drs_ctrl_setup> synthesized.
+
+Synthesizing Unit <drs_ctrl_init>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_init.vhd".
+    Found 11-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <dclr>.
+    Found 1-bit register for signal <drs_init_a_reg>.
+    Found 1-bit register for signal <drs_init_srclk_reg>.
+    Found 1-bit register for signal <cen>.
+    Found 11-bit adder for signal <cnt[10]_GND_84_o_add_0_OUT> created at line 40.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <drs_ctrl_init> synthesized.
+
+Synthesizing Unit <drs_ctrl_daq>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_ctrl_daq.vhd".
+    Set property "IOB = TRUE" for signal <drs_rsrload>.
+    Set property "IOB = TRUE" for signal <drs_srout>.
+    Found 1-bit register for signal <d2triged>.
+    Found 1-bit register for signal <d3triged>.
+    Found 2-bit register for signal <drs_daq_a_reg>.
+    Found 1-bit register for signal <daqen>.
+    Found 1-bit register for signal <start_daq>.
+    Found 1-bit register for signal <cen>.
+    Found 1-bit register for signal <add_cnt>.
+    Found 1-bit register for signal <dadd_cnt>.
+    Found 1-bit register for signal <drs_daq_srclk_reg>.
+    Found 10-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <dclr>.
+    Found 1-bit register for signal <d2clr>.
+    Found 10-bit register for signal <drs_cal_raddr_reg>.
+    Found 1-bit register for signal <add_cal_raddr>.
+    Found 10-bit register for signal <drs_fifo_waddr_reg>.
+    Found 1-bit register for signal <rcen>.
+    Found 6-bit register for signal <rcnt>.
+    Found 1-bit register for signal <rclr>.
+    Found 1-bit register for signal <drs_read_done_reg>.
+    Found 1-bit register for signal <pdrs_rsrload>.
+    Found 4-bit register for signal <drs_rsrload>.
+    Found 1-bit register for signal <rclk>.
+    Found 1-bit register for signal <shift_sp>.
+    Found 1-bit register for signal <drs_srout>.
+    Found 10-bit register for signal <drs_stop_addr_reg>.
+    Found 1-bit register for signal <dtriged>.
+    Found 10-bit adder for signal <cnt[9]_GND_85_o_add_0_OUT> created at line 108.
+    Found 10-bit adder for signal <drs_cal_raddr_reg[9]_GND_85_o_add_4_OUT> created at line 130.
+    Found 10-bit adder for signal <drs_fifo_waddr_reg[9]_GND_85_o_add_8_OUT> created at line 140.
+    Found 6-bit adder for signal <rcnt[5]_GND_85_o_add_12_OUT> created at line 156.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <drs_ctrl_daq> synthesized.
+
+Synthesizing Unit <drs_calibration>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_calibration.vhd".
+    Found 18-bit register for signal <wa>.
+    Found 8-bit register for signal <we>.
+    Found 8-bit register for signal <lut_data<31>>.
+    Found 8-bit register for signal <lut_data<30>>.
+    Found 8-bit register for signal <lut_data<29>>.
+    Found 8-bit register for signal <lut_data<28>>.
+    Found 8-bit register for signal <lut_data<27>>.
+    Found 8-bit register for signal <lut_data<26>>.
+    Found 8-bit register for signal <lut_data<25>>.
+    Found 8-bit register for signal <lut_data<24>>.
+    Found 8-bit register for signal <lut_data<23>>.
+    Found 8-bit register for signal <lut_data<22>>.
+    Found 8-bit register for signal <lut_data<21>>.
+    Found 8-bit register for signal <lut_data<20>>.
+    Found 8-bit register for signal <lut_data<19>>.
+    Found 8-bit register for signal <lut_data<18>>.
+    Found 8-bit register for signal <lut_data<17>>.
+    Found 8-bit register for signal <lut_data<16>>.
+    Found 8-bit register for signal <lut_data<15>>.
+    Found 8-bit register for signal <lut_data<14>>.
+    Found 8-bit register for signal <lut_data<13>>.
+    Found 8-bit register for signal <lut_data<12>>.
+    Found 8-bit register for signal <lut_data<11>>.
+    Found 8-bit register for signal <lut_data<10>>.
+    Found 8-bit register for signal <lut_data<9>>.
+    Found 8-bit register for signal <lut_data<8>>.
+    Found 8-bit register for signal <lut_data<7>>.
+    Found 8-bit register for signal <lut_data<6>>.
+    Found 8-bit register for signal <lut_data<5>>.
+    Found 8-bit register for signal <lut_data<4>>.
+    Found 8-bit register for signal <lut_data<3>>.
+    Found 8-bit register for signal <lut_data<2>>.
+    Found 8-bit register for signal <lut_data<1>>.
+    Found 8-bit register for signal <lut_data<0>>.
+    Found 13-bit register for signal <cal_data<31>>.
+    Found 13-bit register for signal <cal_data<30>>.
+    Found 13-bit register for signal <cal_data<29>>.
+    Found 13-bit register for signal <cal_data<28>>.
+    Found 13-bit register for signal <cal_data<27>>.
+    Found 13-bit register for signal <cal_data<26>>.
+    Found 13-bit register for signal <cal_data<25>>.
+    Found 13-bit register for signal <cal_data<24>>.
+    Found 13-bit register for signal <cal_data<23>>.
+    Found 13-bit register for signal <cal_data<22>>.
+    Found 13-bit register for signal <cal_data<21>>.
+    Found 13-bit register for signal <cal_data<20>>.
+    Found 13-bit register for signal <cal_data<19>>.
+    Found 13-bit register for signal <cal_data<18>>.
+    Found 13-bit register for signal <cal_data<17>>.
+    Found 13-bit register for signal <cal_data<16>>.
+    Found 13-bit register for signal <cal_data<15>>.
+    Found 13-bit register for signal <cal_data<14>>.
+    Found 13-bit register for signal <cal_data<13>>.
+    Found 13-bit register for signal <cal_data<12>>.
+    Found 13-bit register for signal <cal_data<11>>.
+    Found 13-bit register for signal <cal_data<10>>.
+    Found 13-bit register for signal <cal_data<9>>.
+    Found 13-bit register for signal <cal_data<8>>.
+    Found 13-bit register for signal <cal_data<7>>.
+    Found 13-bit register for signal <cal_data<6>>.
+    Found 13-bit register for signal <cal_data<5>>.
+    Found 13-bit register for signal <cal_data<4>>.
+    Found 13-bit register for signal <cal_data<3>>.
+    Found 13-bit register for signal <cal_data<2>>.
+    Found 13-bit register for signal <cal_data<1>>.
+    Found 13-bit register for signal <cal_data<0>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<31>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<30>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<29>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<28>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<27>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<26>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<25>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<24>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<23>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<22>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<21>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<20>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<19>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<18>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<17>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<16>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<15>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<14>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<13>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<12>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<11>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<10>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<9>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<8>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<7>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<6>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<5>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<4>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<3>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<2>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<1>>.
+    Found 12-bit register for signal <drs_fifo_wdata_reg<0>>.
+    Found 8-bit register for signal <wd>.
+    Found 18-bit adder for signal <wa[17]_GND_89_o_add_0_OUT> created at line 48.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_4_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_7_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_10_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_13_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_16_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_19_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_22_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_25_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_28_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_31_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_34_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_37_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_40_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_43_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_46_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_49_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_52_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_55_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_58_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_61_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_64_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_67_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_70_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_73_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_76_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_79_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_82_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_85_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_88_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_91_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_94_OUT> created at line 71.
+    Found 13-bit adder for signal <GND_89_o_GND_89_o_add_97_OUT> created at line 71.
+    Summary:
+	inferred  33 Adder/Subtractor(s).
+	inferred 1090 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <drs_calibration> synthesized.
+
+Synthesizing Unit <drs_fifo>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\drs_fifo.vhd".
+    Found 12-bit register for signal <drs_fifo_rdata_reg<30>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<29>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<28>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<27>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<26>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<25>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<24>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<23>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<22>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<21>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<20>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<19>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<18>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<17>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<16>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<15>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<14>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<13>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<12>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<11>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<10>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<9>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<8>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<7>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<6>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<5>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<4>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<3>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<2>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<1>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<0>>.
+    Found 12-bit register for signal <drs_fifo_rdata_reg<31>>.
+    Summary:
+	inferred 384 D-type flip-flop(s).
+Unit <drs_fifo> synthesized.
+
+Synthesizing Unit <data_acquisition>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\data_acquisition.vhd".
+    Summary:
+	no macro.
+Unit <data_acquisition> synthesized.
+
+Synthesizing Unit <daq_control>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\daq_control.vhd".
+    Found 1-bit register for signal <ddrs_on>.
+    Found 1-bit register for signal <dreset>.
+    Found 1-bit register for signal <drs_run>.
+    Found 1-bit register for signal <trig_armed_reg>.
+    Found 10-bit register for signal <swaddr>.
+    Found 1-bit register for signal <cen>.
+    Found 10-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 32-bit register for signal <local_trig_number>.
+    Found 7-bit register for signal <local_trig_ftime>.
+    Found 48-bit register for signal <local_trig_ctime>.
+    Found 10-bit register for signal <drs_fifo_raddr_reg>.
+    Found 512-bit register for signal <dram_fifo_wdata_reg>.
+    Found 11-bit register for signal <dram_fifo_waddr_reg>.
+    Found 1-bit register for signal <add_dram_fifo_cnt_reg>.
+    Found 1-bit register for signal <done_cen>.
+    Found 10-bit register for signal <done_cnt>.
+    Found 1-bit register for signal <drs_daq_done>.
+    Found 1-bit register for signal <run_reg>.
+    Found 10-bit adder for signal <cnt[9]_GND_332_o_add_1_OUT> created at line 106.
+    Found 32-bit adder for signal <local_trig_number[31]_GND_332_o_add_5_OUT> created at line 115.
+    Found 10-bit adder for signal <swaddr[9]_cnt[9]_add_10_OUT> created at line 123.
+    Found 11-bit adder for signal <dram_fifo_waddr_reg[10]_GND_332_o_add_11_OUT> created at line 130.
+    Found 10-bit adder for signal <done_cnt[9]_GND_332_o_add_14_OUT> created at line 153.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred 660 D-type flip-flop(s).
+Unit <daq_control> synthesized.
+
+Synthesizing Unit <fifo_counter>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\fifo_counter.vhd".
+    Found 1-bit register for signal <p2dram_fifo_empty>.
+    Found 5-bit register for signal <data_fifo_cnt>.
+    Found 1-bit register for signal <data_fifo_empty_reg>.
+    Found 18-bit register for signal <ddram_size>.
+    Found 13-bit register for signal <data_cnt>.
+    Found 13-bit register for signal <data_size_reg>.
+    Found 1-bit register for signal <pdram_fifo_empty>.
+    Found 1-bit register for signal <dram_fifo_empty_reg>.
+    Found 1-bit register for signal <reset_fifo_cnt>.
+    Found 17-bit register for signal <dram_wpage_reg>.
+    Found 17-bit register for signal <dram_rpage_reg>.
+    Found 1-bit register for signal <cen_dram_cnt>.
+    Found 1-bit register for signal <dadd_dram_cnt>.
+    Found 18-bit register for signal <dram_size>.
+    Found 1-bit register for signal <dram_full_reg>.
+    Found 1-bit register for signal <dram_empty_reg>.
+    Found 1-bit register for signal <pdata_fifo_full>.
+    Found 1-bit register for signal <data_fifo_full_reg>.
+    Found 7-bit register for signal <dram_fifo_cnt>.
+    Found 7-bit adder for signal <dram_fifo_cnt[6]_idram_fifo_cnt[6]_add_0_OUT> created at line 91.
+    Found 5-bit adder for signal <data_fifo_cnt[4]_idata_fifo_cnt[4]_add_2_OUT> created at line 102.
+    Found 18-bit adder for signal <idata_cnt> created at line 132.
+    Found 17-bit adder for signal <dram_wpage_reg[16]_GND_339_o_add_11_OUT> created at line 149.
+    Found 17-bit adder for signal <dram_rpage_reg[16]_GND_339_o_add_14_OUT> created at line 155.
+    Found 18-bit adder for signal <dram_size[17]_GND_339_o_add_17_OUT> created at line 165.
+    Found 18-bit subtractor for signal <GND_339_o_GND_339_o_sub_19_OUT<17:0>> created at line 167.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred 119 D-type flip-flop(s).
+Unit <fifo_counter> synthesized.
+
+Synthesizing Unit <one_shot_inter_clock>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\one_shot_inter_clock.vhd".
+    Found 1-bit register for signal <d2wsig>.
+    Found 1-bit register for signal <sig_enable>.
+    Found 1-bit register for signal <p3rsig>.
+    Found 1-bit register for signal <p2rsig>.
+    Found 1-bit register for signal <prsig>.
+    Found 1-bit register for signal <rsig_reg>.
+    Found 1-bit register for signal <dwsig>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <one_shot_inter_clock> synthesized.
+
+Synthesizing Unit <dram_fifo>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_fifo.vhd".
+    Found 64-bit register for signal <dram_fifo_rdata_reg>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <dram_fifo> synthesized.
+
+Synthesizing Unit <dram_controller>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_controller.vhd".
+    Summary:
+	no macro.
+Unit <dram_controller> synthesized.
+
+Synthesizing Unit <dram_timing>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_timing.vhd".
+    Found 1-bit register for signal <rwcyc_start>.
+    Found 1-bit register for signal <fcyc_start>.
+    Found 1-bit register for signal <dram_cyc>.
+    Found 11-bit register for signal <refresh_cnt>.
+    Found 1-bit register for signal <en_test_wr>.
+    Found 1-bit register for signal <en_test_rd>.
+    Found 1-bit register for signal <rwcyc_cen>.
+    Found 9-bit register for signal <rwcyc_cnt>.
+    Found 1-bit register for signal <rwcyc_clr>.
+    Found 1-bit register for signal <fcyc_cen>.
+    Found 6-bit register for signal <fcyc_cnt>.
+    Found 1-bit register for signal <fcyc_clr>.
+    Found 1-bit register for signal <write_dram_reg>.
+    Found 1-bit register for signal <read_dram_reg>.
+    Found 1-bit register for signal <refresh_dram_reg>.
+    Found 1-bit register for signal <dram_ready_reg>.
+    Found 11-bit adder for signal <refresh_cnt[10]_GND_727_o_add_0_OUT> created at line 71.
+    Found 9-bit adder for signal <rwcyc_cnt[8]_GND_727_o_add_3_OUT> created at line 99.
+    Found 6-bit adder for signal <fcyc_cnt[5]_GND_727_o_add_7_OUT> created at line 121.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+Unit <dram_timing> synthesized.
+
+Synthesizing Unit <dram_write>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_write.vhd".
+    Set property "KEEP = TRUE" for signal <dram_fifo_raddr_reg>.
+    Found 1-bit register for signal <sub_dram_fifo_cnt_reg>.
+    Found 1-bit register for signal <scen>.
+    Found 1-bit register for signal <cen>.
+    Found 1-bit register for signal <dcen>.
+    Found 1-bit register for signal <d2cen>.
+    Found 1-bit register for signal <p5emds_reg>.
+    Found 1-bit register for signal <p5omds_reg>.
+    Found 1-bit register for signal <p3emd_reg>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <dram_wcs_reg>.
+    Found 1-bit register for signal <dram_wras_reg>.
+    Found 1-bit register for signal <dram_wcas_reg>.
+    Found 1-bit register for signal <dram_wmwe_reg>.
+    Found 1-bit register for signal <addbufcnt>.
+    Found 6-bit register for signal <bufcnt>.
+    Found 14-bit register for signal <dram_fifo_raddr_reg>.
+    Found 14-bit register for signal <dram_wa_reg>.
+    Found 3-bit register for signal <dram_wba_reg>.
+    Found 1-bit register for signal <add_dram_wpage_reg>.
+    Found 1-bit register for signal <add_dram_cnt_reg>.
+    Found 8-bit adder for signal <cnt[7]_GND_728_o_add_0_OUT> created at line 81.
+    Found 6-bit adder for signal <bufcnt[5]_GND_728_o_add_3_OUT> created at line 97.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  61 D-type flip-flop(s).
+Unit <dram_write> synthesized.
+
+Synthesizing Unit <dram_read>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_read.vhd".
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<11>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<10>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<9>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<8>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<7>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<6>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<5>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<4>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<3>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<2>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<1>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_waddr_reg<0>>.
+    Set property "KEEP = TRUE" for signal <data_fifo_write_reg>.
+    Found 1-bit register for signal <add_data_fifo_cnt_reg>.
+    Found 1-bit register for signal <scen>.
+    Found 1-bit register for signal <cen>.
+    Found 8-bit register for signal <cnt>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <dram_rcs_reg>.
+    Found 1-bit register for signal <dram_rras_reg>.
+    Found 1-bit register for signal <dram_rcas_reg>.
+    Found 1-bit register for signal <dram_rmwe_reg>.
+    Found 14-bit register for signal <dram_ra_reg>.
+    Found 3-bit register for signal <dram_rba_reg>.
+    Found 1-bit register for signal <data_fifo_waddr_reg<11>>.
+    Found 1-bit register for signal <data_fifo_waddr_reg<10>>.
+    Found 1-bit register for signal <data_fifo_waddr_reg<9>>.
+    Found 1-bit register for signal <data_fifo_waddr_reg<8>>.
+    Found 1-bit register for signal <padd_dram_rpage>.
+    Found 1-bit register for signal <pdata_fifo_write>.
+    Found 8-bit register for signal <pdata_fifo_waddr>.
+    Found 1-bit register for signal <pdram_test_clr>.
+    Found 1-bit register for signal <dram_test_and_reg>.
+    Found 1-bit register for signal <sub_dram_cnt_reg>.
+    Found 8-bit adder for signal <cnt[7]_GND_731_o_add_0_OUT> created at line 75.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+Unit <dram_read> synthesized.
+
+Synthesizing Unit <dram_refresh>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_refresh.vhd".
+    Set property "KEEP = TRUE" for signal <dram_fcs_reg>.
+    Set property "KEEP = TRUE" for signal <dram_fras_reg>.
+    Set property "KEEP = TRUE" for signal <dram_fcas_reg>.
+    Found 1-bit register for signal <dram_fras_reg>.
+    Found 1-bit register for signal <dram_fcas_reg>.
+    Found 1-bit register for signal <dram_fcs_reg>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <dram_refresh> synthesized.
+
+Synthesizing Unit <dram_init>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_init.vhd".
+    Set property "KEEP = TRUE" for signal <dram_enable_reg>.
+    Set property "IOB = TRUE" for signal <dram_reset>.
+    Found 1-bit register for signal <dram_reset>.
+    Found 16-bit register for signal <rst_cnt>.
+    Found 1-bit register for signal <rst_clr>.
+    Found 1-bit register for signal <clk_cen>.
+    Found 17-bit register for signal <clk_cnt>.
+    Found 1-bit register for signal <clk_clr>.
+    Found 1-bit register for signal <pdram_clke>.
+    Found 1-bit register for signal <init_cen>.
+    Found 6-bit register for signal <init_cnt>.
+    Found 1-bit register for signal <init_clr>.
+    Found 1-bit register for signal <mrs_cen>.
+    Found 5-bit register for signal <mrs_cnt>.
+    Found 1-bit register for signal <mrs_clr>.
+    Found 1-bit register for signal <dll_cen>.
+    Found 9-bit register for signal <dll_cnt>.
+    Found 1-bit register for signal <dram_enable_reg>.
+    Found 1-bit register for signal <dram_sras_reg>.
+    Found 1-bit register for signal <dram_scas_reg>.
+    Found 1-bit register for signal <dram_smwe_reg>.
+    Found 1-bit register for signal <dram_scs_reg>.
+    Found 2-bit register for signal <dram_sba_reg>.
+    Found 5-bit register for signal <dram_sa_reg>.
+    Found 1-bit register for signal <rst_cen>.
+    Found 16-bit adder for signal <rst_cnt[15]_GND_757_o_add_0_OUT> created at line 83.
+    Found 17-bit adder for signal <clk_cnt[16]_GND_757_o_add_3_OUT> created at line 100.
+    Found 6-bit adder for signal <init_cnt[5]_GND_757_o_add_6_OUT> created at line 121.
+    Found 5-bit adder for signal <mrs_cnt[4]_GND_757_o_add_9_OUT> created at line 136.
+    Found 9-bit adder for signal <dll_cnt[8]_GND_757_o_add_12_OUT> created at line 150.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  76 D-type flip-flop(s).
+Unit <dram_init> synthesized.
+
+Synthesizing Unit <dram_signal>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_signal.vhd".
+    Found 3-bit register for signal <pdram_ba>.
+    Found 1-bit register for signal <pdram_cs>.
+    Found 1-bit register for signal <pdram_ras>.
+    Found 1-bit register for signal <pdram_cas>.
+    Found 1-bit register for signal <pdram_we>.
+    Found 14-bit register for signal <pdram_a>.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+Unit <dram_signal> synthesized.
+
+Synthesizing Unit <dram_md>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_md.vhd".
+    Set property "KEEP = TRUE" for signal <data_fifo_wdata_reg>.
+    Set property "KEEP = TRUE" for signal <p2emd>.
+    Set property "KEEP = TRUE" for signal <pemd>.
+    Found 1-bit register for signal <cen<0>>.
+    Found 5-bit register for signal <cnt<1>>.
+    Found 5-bit register for signal <cnt<0>>.
+    Found 2-bit register for signal <clr>.
+    Found 2-bit register for signal <dlyrst>.
+    Found 2-bit register for signal <start>.
+    Found 2-bit register for signal <dlyce>.
+    Found 64-bit register for signal <data_fifo_wdata_reg>.
+    Found 64-bit register for signal <dram_pattern_reg>.
+    Found 64-bit register for signal <p2omd>.
+    Found 64-bit register for signal <pomd>.
+    Found 16-bit register for signal <p2emd>.
+    Found 16-bit register for signal <pemd>.
+    Found 1-bit register for signal <cen<1>>.
+    Found 5-bit adder for signal <cnt[0][4]_GND_998_o_add_0_OUT> created at line 68.
+    Found 5-bit adder for signal <cnt[1][4]_GND_998_o_add_4_OUT> created at line 68.
+    Found 5-bit comparator equal for signal <cnt[0][4]_dram_idly[0][4]_equal_4_o> created at line 71
+    Found 5-bit comparator equal for signal <cnt[1][4]_dram_idly[1][4]_equal_8_o> created at line 71
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 308 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <dram_md> synthesized.
+
+Synthesizing Unit <dram_mds>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_mds.vhd".
+    Set property "KEEP = TRUE" for signal <p2omds>.
+    Set property "KEEP = TRUE" for signal <pomds>.
+    Set property "KEEP = TRUE" for signal <p2emds>.
+    Set property "KEEP = TRUE" for signal <pemds>.
+    Set property "KEEP = TRUE" for signal <p4omds>.
+    Set property "KEEP = TRUE" for signal <p3omds>.
+    Set property "KEEP = TRUE" for signal <p4emds>.
+    Set property "KEEP = TRUE" for signal <p3emds>.
+    Found 1-bit register for signal <p4emds>.
+    Found 1-bit register for signal <p3omds>.
+    Found 2-bit register for signal <p2omds>.
+    Found 2-bit register for signal <pomds>.
+    Found 1-bit register for signal <p3emds>.
+    Found 2-bit register for signal <p2emds>.
+    Found 2-bit register for signal <pemds>.
+    Found 1-bit register for signal <p4omds>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <dram_mds> synthesized.
+
+Synthesizing Unit <dram_alignment>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\dram_alignment.vhd".
+    Found 64-bit register for signal <dram_test_pattern_reg>.
+    Found 64-bit register for signal <pdram_test_pattern>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <dram_alignment> synthesized.
+
+Synthesizing Unit <data_fifo>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\data_fifo.vhd".
+    Found 8-bit register for signal <wdat<6>>.
+    Found 8-bit register for signal <wdat<5>>.
+    Found 8-bit register for signal <wdat<4>>.
+    Found 8-bit register for signal <wdat<3>>.
+    Found 8-bit register for signal <wdat<2>>.
+    Found 8-bit register for signal <wdat<1>>.
+    Found 8-bit register for signal <wdat<0>>.
+    Found 12-bit register for signal <waddr>.
+    Found 1-bit register for signal <wrec>.
+    Found 32-bit register for signal <data_fifo_rdata_reg>.
+    Found 8-bit register for signal <wdat<7>>.
+    Summary:
+	inferred 109 D-type flip-flop(s).
+Unit <data_fifo> synthesized.
+
+Synthesizing Unit <usb_interface>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\usb_interface.vhd".
+    Summary:
+	no macro.
+Unit <usb_interface> synthesized.
+
+Synthesizing Unit <usb_control>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\usb_control.vhd".
+    Set property "IOB = TRUE" for signal <usb_a>.
+    Set property "IOB = TRUE" for signal <usb_rflag>.
+    Set property "IOB = TRUE" for signal <usb_wflag>.
+    Set property "IOB = TRUE" for signal <usb_on>.
+    Found 1-bit register for signal <usbok>.
+    Found 1-bit register for signal <usb_reset_reg>.
+    Found 1-bit register for signal <usb_wflag>.
+    Found 2-bit register for signal <usb_rflag>.
+    Found 1-bit register for signal <usb_rdon>.
+    Found 1-bit register for signal <cen>.
+    Found 1-bit register for signal <cblk>.
+    Found 5-bit register for signal <cnt>.
+    Found 2-bit register for signal <pusb_a>.
+    Found 2-bit register for signal <usb_a>.
+    Found 1-bit register for signal <ucen>.
+    Found 1-bit register for signal <uden>.
+    Found 1-bit register for signal <usb_sucom_reg>.
+    Found 1-bit register for signal <mlrfg>.
+    Found 1-bit register for signal <usb_sudmp_reg>.
+    Found 1-bit register for signal <usb_on>.
+    Found 5-bit adder for signal <cnt[4]_GND_1487_o_add_0_OUT> created at line 93.
+INFO:Xst:2774 - HDL ADVISOR - IOB property attached to signal usb_on may hinder XST clustering optimizations.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+Unit <usb_control> synthesized.
+
+Synthesizing Unit <read_ep6>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\read_ep6.vhd".
+    Set property "IOB = TRUE" for signal <lcd>.
+    Set property "IOB = TRUE" for signal <usb_rd>.
+    Set property "IOB = TRUE" for signal <usb_oe>.
+    Found 1-bit register for signal <pusb_rd>.
+    Found 1-bit register for signal <usb_rd>.
+    Found 1-bit register for signal <pusb_oe>.
+    Found 1-bit register for signal <usb_oe>.
+    Found 1-bit register for signal <enaddr>.
+    Found 32-bit register for signal <lcd>.
+    Found 30-bit register for signal <usb_rucnt_reg>.
+    Found 13-bit register for signal <usb_addr_reg>.
+    Found 1-bit register for signal <usb_clrbn_reg>.
+    Found 1-bit register for signal <latch_data_size_reg>.
+    Found 1-bit register for signal <dusb_sucom>.
+    Summary:
+	inferred  83 D-type flip-flop(s).
+Unit <read_ep6> synthesized.
+
+Synthesizing Unit <write_ep2>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\write_ep2.vhd".
+    Set property "IOB = TRUE" for signal <usb_ecd>.
+    Set property "IOB = TRUE" for signal <usb_wr>.
+    Set property "IOB = TRUE" for signal <usb_pktend>.
+    Found 30-bit register for signal <racnt>.
+    Found 12-bit register for signal <saddr>.
+    Found 1-bit register for signal <rdtc>.
+    Found 1-bit register for signal <enpke>.
+    Found 1-bit register for signal <usb_bufn_reg>.
+    Found 1-bit register for signal <btog>.
+    Found 13-bit register for signal <data_fifo_raddr_reg>.
+    Found 1-bit register for signal <addra>.
+    Found 1-bit register for signal <cen>.
+    Found 12-bit register for signal <cnt>.
+    Found 1-bit register for signal <tcnt>.
+    Found 32-bit register for signal <usb_ecd>.
+    Found 1-bit register for signal <usb_wr>.
+    Found 1-bit register for signal <drdtc>.
+    Found 1-bit register for signal <raclr>.
+    Found 1-bit register for signal <clr>.
+    Found 1-bit register for signal <usb_rend_reg>.
+    Found 1-bit register for signal <sub_data_fifo_cnt_reg>.
+    Found 1-bit register for signal <usb_eudmp_reg>.
+    Found 1-bit register for signal <pusb_pktend>.
+    Found 1-bit register for signal <usb_pktend>.
+    Found 1-bit register for signal <usb_rmux_reg>.
+    Found 30-bit adder for signal <racnt[29]_GND_1492_o_add_0_OUT> created at line 77.
+    Found 12-bit adder for signal <sua[11]_sracnt[11]_add_3_OUT> created at line 80.
+    Found 12-bit adder for signal <cnt[11]_GND_1492_o_add_5_OUT> created at line 128.
+    Found 30-bit comparator lessequal for signal <n0004> created at line 82
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 116 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <write_ep2> synthesized.
+
+Synthesizing Unit <usb_data_readout>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\usb_data_readout.vhd".
+    Set property "IOB = TRUE" for signal <usb_ocd_reg>.
+    Found 32-bit register for signal <usb_ocd_reg>.
+    Found 32-bit register for signal <pusb_ocd>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <usb_data_readout> synthesized.
+
+Synthesizing Unit <commands>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\commands.vhd".
+    Found 1-bit register for signal <start_reg>.
+    Found 1-bit register for signal <stop_reg>.
+    Found 1-bit register for signal <start_drs>.
+    Found 1-bit register for signal <stop_drs>.
+    Found 1-bit register for signal <drs_on_reg>.
+    Found 32-bit register for signal <sel_ch>.
+    Found 1-bit register for signal <sel_addr_hv>.
+    Found 1-bit register for signal <sel_addr_thr>.
+    Found 1-bit register for signal <sel_addr_dram_onoff>.
+    Found 1-bit register for signal <sel_addr_dram_test>.
+    Found 1-bit register for signal <sel_addr_dac_ofs>.
+    Found 1-bit register for signal <sel_addr_drs_calib>.
+    Found 1-bit register for signal <sel_addr_adc_setup>.
+    Found 1-bit register for signal <sel_addr_reset_refclk>.
+    Found 1-bit register for signal <sel_addr_dram_idly>.
+    Found 1-bit register for signal <sel_addr_dram_bitslip>.
+    Found 4-bit register for signal <wen_hv>.
+    Found 32-bit register for signal <wen_thr>.
+    Found 1-bit register for signal <wen_dram_onoff>.
+    Found 1-bit register for signal <wen_dram_test>.
+    Found 1-bit register for signal <wen_dac_ofs>.
+    Found 1-bit register for signal <wen_drs_calib>.
+    Found 1-bit register for signal <wen_adc_setup>.
+    Found 2-bit register for signal <wen_dram_idly>.
+    Found 8-bit register for signal <hv_data_reg<3>>.
+    Found 8-bit register for signal <hv_data_reg<2>>.
+    Found 8-bit register for signal <hv_data_reg<1>>.
+    Found 8-bit register for signal <hv_data_reg<0>>.
+    Found 4-bit register for signal <hv_write_reg>.
+    Found 12-bit register for signal <thr_data_reg<31>>.
+    Found 12-bit register for signal <thr_data_reg<30>>.
+    Found 12-bit register for signal <thr_data_reg<29>>.
+    Found 12-bit register for signal <thr_data_reg<28>>.
+    Found 12-bit register for signal <thr_data_reg<27>>.
+    Found 12-bit register for signal <thr_data_reg<26>>.
+    Found 12-bit register for signal <thr_data_reg<25>>.
+    Found 12-bit register for signal <thr_data_reg<24>>.
+    Found 12-bit register for signal <thr_data_reg<23>>.
+    Found 12-bit register for signal <thr_data_reg<22>>.
+    Found 12-bit register for signal <thr_data_reg<21>>.
+    Found 12-bit register for signal <thr_data_reg<20>>.
+    Found 12-bit register for signal <thr_data_reg<19>>.
+    Found 12-bit register for signal <thr_data_reg<18>>.
+    Found 12-bit register for signal <thr_data_reg<17>>.
+    Found 12-bit register for signal <thr_data_reg<16>>.
+    Found 12-bit register for signal <thr_data_reg<15>>.
+    Found 12-bit register for signal <thr_data_reg<14>>.
+    Found 12-bit register for signal <thr_data_reg<13>>.
+    Found 12-bit register for signal <thr_data_reg<12>>.
+    Found 12-bit register for signal <thr_data_reg<11>>.
+    Found 12-bit register for signal <thr_data_reg<10>>.
+    Found 12-bit register for signal <thr_data_reg<9>>.
+    Found 12-bit register for signal <thr_data_reg<8>>.
+    Found 12-bit register for signal <thr_data_reg<7>>.
+    Found 12-bit register for signal <thr_data_reg<6>>.
+    Found 12-bit register for signal <thr_data_reg<5>>.
+    Found 12-bit register for signal <thr_data_reg<4>>.
+    Found 12-bit register for signal <thr_data_reg<3>>.
+    Found 12-bit register for signal <thr_data_reg<2>>.
+    Found 12-bit register for signal <thr_data_reg<1>>.
+    Found 12-bit register for signal <thr_data_reg<0>>.
+    Found 32-bit register for signal <thr_write_reg>.
+    Found 1-bit register for signal <dram_start_clk>.
+    Found 1-bit register for signal <dram_stop_clk>.
+    Found 1-bit register for signal <dram_test_off_clk>.
+    Found 1-bit register for signal <dram_test_on_clk>.
+    Found 1-bit register for signal <dram_test_wr_clk>.
+    Found 1-bit register for signal <dram_test_rd_clk>.
+    Found 1-bit register for signal <dram_adj_enable>.
+    Found 12-bit register for signal <drs_rofs_reg>.
+    Found 12-bit register for signal <drs_oofs_reg>.
+    Found 1-bit register for signal <dac_ofs_write_reg>.
+    Found 1-bit register for signal <drs_calib_reg>.
+    Found 8-bit register for signal <adc_sdata_reg>.
+    Found 8-bit register for signal <adc_saddr_reg>.
+    Found 1-bit register for signal <adc_write_reg>.
+    Found 1-bit register for signal <reset_refclk_reg>.
+    Found 5-bit register for signal <dram_idly_clk<1>>.
+    Found 5-bit register for signal <dram_idly_clk<0>>.
+    Found 2-bit register for signal <write_dram_idly_clk>.
+    Found 2-bit register for signal <dram_bitslip_clk>.
+    Found 5-bit register for signal <dram_idly_reg<1>>.
+    Found 5-bit register for signal <dram_idly_reg<0>>.
+    Found 1-bit register for signal <dram_test_on_reg>.
+    Found 1-bit register for signal <reset_reg>.
+    Summary:
+	inferred 619 D-type flip-flop(s).
+Unit <commands> synthesized.
+
+Synthesizing Unit <register_readout>.
+    Related source file is "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_fpga\register_readout.vhd".
+    Found 1-bit register for signal <latch_pll_lock_reg>.
+    Found 8-bit register for signal <rb_hv_data>.
+    Found 12-bit register for signal <rb_thr_data>.
+    Found 32-bit register for signal <rb_dram_pattern>.
+    Found 32-bit register for signal <reg_rdata_reg>.
+    Found 1-bit register for signal <latch_temp_reg>.
+    Found 8-bit 4-to-1 multiplexer for signal <irb_hv_data> created at line 31.
+    Found 12-bit 32-to-1 multiplexer for signal <irb_thr_data> created at line 33.
+    Found 32-bit 8-to-1 multiplexer for signal <_n0200> created at line 37.
+    Summary:
+	inferred  86 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <register_readout> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 119
+ 10-bit adder                                          : 14
+ 11-bit adder                                          : 3
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 32
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 3
+ 18-bit adder                                          : 2
+ 18-bit addsub                                         : 1
+ 2-bit adder                                           : 1
+ 27-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 30-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 37
+ 6-bit adder                                           : 6
+ 7-bit adder                                           : 6
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 2
+# Registers                                            : 1046
+ 1-bit register                                        : 544
+ 10-bit register                                       : 23
+ 11-bit register                                       : 3
+ 12-bit register                                       : 170
+ 13-bit register                                       : 36
+ 14-bit register                                       : 4
+ 15-bit register                                       : 1
+ 16-bit register                                       : 4
+ 17-bit register                                       : 3
+ 18-bit register                                       : 3
+ 2-bit register                                        : 56
+ 24-bit register                                       : 2
+ 27-bit register                                       : 1
+ 28-bit register                                       : 2
+ 3-bit register                                        : 10
+ 30-bit register                                       : 2
+ 32-bit register                                       : 16
+ 4-bit register                                        : 20
+ 48-bit register                                       : 7
+ 5-bit register                                        : 49
+ 512-bit register                                      : 1
+ 6-bit register                                        : 10
+ 64-bit register                                       : 7
+ 7-bit register                                        : 9
+ 8-bit register                                        : 60
+ 9-bit register                                        : 3
+# Comparators                                          : 10
+ 10-bit comparator lessequal                           : 6
+ 30-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 132
+ 1-bit 2-to-1 multiplexer                              : 84
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 32-to-1 multiplexer                            : 2
+ 13-bit 2-to-1 multiplexer                             : 32
+ 2-bit 4-to-1 multiplexer                              : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 48-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_445> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_444> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_431> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_430> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_429> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_428> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_415> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_414> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_413> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_412> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_399> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_398> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_397> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_396> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_383> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_382> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_381> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_511> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_510> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_509> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_508> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_495> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_494> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_493> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_492> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_479> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_478> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_477> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_476> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_463> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_462> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_461> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_460> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_447> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_446> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_302> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_301> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_300> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_287> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_286> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_285> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_284> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_223> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_95> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_31> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_30> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_29> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_28> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_15> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_14> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_13> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_12> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_380> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_367> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_366> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_365> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_364> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_351> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_350> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_349> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_348> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_335> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_334> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_333> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_332> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_319> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_318> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_317> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_316> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_303> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <dram_fifo_wdata_reg<511:508>> (without init value) have a constant value of 0 in block <daq_control>.
+
+Synthesizing (advanced) Unit <adc_setup>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <adc_setup> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cpld_spi_set_mux>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <cpld_spi_set_mux> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dac_drs_ctrl>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <dac_drs_ctrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dac_hv_ctrl>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <dac_hv_ctrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dac_thr_ctrl>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <rcnt>: 1 register on signal <rcnt>.
+Unit <dac_thr_ctrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <daq_control>.
+The following registers are absorbed into counter <local_trig_number>: 1 register on signal <local_trig_number>.
+The following registers are absorbed into counter <dram_fifo_waddr_reg>: 1 register on signal <dram_fifo_waddr_reg>.
+The following registers are absorbed into counter <done_cnt>: 1 register on signal <done_cnt>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <daq_control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dram_init>.
+The following registers are absorbed into counter <rst_cnt>: 1 register on signal <rst_cnt>.
+The following registers are absorbed into counter <clk_cnt>: 1 register on signal <clk_cnt>.
+The following registers are absorbed into counter <mrs_cnt>: 1 register on signal <mrs_cnt>.
+The following registers are absorbed into counter <init_cnt>: 1 register on signal <init_cnt>.
+The following registers are absorbed into counter <dll_cnt>: 1 register on signal <dll_cnt>.
+Unit <dram_init> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dram_md>.
+The following registers are absorbed into counter <cnt_1>: 1 register on signal <cnt_1>.
+The following registers are absorbed into counter <cnt_0>: 1 register on signal <cnt_0>.
+Unit <dram_md> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dram_read>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <dram_read> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dram_timing>.
+The following registers are absorbed into counter <refresh_cnt>: 1 register on signal <refresh_cnt>.
+The following registers are absorbed into counter <rwcyc_cnt>: 1 register on signal <rwcyc_cnt>.
+The following registers are absorbed into counter <fcyc_cnt>: 1 register on signal <fcyc_cnt>.
+Unit <dram_timing> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dram_write>.
+The following registers are absorbed into counter <bufcnt>: 1 register on signal <bufcnt>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <dram_write> synthesized (advanced).
+
+Synthesizing (advanced) Unit <drs_calibration>.
+The following registers are absorbed into counter <wa>: 1 register on signal <wa>.
+Unit <drs_calibration> synthesized (advanced).
+
+Synthesizing (advanced) Unit <drs_ctrl_daq>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <drs_cal_raddr_reg>: 1 register on signal <drs_cal_raddr_reg>.
+The following registers are absorbed into counter <rcnt>: 1 register on signal <rcnt>.
+The following registers are absorbed into counter <drs_fifo_waddr_reg>: 1 register on signal <drs_fifo_waddr_reg>.
+Unit <drs_ctrl_daq> synthesized (advanced).
+
+Synthesizing (advanced) Unit <drs_ctrl_init>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <drs_ctrl_init> synthesized (advanced).
+
+Synthesizing (advanced) Unit <drs_ctrl_setup>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <drs_ctrl_setup> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo_counter>.
+The following registers are absorbed into accumulator <data_fifo_cnt>: 1 register on signal <data_fifo_cnt>.
+The following registers are absorbed into counter <dram_size>: 1 register on signal <dram_size>.
+The following registers are absorbed into accumulator <dram_fifo_cnt>: 1 register on signal <dram_fifo_cnt>.
+The following registers are absorbed into counter <dram_wpage_reg>: 1 register on signal <dram_wpage_reg>.
+The following registers are absorbed into counter <dram_rpage_reg>: 1 register on signal <dram_rpage_reg>.
+Unit <fifo_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <read_ep6>.
+Unit <read_ep6> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tcb_read>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <local_ftime_reg>: 1 register on signal <local_ftime_reg>.
+Unit <tcb_read> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tcb_sync>.
+The following registers are absorbed into counter <atimer>: 1 register on signal <atimer>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+The following registers are absorbed into counter <acnt_3>: 1 register on signal <acnt_3>.
+The following registers are absorbed into counter <acnt_2>: 1 register on signal <acnt_2>.
+The following registers are absorbed into counter <acnt_1>: 1 register on signal <acnt_1>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <acnt_0>: 1 register on signal <acnt_0>.
+The following registers are absorbed into counter <fcnt_reg>: 1 register on signal <fcnt_reg>.
+Unit <tcb_sync> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tcb_transmitter>.
+The following registers are absorbed into counter <muxcnt>: 1 register on signal <muxcnt>.
+Unit <tcb_transmitter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tcb_write>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <tcb_write> synthesized (advanced).
+
+Synthesizing (advanced) Unit <temperature_monitor>.
+The following registers are absorbed into counter <read_cnt>: 1 register on signal <read_cnt>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <temperature_monitor> synthesized (advanced).
+
+Synthesizing (advanced) Unit <trig_pattern_capture>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <trig_pattern_capture> synthesized (advanced).
+
+Synthesizing (advanced) Unit <usb_control>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <usb_control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <write_ep2>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <racnt>: 1 register on signal <racnt>.
+Unit <write_ep2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 35
+ 10-bit adder                                          : 1
+ 12-bit adder                                          : 1
+ 13-bit adder                                          : 32
+ 18-bit adder                                          : 1
+# Counters                                             : 82
+ 10-bit up counter                                     : 13
+ 11-bit up counter                                     : 3
+ 12-bit up counter                                     : 1
+ 15-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 3
+ 18-bit up counter                                     : 1
+ 18-bit updown counter                                 : 1
+ 2-bit up counter                                      : 1
+ 27-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 30-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 36
+ 6-bit up counter                                      : 6
+ 7-bit up counter                                      : 5
+ 8-bit up counter                                      : 3
+ 9-bit up counter                                      : 2
+# Accumulators                                         : 2
+ 5-bit up accumulator                                  : 1
+ 7-bit up accumulator                                  : 1
+# Registers                                            : 5951
+ Flip-Flops                                            : 5951
+# Comparators                                          : 10
+ 10-bit comparator lessequal                           : 6
+ 30-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 132
+ 1-bit 2-to-1 multiplexer                              : 84
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 32-to-1 multiplexer                            : 2
+ 13-bit 2-to-1 multiplexer                             : 32
+ 2-bit 4-to-1 multiplexer                              : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 48-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <dram_fifo_wdata_reg_367> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_380> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_381> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_382> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_383> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_396> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_397> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_398> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_399> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_412> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_413> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_414> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_415> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_428> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_429> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_430> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_495> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_494> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_493> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_492> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_479> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_478> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_477> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_476> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_463> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_462> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_461> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_460> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_447> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_446> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_445> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_444> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_431> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_12> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_13> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_14> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_15> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_28> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_29> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_30> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_31> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_95> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_223> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_284> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_285> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_286> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_287> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_300> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_301> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_366> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_365> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_364> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_351> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_350> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_349> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_348> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_335> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_334> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_333> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_332> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_319> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_318> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_317> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_316> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_303> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dram_fifo_wdata_reg_302> (without init value) has a constant value of 0 in block <daq_control>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance mmcme2_clk in unit clocks of type MMCME2_BASE has been replaced by MMCME2_ADV
+INFO:Xst:1901 - Instance mmcme2_dram_clk in unit clocks of type MMCME2_BASE has been replaced by MMCME2_ADV
+INFO:Xst:1901 - Instance iddr_tcb_timer in unit tcb_sync of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance iddr_tcb_trig in unit tcb_sync of type IDDR has been replaced by IDDR_2CLK
+
+Optimizing unit <ys_sipm_daq_fpga> ...
+
+Optimizing unit <adc_capture> ...
+
+Optimizing unit <adc_capture_ch> ...
+
+Optimizing unit <drs_ctrl_status> ...
+
+Optimizing unit <clocks> ...
+
+Optimizing unit <drs_fifo> ...
+
+Optimizing unit <data_fifo> ...
+
+Optimizing unit <dram_fifo> ...
+
+Optimizing unit <dram_controller> ...
+
+Optimizing unit <adc_input> ...
+
+Optimizing unit <drs_control> ...
+
+Optimizing unit <drs_ctrl_daq> ...
+
+Optimizing unit <drs_ctrl_setup> ...
+
+Optimizing unit <drs_ctrl_init> ...
+
+Optimizing unit <trigger> ...
+
+Optimizing unit <usb_control> ...
+
+Optimizing unit <usb_data_readout> ...
+
+Optimizing unit <write_ep2> ...
+
+Optimizing unit <read_ep6> ...
+
+Optimizing unit <tcb_read> ...
+
+Optimizing unit <tcb_transmitter> ...
+
+Optimizing unit <tcb_write> ...
+
+Optimizing unit <tcb_sync> ...
+
+Optimizing unit <tcb_serializer> ...
+
+Optimizing unit <tcb_deserializer> ...
+
+Optimizing unit <tcb_receiver> ...
+
+Optimizing unit <download_mid> ...
+
+Optimizing unit <drs_calibration> ...
+
+Optimizing unit <register_readout> ...
+
+Optimizing unit <daq_control> ...
+
+Optimizing unit <fifo_counter> ...
+
+Optimizing unit <one_shot_inter_clock> ...
+
+Optimizing unit <cpld_spi_set_mux> ...
+
+Optimizing unit <dac_drs_ctrl> ...
+
+Optimizing unit <dac_hv_ctrl> ...
+
+Optimizing unit <dac_thr_ctrl> ...
+
+Optimizing unit <cpld_spi_output> ...
+
+Optimizing unit <temperature_monitor> ...
+
+Optimizing unit <adc_setup> ...
+
+Optimizing unit <dram_md> ...
+
+Optimizing unit <dram_write> ...
+
+Optimizing unit <dram_read> ...
+
+Optimizing unit <dram_timing> ...
+
+Optimizing unit <dram_init> ...
+
+Optimizing unit <dram_signal> ...
+
+Optimizing unit <dram_mds> ...
+
+Optimizing unit <dram_alignment> ...
+
+Optimizing unit <commands> ...
+WARNING:Xst:1710 - FF/Latch <u2/u7/trig_sr_6> (without init value) has a constant value of 0 in block <ys_sipm_daq_fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u2/u7/trig_sr_5> (without init value) has a constant value of 0 in block <ys_sipm_daq_fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u2/u7/trig_sr_4> (without init value) has a constant value of 0 in block <ys_sipm_daq_fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u2/u7/trig_sr_3> (without init value) has a constant value of 0 in block <ys_sipm_daq_fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u2/u7/trig_sr_2> (without init value) has a constant value of 0 in block <ys_sipm_daq_fpga>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ys_sipm_daq_fpga, actual ratio is 23.
+
+Final Macro Processing ...
+
+Processing Unit <ys_sipm_daq_fpga> :
+	Found 2-bit shift register for signal <u7/myloop1[31].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[30].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[29].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[28].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[27].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[26].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[25].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[24].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[23].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[22].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[21].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[20].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[19].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[18].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[17].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[16].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[15].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[14].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[13].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[12].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[11].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[10].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[9].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[8].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[7].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[6].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[5].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[4].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[3].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[2].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[1].u2/sd_1>.
+	Found 2-bit shift register for signal <u7/myloop1[0].u2/sd_1>.
+	Found 2-bit shift register for signal <u9/u4/d2clr>.
+	Found 2-bit shift register for signal <u9/u4/d3triged>.
+	Found 2-bit shift register for signal <u2/u4/reg_wr_reg>.
+	Found 2-bit shift register for signal <u2/u5/d2linkok>.
+	Found 2-bit shift register for signal <u12/u2/data_fifo_full_reg>.
+	Found 2-bit shift register for signal <u12/u2/dram_fifo_empty_reg>.
+	Found 2-bit shift register for signal <u12/u2/osic_add_data_fifo_cnt_clk/p2rsig>.
+	Found 2-bit shift register for signal <u12/u2/osic_sub_dram_fifo_cnt_clk/p2rsig>.
+	Found 2-bit shift register for signal <u4/u3/d2clr>.
+	Found 2-bit shift register for signal <u17/osic_reset_dram/p2rsig>.
+	Found 2-bit shift register for signal <u17/osic_dram_start/p2rsig>.
+	Found 2-bit shift register for signal <u17/osic_dram_stop/p2rsig>.
+	Found 2-bit shift register for signal <u17/myloop1[0].osic_write_dram_idly/p2rsig>.
+	Found 2-bit shift register for signal <u17/myloop1[0].osic_dram_bitslip/p2rsig>.
+	Found 2-bit shift register for signal <u17/myloop1[1].osic_write_dram_idly/p2rsig>.
+	Found 2-bit shift register for signal <u17/myloop1[1].osic_dram_bitslip/p2rsig>.
+	Found 2-bit shift register for signal <u17/osic_dram_test_wr/p2rsig>.
+	Found 2-bit shift register for signal <u17/osic_dram_test_rd/p2rsig>.
+	Found 2-bit shift register for signal <u17/osic_dram_test_on/p2rsig>.
+	Found 2-bit shift register for signal <u17/osic_dram_test_off/p2rsig>.
+Unit <ys_sipm_daq_fpga> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 6472
+ Flip-Flops                                            : 6472
+# Shift Registers                                      : 52
+ 2-bit shift register                                  : 52
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ys_sipm_daq_fpga.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5542
+#      GND                         : 1
+#      INV                         : 178
+#      LUT1                        : 515
+#      LUT2                        : 1326
+#      LUT3                        : 942
+#      LUT4                        : 218
+#      LUT5                        : 181
+#      LUT6                        : 402
+#      MUXCY                       : 896
+#      MUXF7                       : 27
+#      ROM128X1                    : 3
+#      ROM256X1                    : 2
+#      VCC                         : 1
+#      XORCY                       : 850
+# FlipFlops/Latches                : 6527
+#      FD                          : 3903
+#      FD_1                        : 6
+#      FDE                         : 1576
+#      FDR                         : 262
+#      FDRE                        : 656
+#      FDS                         : 37
+#      FDSE                        : 84
+#      IDDR_2CLK                   : 2
+#      ODDR                        : 1
+# RAMS                             : 63
+#      RAMB18E1                    : 3
+#      RAMB36E1                    : 60
+# Shift Registers                  : 88
+#      SRL16E                      : 36
+#      SRLC16E                     : 52
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 271
+#      IBUF                        : 95
+#      IBUFDS                      : 34
+#      IBUFDS_GTE2                 : 1
+#      OBUF                        : 76
+#      OBUFDS                      : 10
+#      OBUFT                       : 53
+#      OBUFTDS                     : 2
+# Others                           : 76
+#      IDELAYCTRL                  : 1
+#      IDELAYE2                    : 16
+#      ISERDESE2                   : 16
+#      MMCME2_ADV                  : 2
+#      OSERDESE2                   : 41
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k70tfbg484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            6297  out of  82000     7%  
+ Number of Slice LUTs:                 3864  out of  41000     9%  
+    Number used as Logic:              3762  out of  41000     9%  
+    Number used as Memory:              102  out of  13400     0%  
+       Number used as ROM:               14
+       Number used as SRL:               88
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   7182
+   Number with an unused Flip Flop:     885  out of   7182    12%  
+   Number with an unused LUT:          3318  out of   7182    46%  
+   Number of fully used LUT-FF pairs:  2979  out of   7182    41%  
+   Number of unique control sets:       194
+
+IO Utilization: 
+ Number of IOs:                         267
+ Number of bonded IOBs:                 267  out of    285    93%  
+    IOB Flip Flops/Latches:             230
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               62  out of    135    45%  
+    Number using Block RAM only:         62
+ Number of BUFG/BUFGCTRLs:                8  out of     32    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+u1/lclk                            | BUFG                   | 5697  |
+u1/lx2clk                          | BUFG                   | 64    |
+u1/lclk45_dram                     | BUFG                   | 12    |
+u1/lclk_dram                       | BUFG                   | 943   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------------+-------+
+Control Signal                     | Buffer(FF name)                  | Load  |
+-----------------------------------+----------------------------------+-------+
+u16/u2/obuf_usb_cs(XST_GND:G)      | NONE(u10/myloop1[1].ramb36e1_mrd)| 200   |
+-----------------------------------+----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.629ns (Maximum Frequency: 380.373MHz)
+   Minimum input arrival time before clock: 0.876ns
+   Maximum output required time after clock: 1.006ns
+   Maximum combinational path delay: 0.865ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/lclk'
+  Clock period: 2.629ns (frequency: 380.373MHz)
+  Total number of paths / destination ports: 25364 / 8362
+-------------------------------------------------------------------------
+Delay:               2.629ns (Levels of Logic = 1)
+  Source:            u2/u6/u1/RAMB18E1_encoder_8b10b (RAM)
+  Destination:       u2/u6/disparity (FF)
+  Source Clock:      u1/lclk rising
+  Destination Clock: u1/lclk rising
+
+  Data Path: u2/u6/u1/RAMB18E1_encoder_8b10b to u2/u6/disparity
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO15    1   2.080   0.485  u2/u6/u1/RAMB18E1_encoder_8b10b (u2/u6/dispm)
+     LUT4:I2->O            1   0.053   0.000  u2/u6/disparity_rstpot (u2/u6/disparity_rstpot)
+     FD:D                      0.011          u2/u6/disparity
+    ----------------------------------------
+    Total                      2.629ns (2.144ns logic, 0.485ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/lx2clk'
+  Clock period: 0.698ns (frequency: 1432.665MHz)
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Delay:               0.698ns (Levels of Logic = 0)
+  Source:            u7/myloop1[31].u2/xd (FF)
+  Destination:       u7/myloop1[31].u2/dxd (FF)
+  Source Clock:      u1/lx2clk rising
+  Destination Clock: u1/lx2clk rising
+
+  Data Path: u7/myloop1[31].u2/xd to u7/myloop1[31].u2/dxd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.282   0.405  u7/myloop1[31].u2/xd (u7/myloop1[31].u2/xd)
+     FD:D                      0.011          u7/myloop1[31].u2/dxd
+    ----------------------------------------
+    Total                      0.698ns (0.293ns logic, 0.405ns route)
+                                       (42.0% logic, 58.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/lclk_dram'
+  Clock period: 2.176ns (frequency: 459.610MHz)
+  Total number of paths / destination ports: 3072 / 1345
+-------------------------------------------------------------------------
+Delay:               2.176ns (Levels of Logic = 0)
+  Source:            u14/u3/srl16e_dram_test_clr (FF)
+  Destination:       u14/u9/pdram_test_pattern_63 (FF)
+  Source Clock:      u1/lclk_dram rising
+  Destination Clock: u1/lclk_dram rising
+
+  Data Path: u14/u3/srl16e_dram_test_clr to u14/u9/pdram_test_pattern_63
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q        65   1.292   0.559  u14/u3/srl16e_dram_test_clr (u14/dram_test_clr)
+     FDSE:S                    0.325          u14/u9/pdram_test_pattern_0
+    ----------------------------------------
+    Total                      2.176ns (1.617ns logic, 0.559ns route)
+                                       (74.3% logic, 25.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/lclk45_dram'
+  Clock period: 2.168ns (frequency: 461.255MHz)
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               2.168ns (Levels of Logic = 1)
+  Source:            u1/srl16e_dlocked_mds (FF)
+  Destination:       u1/reset_serdes_mds_reg (FF)
+  Source Clock:      u1/lclk45_dram rising
+  Destination Clock: u1/lclk45_dram rising
+
+  Data Path: u1/srl16e_dlocked_mds to u1/reset_serdes_mds_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   1.292   0.399  u1/srl16e_dlocked_mds (u1/dlocked_mds)
+     INV:I->O              1   0.067   0.399  u1/reset_serdes_mds_reg_rstpot1_INV_0 (u1/reset_serdes_mds_reg_rstpot)
+     FD:D                      0.011          u1/reset_serdes_mds_reg
+    ----------------------------------------
+    Total                      2.168ns (1.370ns logic, 0.798ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/lx2clk'
+  Total number of paths / destination ports: 64 / 32
+-------------------------------------------------------------------------
+Offset:              0.876ns (Levels of Logic = 2)
+  Source:            p_adc_dp<29> (PAD)
+  Destination:       u7/myloop1[29].u2/xd (FF)
+  Destination Clock: u1/lx2clk rising
+
+  Data Path: p_adc_dp<29> to u7/myloop1[29].u2/xd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFDS:I->O           1   0.000   0.399  u7/u1/ibufds_padc_in29 (u7/u1/padc_in<29>)
+     INV:I->O              1   0.067   0.399  u7/u1/adc_in<29>1_INV_0 (u7/adc_in<29>)
+     FD:D                      0.011          u7/myloop1[29].u2/xd
+    ----------------------------------------
+    Total                      0.876ns (0.078ns logic, 0.798ns route)
+                                       (8.9% logic, 91.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/lclk'
+  Total number of paths / destination ports: 86 / 86
+-------------------------------------------------------------------------
+Offset:              0.416ns (Levels of Logic = 0)
+  Source:            u2/u1/iddr_tcb_trig:Q1 (PAD)
+  Destination:       u2/u1/cd_trig_3 (FF)
+  Destination Clock: u1/lclk rising
+
+  Data Path: u2/u1/iddr_tcb_trig:Q1 to u2/u1/cd_trig_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    IDDR_2CLK:Q1           2   0.000   0.405  u2/u1/iddr_tcb_trig (u2/u1/ad_trig<1>)
+     FD:D                      0.011          u2/u1/cd_trig_3
+    ----------------------------------------
+    Total                      0.416ns (0.011ns logic, 0.405ns route)
+                                       (2.6% logic, 97.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/lclk45_dram'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.412ns (Levels of Logic = 0)
+  Source:            u1/mmcme2_dram_clk:LOCKED (PAD)
+  Destination:       u1/srl16e_dlocked_mds (FF)
+  Destination Clock: u1/lclk45_dram rising
+
+  Data Path: u1/mmcme2_dram_clk:LOCKED to u1/srl16e_dlocked_mds
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    MMCME2_ADV:LOCKED      2   0.000   0.405  u1/mmcme2_dram_clk (u1/locked_sec)
+     SRL16E:D                  0.007          u1/srl16e_dlocked_mds
+    ----------------------------------------
+    Total                      0.412ns (0.007ns logic, 0.405ns route)
+                                       (1.7% logic, 98.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/lclk_dram'
+  Total number of paths / destination ports: 65 / 65
+-------------------------------------------------------------------------
+Offset:              0.412ns (Levels of Logic = 0)
+  Source:            u1/mmcme2_dram_clk:LOCKED (PAD)
+  Destination:       u1/srl16e_dlocked_md (FF)
+  Destination Clock: u1/lclk_dram rising
+
+  Data Path: u1/mmcme2_dram_clk:LOCKED to u1/srl16e_dlocked_md
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    MMCME2_ADV:LOCKED      2   0.000   0.405  u1/mmcme2_dram_clk (u1/locked_sec)
+     SRL16E:D                  0.007          u1/srl16e_dlocked_md
+    ----------------------------------------
+    Total                      0.412ns (0.007ns logic, 0.405ns route)
+                                       (1.7% logic, 98.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/lclk'
+  Total number of paths / destination ports: 143 / 107
+-------------------------------------------------------------------------
+Offset:              1.006ns (Levels of Logic = 1)
+  Source:            u1/oddr_pclk (FF)
+  Destination:       p_usb_pclk (PAD)
+  Source Clock:      u1/lclk rising
+
+  Data Path: u1/oddr_pclk to p_usb_pclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     ODDR:C->Q             1   0.607   0.399  u1/oddr_pclk (u1/usb_pclk)
+     OBUF:I->O                 0.000          u1/obuf_pclk (p_usb_pclk)
+    ----------------------------------------
+    Total                      1.006ns (0.607ns logic, 0.399ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/lclk_dram'
+  Total number of paths / destination ports: 293 / 293
+-------------------------------------------------------------------------
+Offset:              0.838ns (Levels of Logic = 0)
+  Source:            u1/reset_serdes_md_reg (FF)
+  Destination:       u14/u7/myloop1[15].OSERDESE2_md:RST (PAD)
+  Source Clock:      u1/lclk_dram rising
+
+  Data Path: u1/reset_serdes_md_reg to u14/u7/myloop1[15].OSERDESE2_md:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              54   0.282   0.556  u1/reset_serdes_md_reg (u1/reset_serdes_md_reg)
+    ISERDESE2:RST              0.000          u14/u7/myloop1[0].ISERDESE2_md
+    ----------------------------------------
+    Total                      0.838ns (0.282ns logic, 0.556ns route)
+                                       (33.6% logic, 66.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/lclk45_dram'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              0.701ns (Levels of Logic = 0)
+  Source:            u14/u8/pemds_1 (FF)
+  Destination:       u14/u8/myloop1[1].OSERDESE2_mds:T4 (PAD)
+  Source Clock:      u1/lclk45_dram rising
+
+  Data Path: u14/u8/pemds_1 to u14/u8/myloop1[1].OSERDESE2_mds:T4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.282   0.419  u14/u8/pemds_1 (u14/u8/pemds<1>)
+    OSERDESE2:T1               0.000          u14/u8/myloop1[1].OSERDESE2_mds
+    ----------------------------------------
+    Total                      0.701ns (0.282ns logic, 0.419ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 102 / 84
+-------------------------------------------------------------------------
+Delay:               0.865ns (Levels of Logic = 2)
+  Source:            p_tcb_timern (PAD)
+  Destination:       u2/u1/iddr_tcb_timer:D (PAD)
+
+  Data Path: p_tcb_timern to u2/u1/iddr_tcb_timer:D
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFDS:I->O           1   0.000   0.399  u2/u1/ibufds_tcb_timer (u2/u1/ntcb_timer)
+     INV:I->O              1   0.067   0.399  u2/u1/tcb_timer1_INV_0 (u2/u1/tcb_timer)
+    IDDR_2CLK:D                0.000          u2/u1/iddr_tcb_timer
+    ----------------------------------------
+    Total                      0.865ns (0.067ns logic, 0.798ns route)
+                                       (7.7% logic, 92.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock u1/lclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u1/lclk        |    2.629|    0.699|         |         |
+u1/lclk_dram   |    1.101|         |         |         |
+u1/lx2clk      |    0.698|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u1/lclk45_dram
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u1/lclk45_dram |    2.168|         |         |         |
+u1/lclk_dram   |         |    0.699|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u1/lclk_dram
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u1/lclk        |    0.708|         |         |         |
+u1/lclk_dram   |    2.176|         |    0.698|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u1/lx2clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u1/lx2clk      |    0.698|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 42.00 secs
+Total CPU time to Xst completion: 41.16 secs
+ 
+--> 
+
+Total memory usage is 343508 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  142 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

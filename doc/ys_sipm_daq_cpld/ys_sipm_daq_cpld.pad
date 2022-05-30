@@ -1,0 +1,129 @@
+Release 8.1i - Fit P.40xd
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 2-16-2022  0:08AM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  ys_sipm_daq_cpld.ngd
+output file: ys_sipm_daq_cpld.pad
+Part type:   xc2c128
+Speed grade: -7
+Package:     vq100
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1|KPR||I/O/GTS2|||2|||||||
+P2|KPR||I/O/GTS3|||2|||||||
+P3|KPR||I/O/GTS0|||2|||||||
+P4|KPR||I/O/GTS1|||2|||||||
+P5||VCCAUX|VAUX||||||||||
+P6|KPR||I/O|||2|||||||
+P7|p_fpga_done|I|I/O|INPUT|LVCMOS18|2||FAST||||
+P8|p_mgt_txdis_l|I|I/O|INPUT|LVCMOS18|2||FAST||||
+P9|p_mgt_loss_l|O|I/O|OUTPUT|LVCMOS18|2||SLOW||||
+P10|p_mgt_def_l|O|I/O|OUTPUT|LVCMOS18|2||SLOW||||
+P11|p_cpld_sdi|I|I/O|INPUT|LVCMOS18|2||FAST||||
+P12|p_cpld_sck|I|I/O|INPUT|LVCMOS18|2||FAST||||
+P13|p_cpld_cs|I|I/O|INPUT|LVCMOS18|2||FAST||||
+P14|KPR||I/O|||1|||||||
+P15|p_bias_sdi<3>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P16|p_bias_sck<3>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P17|p_bias_cs<3>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P18|p_bias_sdi<0>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P19|p_bias_sck<0>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P20||VCCIO-1.8|VCCIO|||1|||||||
+P21|GND||GND||||||||||
+P22|p_clk|GCK|I/O/GCK0||LVCMOS18|1||FAST||||
+P23|p_bias_cs<0>|O|I/O/GCK1|OUTPUT|LVCMOS18|1||SLOW||||
+P24|p_bias_sdi<2>|O|I/O/CDR|OUTPUT|LVCMOS18|1||SLOW||||
+P25|GND||GND||||||||||
+P26||VCC|VCC||||||||||
+P27|p_bias_sck<2>|O|I/O/GCK2|OUTPUT|LVCMOS18|1||SLOW||||
+P28|p_bias_cs<2>|O|I/O/DGE0|OUTPUT|LVCMOS18|1||SLOW||||
+P29|p_bias_sdi<1>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P30|p_bias_sck<1>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P31|GND||GND||||||||||
+P32|p_bias_cs<1>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P33|p_dac_cs<4>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P34|p_dac_sck<4>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P35|p_dac_sdi<4>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P36|p_dac_sdi<0>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P37|p_dac_sck<0>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P38||VCCIO-1.8|VCCIO|||1|||||||
+P39|p_dac_cs<0>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P40|p_dac_sdi<1>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P41|p_dac_sck<1>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P42|p_dac_cs<1>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P43|p_dac_sdi<2>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P44|p_dac_sck<2>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P45|TDI||TDI||||||||||
+P46|p_dac_cs<2>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P47|TMS||TMS||||||||||
+P48|TCK||TCK||||||||||
+P49|p_dac_sdi<3>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P50|p_dac_sck<3>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P51||VCCIO-1.8|VCCIO|||1|||||||
+P52|p_dac_cs<3>|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P53|KPR||I/O|||1|||||||
+P54|p_mgt_txdis|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P55|KPR||I/O|||1|||||||
+P56|p_mgt_def|I|I/O|INPUT|LVCMOS18|1||FAST||||
+P57||VCC|VCC||||||||||
+P58|p_mgt_loss|I|I/O|INPUT|LVCMOS18|1||FAST||||
+P59|KPR||I/O|||1|||||||
+P60|p_spi_sdo|O|I/O|OUTPUT|LVCMOS18|1||SLOW||||
+P61|p_spi_cs|I|I/O|INPUT|LVCMOS18|1||FAST||||
+P62|GND||GND||||||||||
+P63|p_spi_sdi|I|I/O|INPUT|LVCMOS18|1||FAST||||
+P64|p_spi_sck|I|I/O|INPUT|LVCMOS18|1||FAST||||
+P65|KPR||I/O|||2|||||||
+P66|KPR||I/O|||2|||||||
+P67|KPR||I/O|||2|||||||
+P68|KPR||I/O|||2|||||||
+P69|GND||GND||||||||||
+P70|KPR||I/O|||2|||||||
+P71|KPR||I/O|||2|||||||
+P72|KPR||I/O|||2|||||||
+P73|KPR||I/O|||2|||||||
+P74|KPR||I/O|||2|||||||
+P75|GND||GND||||||||||
+P76|KPR||I/O|||2|||||||
+P77|KPR||I/O|||2|||||||
+P78|KPR||I/O|||2|||||||
+P79|KPR||I/O|||2|||||||
+P80|p_prom_sdi|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P81|p_prom_sck|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P82|p_prom_cs|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P83|TDO||TDO||||||||||
+P84|GND||GND||||||||||
+P85|p_prom_sdo|I|I/O/DGE1|INPUT|LVCMOS18|2||FAST||||
+P86|p_prom_wp|O|I/O|OUTPUT|LVCMOS18|2||SLOW||||
+P87|KPR||I/O|||2|||||||
+P88||VCCIO-1.8|VCCIO|||2|||||||
+P89|KPR||I/O|||2|||||||
+P90|p_fpga_cclk|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P91|KPR||I/O|||2|||||||
+P92|p_fpga_din|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P93|KPR||I/O|||2|||||||
+P94|p_fpga_init|I|I/O|INPUT|LVCMOS18|2||FAST||||
+P95|KPR||I/O|||2|||||||
+P96|p_fpga_prog|O|I/O|OUTPUT|LVCMOS18|2||SLOW||||
+P97|KPR||I/O|||2|||||||
+P98||VCCIO-1.8|VCCIO|||2|||||||
+P99|KPR||I/O/GSR|||2|||||||
+P100|GND||GND||||||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

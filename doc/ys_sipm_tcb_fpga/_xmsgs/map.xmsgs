@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer36/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer38/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer30/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer32/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer33/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer16/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer18/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer10/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer12/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer11/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer14/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer25/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer21/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer24/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer8/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer6/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer9/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer0/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer4/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer1/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2912" delta="old" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">u3/u1/u3/serdat[0]_INV_38_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">u3/u1/u3/obufds_tcb_timer2/OBUFDS</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter u3/u1/u3/serdat[0]_INV_38_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;31&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;32&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;33&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;34&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;30&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;39&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;35&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;36&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;37&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;38&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;21&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;22&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;23&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;24&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;20&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;29&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;25&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;26&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;27&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;28&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;11&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;12&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;13&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;14&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;10&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;19&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;15&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;16&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;17&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;18&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;4&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;3&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;2&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;1&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;0&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;9&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;8&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;7&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;6&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;5&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;4&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;3&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;2&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;1&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;0&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;9&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;8&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;7&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;6&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggern&lt;5&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;31&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;32&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;33&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;34&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;30&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;39&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;35&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;36&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;37&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;38&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;21&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;22&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;23&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;24&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;20&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;29&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;25&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;26&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;27&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;28&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;11&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;12&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;13&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;14&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;10&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;19&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;15&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;16&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;17&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_triggerp&lt;18&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">0.970</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.970</arg> to <arg fmt="%0.3f" index="3">1.030</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="old" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: p_adc_triggerp&lt;0&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;1&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;2&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;3&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;4&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;5&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;6&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;7&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;8&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;9&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;10&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;11&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;12&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;13&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;14&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;15&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;16&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;17&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;18&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;19&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;20&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;21&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;22&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;23&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;24&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;25&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;26&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;27&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;28&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;29&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;30&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;31&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggerp&lt;32&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;33&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;34&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;35&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;36&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;37&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;38&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggerp&lt;39&gt;   IOSTANDARD = LVDS_25
+
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="old" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: p_adc_triggern&lt;0&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;1&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;2&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;3&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;4&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;5&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;6&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;7&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;8&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;9&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;10&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;11&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;12&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;13&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;14&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;15&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;16&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;17&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;18&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;19&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;20&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;21&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;22&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;23&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;24&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;25&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;26&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;27&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;28&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;29&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;30&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;31&gt;   IOSTANDARD = LVDS
+	 Comp: p_adc_triggern&lt;32&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;33&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;34&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;35&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;36&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;37&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;38&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_adc_triggern&lt;39&gt;   IOSTANDARD = LVDS_25
+
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="old" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: p_tcb_timerp&lt;0&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;1&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;2&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;3&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;4&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;5&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;6&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;7&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;8&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;9&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;10&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;11&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;12&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;13&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;14&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;15&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;16&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;17&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;18&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;19&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;20&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;21&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;22&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;23&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;24&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;25&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;26&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;27&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;28&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;29&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;30&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;31&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;32&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;33&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timerp&lt;34&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;35&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;36&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;37&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;38&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timerp&lt;39&gt;   IOSTANDARD = LVDS_25
+
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="old" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: p_tcb_timern&lt;0&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;1&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;2&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;3&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;4&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;5&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;6&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;7&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;8&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;9&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;10&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;11&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;12&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;13&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;14&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;15&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;16&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;17&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;18&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;19&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;20&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;21&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;22&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;23&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;24&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;25&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;26&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;27&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;28&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;29&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;30&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;31&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;32&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;33&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_timern&lt;34&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;35&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;36&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;37&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;38&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_timern&lt;39&gt;   IOSTANDARD = LVDS_25
+
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="old" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: p_tcb_triggerp&lt;0&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;1&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;2&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;3&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;4&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;5&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;6&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;7&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;8&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;9&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;10&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;11&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;12&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;13&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;14&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;15&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;16&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;17&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;18&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;19&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;20&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;21&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;22&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;23&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;24&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;25&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;26&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;27&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggerp&lt;28&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;29&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;30&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;31&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;32&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;33&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;34&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;35&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;36&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;37&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;38&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggerp&lt;39&gt;   IOSTANDARD = LVDS_25
+
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="old" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: p_tcb_triggern&lt;0&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;1&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;2&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;3&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;4&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;5&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;6&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;7&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;8&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;9&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;10&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;11&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;12&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;13&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;14&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;15&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;16&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;17&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;18&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;19&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;20&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;21&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;22&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;23&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;24&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;25&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;26&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;27&gt;   IOSTANDARD = LVDS
+	 Comp: p_tcb_triggern&lt;28&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;29&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;30&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;31&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;32&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;33&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;34&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;35&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;36&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;37&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;38&gt;   IOSTANDARD = LVDS_25
+	 Comp: p_tcb_triggern&lt;39&gt;   IOSTANDARD = LVDS_25
+
+</arg>
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+</messages>
+

@@ -1,2 +1,3 @@
-# DRC_DAQ
-DAQ &amp; TCB codes for DRC beam test
+# notice_daq for DRC
+<hr/>
+DAQ & TCB codes for DRC beam test

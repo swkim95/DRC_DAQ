@@ -1,0 +1,7 @@
+vhdl work "ys_sipm_daq_fpga_type.vhd"
+vhdl work "dac_thr_ctrl.vhd"
+vhdl work "dac_hv_ctrl.vhd"
+vhdl work "dac_drs_ctrl.vhd"
+vhdl work "cpld_spi_set_mux.vhd"
+vhdl work "cpld_spi_output.vhd"
+vhdl work "cpld_spi_ctrl.vhd"

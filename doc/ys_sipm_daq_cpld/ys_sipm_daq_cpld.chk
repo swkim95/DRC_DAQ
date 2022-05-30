@@ -1,0 +1,193 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GCLK0: 0=p_clk.p
+----------------- B l o c k 0 ------------------
+PLApt(25/56), Fanin(17/38), Clk(1/3), Bct(0/4), Pin(7/10), Mcell(16/16)
+PLApts[25/50] 56 81 39 55 45 57 46 58 47 59 144 48 60 49 61 50 128 62 51 148 63 () 9 () () 10 () () () () () 
+              () () () () () () 24 () () () () () () () () () () () 25
+Fanins[17] download.n u2/ecs.n u2/scom.n u2/sdat.n u3/cen.n u3/clr.n u3/cnt<0>.n u3/cnt<1>.n u3/cnt<2>.n 
+           u3/cnt<3>.n u3/cnt<4>.n u3/cnt<5>.n u3/cnt<6>.n u3/cnt<7>.n u3/cnt<8>.n p_mgt_def.p p_mgt_loss.p
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[24] [p_mgt_def_l(105),p_mgt_def_l(10)] [p_mgt_loss_l(106),p_mgt_loss_l(9)] [p_fpga_done(7)]  
+           [p_mgt_txdis_l(8)] [N_PZ_699(101),u5/cpld_cs,p_cpld_cs(13)]  
+           [N_PZ_697(103),u5/cpld_sck,p_cpld_sck(12)] [N_PZ_698(104),u5/cpld_sdi,p_cpld_sdi(11)]  
+           [down_done(114)] [rprom_cs(110)] [u3/cnt<0>(109)] [u3/cnt<1>(108)] [u3/cnt<2>(107)]  
+           [u3/cnt<3>(102)] [u3/cnt<4>(116)] [u3/cnt<5>(115)] [u3/cnt<6>(113)] [u3/cnt<7>(112)]  
+           [u3/cnt<8>(111)] 
+Signal[24] [ 0: N_PZ_699(101) u5/cpld_cs(101) p_cpld_cs(13)  ][ 1: u3/cnt<3>(102)  ][ 2: N_PZ_697(103)  
+           u5/cpld_sck(103) p_cpld_sck(12)  ][ 3: N_PZ_698(104) u5/cpld_sdi(104) p_cpld_sdi(11)  ][ 4:  
+           p_mgt_def_l(105) p_mgt_def_l(10)  ][ 5: p_mgt_loss_l(106) p_mgt_loss_l(9)  ][ 6: u3/cnt<2>(107)  ] 
+           [ 7: u3/cnt<1>(108)  ][ 8: u3/cnt<0>(109)  ][ 9: rprom_cs(110)  ][ 10: u3/cnt<8>(111)  
+           p_mgt_txdis_l(8)  ][ 11: u3/cnt<7>(112) p_fpga_done(7)  ][ 12: u3/cnt<6>(113) (6)  ][ 13:  
+           down_done(114)  ][ 14: u3/cnt<5>(115) (4)  ][ 15: u3/cnt<4>(116) (3)  ]
+----------------- B l o c k 1 ------------------
+PLApt(21/56), Fanin(21/38), Clk(1/3), Bct(0/4), Pin(9/10), Mcell(16/16)
+PLApts[21/56] 101 12 13 14 52 64 () () () () 129 () () () () () 107 () () 117 () () 87 () () 110 () () 129 () 
+              () 129 () () 129 () () 111 () () 120 () () 153 () () 17 () () 90 () () 108 () () 118
+Fanins[21] u3/cen.n u3/clr.n u3/cnt<0>.n u3/cnt<1>.n u3/cnt<2>.n u3/cnt<3>.n u3/cnt<4>.n u3/cnt<5>.n 
+           u3/cnt<6>.n u3/cnt<7>.n u3/cnt<8>.n u3/cnt<9>.n u5/d2cpld_sck.n u5/dcpld_cs.n u5/dcpld_sck.n 
+           u5/dcpld_sdi.n u5/mux<0>.n u5/mux<1>.n u5/mux<2>.n u5/mux<3>.n u5/set_mux.n
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [p_bias_sck<0>(127),p_bias_sck<0>(19)] [p_bias_sck<2>(132),p_bias_sck<2>(27)]  
+           [p_bias_sck<3>(120),p_bias_sck<3>(16)] [p_bias_sdi<0>(122),p_bias_sdi<0>(18)]  
+           [p_bias_sdi<2>(131),p_bias_sdi<2>(24)] [p_bias_sdi<3>(119),p_bias_sdi<3>(15)]  
+           [p_bias_cs<0>(130),p_bias_cs<0>(23)] [p_bias_cs<3>(121),p_bias_cs<3>(17)] [p_clk(22)]  
+           [u5/set_mux(128)] [u5/d2cpld_sck(126)] [u5/mux<0>(125)] [u5/mux<1>(124)] [u5/mux<2>(123)]  
+           [u5/mux<3>(117)] [rprom_sck(129)] [u3/cnt<9>(118)] 
+Signal[17] [ 0: u5/mux<3>(117)  ][ 1: u3/cnt<9>(118) (14)  ][ 2: p_bias_sdi<3>(119) p_bias_sdi<3>(15)  ][ 3:  
+           p_bias_sck<3>(120) p_bias_sck<3>(16)  ][ 4: p_bias_cs<3>(121) p_bias_cs<3>(17)  ][ 5:  
+           p_bias_sdi<0>(122) p_bias_sdi<0>(18)  ][ 6: u5/mux<2>(123)  ][ 7: u5/mux<1>(124)  ][ 8:  
+           u5/mux<0>(125)  ][ 9: u5/d2cpld_sck(126)  ][ 10: p_bias_sck<0>(127) p_bias_sck<0>(19)  ][ 11:  
+           u5/set_mux(128)  ][ 12: rprom_sck(129) p_clk(22)  ][ 13: p_bias_cs<0>(130) p_bias_cs<0>(23)  ] 
+           [ 14: p_bias_sdi<2>(131) p_bias_sdi<2>(24)  ][ 15: p_bias_sck<2>(132) p_bias_sck<2>(27)  ]
+----------------- B l o c k 2 ------------------
+PLApt(25/56), Fanin(20/38), Clk(1/3), Bct(0/4), Pin(4/11), Mcell(16/16)
+PLApts[25/56] 2 26 131 1 123 126 122 125 121 124 15 16 143 27 100 () 22 () () 23 () () 160 () () 92 () () 98 
+              () () () () () 96 () () 95 () () 99 () () 93 () () () () () () () () () () () 134
+Fanins[20] N_PZ_700.n calib.n down_done.n prom_rdat.n rprom_sck.n u2/ccen.n u2/ccnt<0>.n u2/ccnt<1>.n 
+           u2/ccnt<2>.n u2/dat_sck.n u2/dcen.n u2/enflag.n u2/mux<0>.n u2/mux<1>.n u2/sclk.n u2/scom.n 
+           u3/endown.n p_fpga_done.p p_fpga_init.p p_spi_sdi.p
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[17] [p_fpga_prog(138),p_fpga_prog(96)] [p_fpga_din(146),p_fpga_din(92)]  
+           [p_fpga_cclk(148),p_fpga_cclk(90)] [p_fpga_init(94)] [download(144)] [u2/mux<0>(142)]  
+           [u2/mux<1>(141)] [u2/ccnt<2>(140)] [u2/ccnt<1>(133)] [u2/ccnt<0>(147)] [u2/cpld_sdo(145)]  
+           [u2/scom(143)] [u2/sdat(139)] [u2/enflag(137)] [wprom_sdi(136)] [wprom_cs(135)] [wprom_sck(134)] 
+Signal[17] [ 0: u2/ccnt<1>(133)  ][ 1: wprom_sck(134) (2)  ][ 2: wprom_cs(135) (1)  ][ 3: wprom_sdi(136)  
+           (99)  ][ 4: u2/enflag(137) (97)  ][ 5: p_fpga_prog(138) p_fpga_prog(96)  ][ 6: u2/sdat(139) (95)  
+            ][ 7: u2/ccnt<2>(140)  ][ 8: u2/mux<1>(141)  ][ 9: u2/mux<0>(142)  ][ 10: u2/scom(143)  
+           p_fpga_init(94)  ][ 11: download(144)  ][ 12: u2/cpld_sdo(145) (93)  ][ 13: p_fpga_din(146)  
+           p_fpga_din(92)  ][ 14: u2/ccnt<0>(147) (91)  ][ 15: p_fpga_cclk(148) p_fpga_cclk(90)  ]
+----------------- B l o c k 3 ------------------
+PLApt(16/56), Fanin(11/38), Clk(1/3), Bct(0/4), Pin(11/11), Mcell(16/16)
+PLApts[16/56] () () () () () () () () () () 88 () () 137 () () 136 () () 109 () () 119 () () 89 () () 82 () 
+              () 132 () () 147 () () 146 () () 112 () () 102 () () 106 () () 116 () () 86 () () 105
+Fanins[11] u2/d2spi_cs.n u2/d3spi_cs.n u2/dspi_cs.n u2/dspi_sck.n u5/dcpld_cs.n u5/dcpld_sck.n u5/dcpld_sdi.n 
+           u5/mux<0>.n u5/mux<1>.n u5/mux<2>.n u5/mux<3>.n
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [p_bias_sck<1>(153),p_bias_sck<1>(30)] [p_bias_sdi<1>(152),p_bias_sdi<1>(29)]  
+           [p_dac_sck<0>(162),p_dac_sck<0>(37)] [p_dac_sck<4>(159),p_dac_sck<4>(34)]  
+           [p_dac_sdi<0>(161),p_dac_sdi<0>(36)] [p_dac_sdi<1>(164),p_dac_sdi<1>(40)]  
+           [p_dac_sdi<4>(160),p_dac_sdi<4>(35)] [p_bias_cs<1>(154),p_bias_cs<1>(32)]  
+           [p_bias_cs<2>(149),p_bias_cs<2>(28)] [p_dac_cs<0>(163),p_dac_cs<0>(39)]  
+           [p_dac_cs<4>(155),p_dac_cs<4>(33)] [u2/d2spi_cs(158)] [u2/d2spi_sck(157)] [u2/d3spi_cs(156)]  
+           [u2/bcs(151)] [u2/ecs(150)] 
+Signal[16] [ 0: p_bias_cs<2>(149) p_bias_cs<2>(28)  ][ 1: u2/ecs(150)  ][ 2: u2/bcs(151)  ][ 3:  
+           p_bias_sdi<1>(152) p_bias_sdi<1>(29)  ][ 4: p_bias_sck<1>(153) p_bias_sck<1>(30)  ][ 5:  
+           p_bias_cs<1>(154) p_bias_cs<1>(32)  ][ 6: p_dac_cs<4>(155) p_dac_cs<4>(33)  ][ 7:  
+           u2/d3spi_cs(156)  ][ 8: u2/d2spi_sck(157)  ][ 9: u2/d2spi_cs(158)  ][ 10: p_dac_sck<4>(159)  
+           p_dac_sck<4>(34)  ][ 11: p_dac_sdi<4>(160) p_dac_sdi<4>(35)  ][ 12: p_dac_sdi<0>(161)  
+           p_dac_sdi<0>(36)  ][ 13: p_dac_sck<0>(162) p_dac_sck<0>(37)  ][ 14: p_dac_cs<0>(163)  
+           p_dac_cs<0>(39)  ][ 15: p_dac_sdi<1>(164) p_dac_sdi<1>(40)  ]
+----------------- B l o c k 4 ------------------
+PLApt(30/56), Fanin(28/38), Clk(1/3), Bct(0/4), Pin(0/10), Mcell(16/16)
+PLApts[30/35] 53 80 44 79 43 78 20 21 42 77 41 76 40 75 38 74 37 73 36 72 35 71 34 70 33 69 32 68 () () () 19 
+              () () 18
+Fanins[28] u3/cen.n u3/clr.n u3/cnt<0>.n u3/cnt<10>.n u3/cnt<11>.n u3/cnt<12>.n u3/cnt<13>.n u3/cnt<14>.n 
+           u3/cnt<15>.n u3/cnt<16>.n u3/cnt<17>.n u3/cnt<18>.n u3/cnt<19>.n u3/cnt<1>.n u3/cnt<20>.n 
+           u3/cnt<21>.n u3/cnt<22>.n u3/cnt<23>.n u3/cnt<24>.n u3/cnt<25>.n u3/cnt<2>.n u3/cnt<3>.n 
+           u3/cnt<4>.n u3/cnt<5>.n u3/cnt<6>.n u3/cnt<7>.n u3/cnt<8>.n u3/cnt<9>.n
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [u3/cnt<25>(180)] [u3/cnt<24>(174)] [u3/clr(173)] [u3/sdown(172)] [u3/cnt<23>(170)]  
+           [rprom_sdi(168)] [u3/cnt<22>(179)] [u3/cnt<21>(178)] [u3/cnt<20>(177)] [u3/cnt<19>(176)]  
+           [u3/cnt<18>(175)] [u3/cnt<17>(171)] [u3/cnt<16>(169)] [u3/cnt<15>(167)] [u3/cnt<14>(166)]  
+           [u3/cnt<13>(165)] 
+Signal[16] [ 0: u3/cnt<13>(165) (65)  ][ 1: u3/cnt<14>(166) (66)  ][ 2: u3/cnt<15>(167) (67)  ][ 3:  
+           rprom_sdi(168)  ][ 4: u3/cnt<16>(169) (68)  ][ 5: u3/cnt<23>(170)  ][ 6: u3/cnt<17>(171) (70)  ] 
+           [ 7: u3/sdown(172)  ][ 8: u3/clr(173)  ][ 9: u3/cnt<24>(174)  ][ 10: u3/cnt<18>(175) (71)  ][ 11:  
+           u3/cnt<19>(176) (72)  ][ 12: u3/cnt<20>(177) (73)  ][ 13: u3/cnt<21>(178) (74)  ][ 14:  
+           u3/cnt<22>(179) (76)  ][ 15: u3/cnt<25>(180)  ]
+----------------- B l o c k 5 ------------------
+PLApt(23/56), Fanin(32/38), Clk(1/3), Bct(0/4), Pin(7/9), Mcell(16/16)
+PLApts[23/56] 130 135 97 140 141 54 29 65 30 66 31 67 () 91 () () 145 () () () () () 151 () () 150 () () () 
+              () () 159 () () 28 () () 139 () () 138 () () () () () 133 () () () () () 162 () () 11
+Fanins[32] N_PZ_699.n N_PZ_702.n prom_rdat.n u2/bcs.n u2/ccen.n u2/ccnt<0>.n u2/ccnt<1>.n u2/ccnt<2>.n 
+           u2/cpld_sdo.n u2/d2spi_sck.n u2/d3spi_sck.n u2/dcen.n u2/eclk.n u2/sclk.n u3/cen.n u3/clr.n 
+           u3/cnt<0>.n u3/cnt<10>.n u3/cnt<11>.n u3/cnt<12>.n u3/cnt<1>.n u3/cnt<2>.n u3/cnt<3>.n u3/cnt<4>.n 
+           u3/cnt<5>.n u3/cnt<6>.n u3/cnt<7>.n u3/cnt<8>.n u3/cnt<9>.n u5/cpld_cs.n u5/cpld_sck.n 
+           p_mgt_txdis_l.p
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[23] [p_spi_sdo(184),p_spi_sdo(60)] [p_mgt_txdis(196),p_mgt_txdis(54)] [p_mgt_def(56)]  
+           [p_mgt_loss(58)] [calib,p_spi_sdi(63)] [N_PZ_700(183),u2/dspi_cs,p_spi_cs(61)]  
+           [N_PZ_702(181),u2/dspi_sck,p_spi_sck(64)] [u2/dat_sck(195)] [u2/d3spi_sck(193)] [u2/eclk(191)]  
+           [u2/sclk(190)] [u3/dclr(189)] [u3/cen(188)] [u3/cnt<10>(187)] [u3/cnt<11>(194)] [u3/cnt<12>(192)]  
+           [u5/dcpld_cs(186)] [u5/dcpld_sck(185)] 
+Signal[23] [ 0: N_PZ_702(181) u2/dspi_sck(181) p_spi_sck(64)  ][ 1: calib(182) p_spi_sdi(63)  ][ 2:  
+           N_PZ_700(183) u2/dspi_cs(183) p_spi_cs(61)  ][ 3: p_spi_sdo(184) p_spi_sdo(60)  ][ 4:  
+           u5/dcpld_sck(185) (59)  ][ 5: u5/dcpld_cs(186) p_mgt_loss(58)  ][ 6: u3/cnt<10>(187)  ][ 7:  
+           u3/cen(188)  ][ 8: u3/dclr(189)  ][ 9: u2/sclk(190)  ][ 10: u2/eclk(191)  ][ 11: u3/cnt<12>(192)  
+           p_mgt_def(56)  ][ 12: u2/d3spi_sck(193)  ][ 13: u3/cnt<11>(194) (55)  ][ 14: u2/dat_sck(195)  ] 
+           [ 15: p_mgt_txdis(196) p_mgt_txdis(54)  ]
+----------------- B l o c k 6 ------------------
+PLApt(12/56), Fanin(19/38), Clk(1/3), Bct(0/4), Pin(5/10), Mcell(9/16)
+PLApts[12/50] 1 127 142 () () () () () () () () () () () () () () () () () () () 156 () () 155 () () () () () 
+              161 () () 158 () () 157 () () 154 () () 152 () () 149 () () 94
+Fanins[19] N_PZ_697.n N_PZ_698.n N_PZ_701.n rprom_cs.n rprom_sck.n rprom_sdi.n u2/ccen.n u2/ccnt<0>.n 
+           u2/ccnt<1>.n u2/ccnt<2>.n u2/ecs.n u2/sclk.n u3/dclr.n u3/sdown.n u5/cpld_sdi.n wprom_cs.n 
+           wprom_sck.n wprom_sdi.n p_spi_sdi.p
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[11] [p_prom_wp(210),p_prom_wp(86)] [p_prom_cs(207),p_prom_cs(82)] [p_prom_sck(202),p_prom_sck(81)]  
+           [p_prom_sdi(201),p_prom_sdi(80)] [N_PZ_701(209),prom_rdat,p_prom_sdo(85)] [u5/dcpld_sdi(208)]  
+           [u2/ccen(206)] [u2/dcen(205)] [u3/endown(204)] 
+Signal[11] [ 0: (77)  ][ 1: (78)  ][ 2:  ][ 3: (79)  ][ 4: p_prom_sdi(201) p_prom_sdi(80)  ][ 5:  
+           p_prom_sck(202) p_prom_sck(81)  ][ 6:  ][ 7: u3/endown(204)  ][ 8: u2/dcen(205)  ][ 9:  
+           u2/ccen(206)  ][ 10: p_prom_cs(207) p_prom_cs(82)  ][ 11: u5/dcpld_sdi(208)  ][ 12: N_PZ_701(209)  
+           prom_rdat(209) p_prom_sdo(85)  ][ 13: p_prom_wp(210) p_prom_wp(86)  ][ 14: (87)  ][ 15: (89)  ]
+----------------- B l o c k 7 ------------------
+PLApt(8/56), Fanin(7/38), Clk(1/3), Bct(0/4), Pin(8/9), Mcell(8/16)
+PLApts[8/56] () () () () () () () () () () () () () () () () 83 () () 113 () () () () () 103 () () () () () 
+             () () () () () () () () () () () () 84 () () 114 () () 104 () () 85 () () 115
+Fanins[ 7] u5/dcpld_cs.n u5/dcpld_sck.n u5/dcpld_sdi.n u5/mux<0>.n u5/mux<1>.n u5/mux<2>.n u5/mux<3>.n
+clk[1] p_clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 8] [p_dac_sck<1>(228),p_dac_sck<1>(41)] [p_dac_sck<2>(225),p_dac_sck<2>(44)]  
+           [p_dac_sck<3>(216),p_dac_sck<3>(50)] [p_dac_sdi<2>(226),p_dac_sdi<2>(43)]  
+           [p_dac_sdi<3>(218),p_dac_sdi<3>(49)] [p_dac_cs<1>(227),p_dac_cs<1>(42)]  
+           [p_dac_cs<2>(224),p_dac_cs<2>(46)] [p_dac_cs<3>(215),p_dac_cs<3>(52)] 
+Signal[ 8] [ 0:  ][ 1: (53)  ][ 2: p_dac_cs<3>(215) p_dac_cs<3>(52)  ][ 3: p_dac_sck<3>(216)  
+           p_dac_sck<3>(50)  ][ 4:  ][ 5: p_dac_sdi<3>(218) p_dac_sdi<3>(49)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ] 
+           [ 10:  ][ 11: p_dac_cs<2>(224) p_dac_cs<2>(46)  ][ 12: p_dac_sck<2>(225) p_dac_sck<2>(44)  ][ 13:  
+           p_dac_sdi<2>(226) p_dac_sdi<2>(43)  ][ 14: p_dac_cs<1>(227) p_dac_cs<1>(42)  ][ 15:  
+           p_dac_sck<1>(228) p_dac_sck<1>(41)  ]

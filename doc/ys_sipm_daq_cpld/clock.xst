@@ -1,0 +1,5 @@
+set -tmpdir "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/xst/projnav.tmp"
+set -xsthdpdir "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/xst"
+elaborate
+-ifn clock.prj
+-ifmt mixed

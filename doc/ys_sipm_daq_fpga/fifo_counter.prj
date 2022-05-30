@@ -1,0 +1,3 @@
+vhdl work "ys_sipm_daq_fpga_type.vhd"
+vhdl work "one_shot_inter_clock.vhd"
+vhdl work "fifo_counter.vhd"

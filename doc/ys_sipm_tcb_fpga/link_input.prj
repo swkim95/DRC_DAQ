@@ -1,0 +1,7 @@
+vhdl work "ys_sipm_tcb_fpga_type.vhd"
+vhdl work "decoder_10b8b.vhd"
+vhdl work "tcb_sync.vhd"
+vhdl work "tcb_receiver.vhd"
+vhdl work "tcb_deserializer.vhd"
+vhdl work "link_input_ch.vhd"
+vhdl work "link_input.vhd"

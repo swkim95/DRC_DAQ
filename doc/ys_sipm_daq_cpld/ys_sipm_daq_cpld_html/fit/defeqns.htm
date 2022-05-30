@@ -1,0 +1,502 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_calib: FDCPE port map (calib,p_spi_sdi,p_clk,'0','0',calib_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calib_CE <= (NOT u2/ccnt(0) AND u2/sclk AND u2/ccen AND u2/ccnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u2/ccnt(2));
+</td></tr><tr><td>
+FDCPE_down_done: FDCPE port map (down_done,NOT u3/cen,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_download: FDCPE port map (download,download_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;download_D <= (NOT u2/ccnt(0) AND p_spi_sdi AND u2/sclk AND u2/ccen AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u2/ccnt(1) AND u2/ccnt(2));
+</td></tr><tr><td>
+FDCPE_p_bias_cs0: FDCPE port map (p_bias_cs(0),p_bias_cs_D(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_cs_D(0) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_bias_cs1: FDCPE port map (p_bias_cs(1),p_bias_cs_D(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_cs_D(1) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_bias_cs2: FDCPE port map (p_bias_cs(2),p_bias_cs_D(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_cs_D(2) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_bias_cs3: FDCPE port map (p_bias_cs(3),p_bias_cs_D(3),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_cs_D(3) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_bias_sck0: FDCPE port map (p_bias_sck(0),p_bias_sck_D(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sck_D(0) <= (NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_bias_sck1: FDCPE port map (p_bias_sck(1),p_bias_sck_D(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sck_D(1) <= (u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_bias_sck2: FDCPE port map (p_bias_sck(2),p_bias_sck_D(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sck_D(2) <= (NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_bias_sck3: FDCPE port map (p_bias_sck(3),p_bias_sck_D(3),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sck_D(3) <= (u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_bias_sdi0: FDCPE port map (p_bias_sdi(0),p_bias_sdi_D(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sdi_D(0) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_bias_sdi1: FDCPE port map (p_bias_sdi(1),p_bias_sdi_D(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sdi_D(1) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_bias_sdi2: FDCPE port map (p_bias_sdi(2),p_bias_sdi_D(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sdi_D(2) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_bias_sdi3: FDCPE port map (p_bias_sdi(3),p_bias_sdi_D(3),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_bias_sdi_D(3) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_dac_cs0: FDCPE port map (p_dac_cs(0),p_dac_cs_D(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_cs_D(0) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_cs1: FDCPE port map (p_dac_cs(1),p_dac_cs_D(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_cs_D(1) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_cs2: FDCPE port map (p_dac_cs(2),p_dac_cs_D(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_cs_D(2) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_cs3: FDCPE port map (p_dac_cs(3),p_dac_cs_D(3),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_cs_D(3) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_cs4: FDCPE port map (p_dac_cs(4),p_dac_cs_D(4),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_cs_D(4) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND u5/mux(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_sck0: FDCPE port map (p_dac_sck(0),p_dac_sck_D(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sck_D(0) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_sck1: FDCPE port map (p_dac_sck(1),p_dac_sck_D(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sck_D(1) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_sck2: FDCPE port map (p_dac_sck(2),p_dac_sck_D(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sck_D(2) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_sck3: FDCPE port map (p_dac_sck(3),p_dac_sck_D(3),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sck_D(3) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_sck4: FDCPE port map (p_dac_sck(4),p_dac_sck_D(4),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sck_D(4) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND u5/mux(2) AND u5/mux(3)));
+</td></tr><tr><td>
+FDCPE_p_dac_sdi0: FDCPE port map (p_dac_sdi(0),p_dac_sdi_D(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sdi_D(0) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_dac_sdi1: FDCPE port map (p_dac_sdi(1),p_dac_sdi_D(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sdi_D(1) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_dac_sdi2: FDCPE port map (p_dac_sdi(2),p_dac_sdi_D(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sdi_D(2) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_dac_sdi3: FDCPE port map (p_dac_sdi(3),p_dac_sdi_D(3),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sdi_D(3) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_dac_sdi4: FDCPE port map (p_dac_sdi(4),p_dac_sdi_D(4),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_dac_sdi_D(4) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u5/mux(1) AND u5/mux(2) AND u5/mux(3));
+</td></tr><tr><td>
+FDCPE_p_fpga_cclk: FDCPE port map (p_fpga_cclk,p_fpga_cclk_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_fpga_cclk_D <= (u3/endown AND rprom_sck);
+</td></tr><tr><td>
+FDCPE_p_fpga_din: FDCPE port map (p_fpga_din,p_fpga_din_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_fpga_din_D <= NOT (((NOT u3/endown AND NOT calib)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT prom_rdat AND NOT calib)));
+</td></tr><tr><td>
+FDCPE_p_fpga_prog: FDCPE port map (p_fpga_prog,NOT p_spi_sdi,p_clk,'0','0',p_fpga_prog_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_fpga_prog_CE <= (u2/ccnt(0) AND u2/sclk AND u2/ccen AND NOT u2/ccnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u2/ccnt(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+p_mgt_def_l <= p_mgt_def;
+</td></tr><tr><td>
+</td></tr><tr><td>
+p_mgt_loss_l <= p_mgt_loss;
+</td></tr><tr><td>
+</td></tr><tr><td>
+p_mgt_txdis <= p_mgt_txdis_l;
+</td></tr><tr><td>
+FDCPE_p_prom_cs: FDCPE port map (p_prom_cs,p_prom_cs_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_prom_cs_D <= (NOT rprom_cs AND NOT wprom_cs);
+</td></tr><tr><td>
+FDCPE_p_prom_sck: FDCPE port map (p_prom_sck,p_prom_sck_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_prom_sck_D <= NOT ((NOT rprom_sck AND NOT wprom_sck));
+</td></tr><tr><td>
+FDCPE_p_prom_sdi: FDCPE port map (p_prom_sdi,p_prom_sdi_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_prom_sdi_D <= NOT ((NOT rprom_sdi AND NOT wprom_sdi));
+</td></tr><tr><td>
+FDCPE_p_prom_wp: FDCPE port map (p_prom_wp,p_spi_sdi,p_clk,'0','0',p_prom_wp_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_prom_wp_CE <= (NOT u2/ccnt(0) AND u2/sclk AND u2/ccen AND u2/ccnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u2/ccnt(2));
+</td></tr><tr><td>
+FDCPE_p_spi_sdo: FDCPE port map (p_spi_sdo,p_spi_sdo_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_spi_sdo_D <= ((prom_rdat AND u2/dcen)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (u2/ccen AND u2/cpld_sdo));
+</td></tr><tr><td>
+</td></tr><tr><td>
+prom_rdat.COMB <= (NOT u3/dclr AND NOT u3/sdown);FDCPE_prom_rdat: FDCPE port map (prom_rdat,p_prom_sdo,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_rprom_cs: FDCPE port map (rprom_cs,u3/cen,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_rprom_sck: FDCPE port map (rprom_sck,u3/cnt(0),p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_rprom_sdi: FDCPE port map (rprom_sdi,rprom_sdi_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rprom_sdi_D <= ((NOT u3/cnt(10) AND NOT u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(5) AND NOT u3/cnt(6) AND NOT u3/cnt(7) AND NOT u3/cnt(8) AND NOT u3/cnt(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(11) AND NOT u3/cnt(12) AND NOT u3/cnt(13) AND NOT u3/cnt(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(15) AND NOT u3/cnt(16) AND NOT u3/cnt(17) AND NOT u3/cnt(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(19) AND NOT u3/cnt(20) AND NOT u3/cnt(21) AND NOT u3/cnt(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(23) AND NOT u3/cnt(24) AND NOT u3/cnt(25))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/cnt(10) AND u3/cnt(2) AND u3/cnt(3) AND NOT u3/cnt(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(5) AND NOT u3/cnt(6) AND NOT u3/cnt(7) AND NOT u3/cnt(8) AND NOT u3/cnt(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(11) AND NOT u3/cnt(12) AND NOT u3/cnt(13) AND NOT u3/cnt(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(15) AND NOT u3/cnt(16) AND NOT u3/cnt(17) AND NOT u3/cnt(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(19) AND NOT u3/cnt(20) AND NOT u3/cnt(21) AND NOT u3/cnt(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(23) AND NOT u3/cnt(24) AND NOT u3/cnt(25)));
+</td></tr><tr><td>
+FDCPE_u2/bcs: FDCPE port map (u2/bcs,u2/bcs_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/bcs_D <= (NOT u2/d2spi_cs AND u2/d3spi_cs);
+</td></tr><tr><td>
+FDCPE_u2/ccen: FDCPE port map (u2/ccen,NOT u2/ecs,p_clk,'0','0',NOT u5/cpld_sck.COMB);
+</td></tr><tr><td>
+FTCPE_u2/ccnt0: FTCPE port map (u2/ccnt(0),u2/ccnt_T(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/ccnt_T(0) <= ((u2/ccnt(0) AND u2/scom)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u2/scom AND u2/sclk AND u2/ccen));
+</td></tr><tr><td>
+FTCPE_u2/ccnt1: FTCPE port map (u2/ccnt(1),u2/ccnt_T(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/ccnt_T(1) <= ((u2/scom AND u2/ccnt(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (u2/ccnt(0) AND NOT u2/scom AND u2/sclk AND u2/ccen));
+</td></tr><tr><td>
+FTCPE_u2/ccnt2: FTCPE port map (u2/ccnt(2),u2/ccnt_T(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/ccnt_T(2) <= ((u2/scom AND u2/ccnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (u2/ccnt(0) AND NOT u2/scom AND u2/sclk AND u2/ccen AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u2/ccnt(1)));
+</td></tr><tr><td>
+FDCPE_u2/cpld_sdo: FDCPE port map (u2/cpld_sdo,u2/cpld_sdo_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/cpld_sdo_D <= ((u2/ccnt(0) AND u2/ccnt(1) AND u2/ccnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	down_done)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (u2/ccnt(0) AND NOT u2/ccnt(1) AND u2/ccnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p_fpga_done)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u2/ccnt(0) AND u2/ccnt(1) AND u2/ccnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	p_fpga_init));
+</td></tr><tr><td>
+FDCPE_u2/d2spi_cs: FDCPE port map (u2/d2spi_cs,u2/dspi_cs,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u2/d2spi_sck: FDCPE port map (u2/d2spi_sck,u2/dspi_sck,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u2/d3spi_cs: FDCPE port map (u2/d3spi_cs,u2/d2spi_cs,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u2/d3spi_sck: FDCPE port map (u2/d3spi_sck,u2/d2spi_sck,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u2/dat_sck: FDCPE port map (u2/dat_sck,NOT u2/eclk,p_clk,'0','0',u2/dspi_sck.COMB);
+</td></tr><tr><td>
+FDCPE_u2/dcen: FDCPE port map (u2/dcen,NOT u2/ecs,p_clk,'0','0',NOT u5/cpld_sdi.COMB);
+</td></tr><tr><td>
+</td></tr><tr><td>
+u2/dspi_cs.COMB <= (NOT u2/sclk AND NOT u2/bcs);FDCPE_u2/dspi_cs: FDCPE port map (u2/dspi_cs,p_spi_cs,p_clk,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+u2/dspi_sck.COMB <= ((u2/eclk)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (u2/sclk AND u2/dcen));FDCPE_u2/dspi_sck: FDCPE port map (u2/dspi_sck,p_spi_sck,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u2/eclk: FDCPE port map (u2/eclk,u2/eclk_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/eclk_D <= (NOT u2/d2spi_sck AND u2/d3spi_sck);
+</td></tr><tr><td>
+FDCPE_u2/ecs: FDCPE port map (u2/ecs,u2/ecs_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/ecs_D <= (u2/d2spi_cs AND NOT u2/d3spi_cs);
+</td></tr><tr><td>
+FDCPE_u2/enflag: FDCPE port map (u2/enflag,NOT u2/sclk,p_clk,'0','0',NOT u2/dspi_cs.COMB);
+</td></tr><tr><td>
+FDCPE_u2/mux0: FDCPE port map (u2/mux(0),p_spi_sdi,p_clk,'0','0',u2/mux_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/mux_CE(0) <= (u2/ccnt(0) AND u2/sclk AND u2/ccen AND NOT u2/ccnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u2/ccnt(2));
+</td></tr><tr><td>
+FDCPE_u2/mux1: FDCPE port map (u2/mux(1),p_spi_sdi,p_clk,'0','0',u2/mux_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/mux_CE(1) <= (NOT u2/ccnt(0) AND u2/sclk AND u2/ccen AND NOT u2/ccnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u2/ccnt(2));
+</td></tr><tr><td>
+FDCPE_u2/sclk: FDCPE port map (u2/sclk,u2/sclk_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/sclk_D <= (u2/d2spi_sck AND NOT u2/d3spi_sck);
+</td></tr><tr><td>
+FDCPE_u2/scom: FDCPE port map (u2/scom,u2/scom_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/scom_D <= (NOT p_spi_sdi AND u2/enflag AND u2/sclk);
+</td></tr><tr><td>
+FDCPE_u2/sdat: FDCPE port map (u2/sdat,u2/sdat_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u2/sdat_D <= (p_spi_sdi AND u2/enflag AND u2/sclk);
+</td></tr><tr><td>
+FDCPE_u3/cen: FDCPE port map (u3/cen,NOT u3/clr,p_clk,'0','0',NOT u5/cpld_cs.COMB);
+</td></tr><tr><td>
+FDCPE_u3/clr: FDCPE port map (u3/clr,u3/clr_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/clr_D <= (NOT u3/cnt(0) AND u3/cnt(10) AND NOT u3/cnt(1) AND NOT u3/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(3) AND u3/cnt(4) AND NOT u3/cnt(5) AND NOT u3/cnt(6) AND NOT u3/cnt(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(8) AND NOT u3/cnt(9) AND u3/cnt(11) AND u3/cnt(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(13) AND NOT u3/cnt(14) AND NOT u3/cnt(15) AND u3/cnt(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND u3/cnt(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(21) AND u3/cnt(22) AND u3/cnt(23) AND NOT u3/cnt(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(25));
+</td></tr><tr><td>
+FDCPE_u3/cnt0: FDCPE port map (u3/cnt(0),u3/cnt_D(0),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_D(0) <= ((NOT u3/clr AND u3/cnt(0) AND NOT u3/cen)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND NOT u3/cnt(0) AND u3/cen));
+</td></tr><tr><td>
+FTCPE_u3/cnt1: FTCPE port map (u3/cnt(1),u3/cnt_T(1),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(1) <= ((u3/clr AND u3/cnt(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen));
+</td></tr><tr><td>
+FTCPE_u3/cnt2: FTCPE port map (u3/cnt(2),u3/cnt_T(2),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(2) <= ((u3/clr AND u3/cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1)));
+</td></tr><tr><td>
+FTCPE_u3/cnt3: FTCPE port map (u3/cnt(3),u3/cnt_T(3),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(3) <= ((u3/clr AND u3/cnt(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2)));
+</td></tr><tr><td>
+FTCPE_u3/cnt4: FTCPE port map (u3/cnt(4),u3/cnt_T(4),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(4) <= ((u3/clr AND u3/cnt(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2) AND u3/cnt(3)));
+</td></tr><tr><td>
+FTCPE_u3/cnt5: FTCPE port map (u3/cnt(5),u3/cnt_T(5),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(5) <= ((u3/clr AND u3/cnt(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4)));
+</td></tr><tr><td>
+FTCPE_u3/cnt6: FTCPE port map (u3/cnt(6),u3/cnt_T(6),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(6) <= ((u3/clr AND u3/cnt(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5)));
+</td></tr><tr><td>
+FTCPE_u3/cnt7: FTCPE port map (u3/cnt(7),u3/cnt_T(7),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(7) <= ((u3/clr AND u3/cnt(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6)));
+</td></tr><tr><td>
+FTCPE_u3/cnt8: FTCPE port map (u3/cnt(8),u3/cnt_T(8),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(8) <= ((u3/clr AND u3/cnt(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(7)));
+</td></tr><tr><td>
+FTCPE_u3/cnt9: FTCPE port map (u3/cnt(9),u3/cnt_T(9),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(9) <= ((u3/clr AND u3/cnt(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(7) AND u3/cnt(8)));
+</td></tr><tr><td>
+FTCPE_u3/cnt10: FTCPE port map (u3/cnt(10),u3/cnt_T(10),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(10) <= ((u3/clr AND u3/cnt(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9)));
+</td></tr><tr><td>
+FTCPE_u3/cnt11: FTCPE port map (u3/cnt(11),u3/cnt_T(11),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(11) <= ((u3/clr AND u3/cnt(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9)));
+</td></tr><tr><td>
+FTCPE_u3/cnt12: FTCPE port map (u3/cnt(12),u3/cnt_T(12),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(12) <= ((u3/clr AND u3/cnt(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11)));
+</td></tr><tr><td>
+FTCPE_u3/cnt13: FTCPE port map (u3/cnt(13),u3/cnt_T(13),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(13) <= ((u3/clr AND u3/cnt(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12)));
+</td></tr><tr><td>
+FTCPE_u3/cnt14: FTCPE port map (u3/cnt(14),u3/cnt_T(14),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(14) <= ((u3/clr AND u3/cnt(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13)));
+</td></tr><tr><td>
+FTCPE_u3/cnt15: FTCPE port map (u3/cnt(15),u3/cnt_T(15),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(15) <= ((u3/clr AND u3/cnt(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14)));
+</td></tr><tr><td>
+FTCPE_u3/cnt16: FTCPE port map (u3/cnt(16),u3/cnt_T(16),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(16) <= ((u3/clr AND u3/cnt(16))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15)));
+</td></tr><tr><td>
+FTCPE_u3/cnt17: FTCPE port map (u3/cnt(17),u3/cnt_T(17),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(17) <= ((u3/clr AND u3/cnt(17))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16)));
+</td></tr><tr><td>
+FTCPE_u3/cnt18: FTCPE port map (u3/cnt(18),u3/cnt_T(18),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(18) <= ((u3/clr AND u3/cnt(18))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17)));
+</td></tr><tr><td>
+FTCPE_u3/cnt19: FTCPE port map (u3/cnt(19),u3/cnt_T(19),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(19) <= ((u3/clr AND u3/cnt(19))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18)));
+</td></tr><tr><td>
+FTCPE_u3/cnt20: FTCPE port map (u3/cnt(20),u3/cnt_T(20),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(20) <= ((u3/clr AND u3/cnt(20))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19)));
+</td></tr><tr><td>
+FTCPE_u3/cnt21: FTCPE port map (u3/cnt(21),u3/cnt_T(21),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(21) <= ((u3/clr AND u3/cnt(21))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(20)));
+</td></tr><tr><td>
+FTCPE_u3/cnt22: FTCPE port map (u3/cnt(22),u3/cnt_T(22),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(22) <= ((u3/clr AND u3/cnt(22))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(20) AND u3/cnt(21)));
+</td></tr><tr><td>
+FTCPE_u3/cnt23: FTCPE port map (u3/cnt(23),u3/cnt_T(23),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(23) <= ((u3/clr AND u3/cnt(23))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(20) AND u3/cnt(21) AND u3/cnt(22)));
+</td></tr><tr><td>
+FTCPE_u3/cnt24: FTCPE port map (u3/cnt(24),u3/cnt_T(24),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(24) <= ((u3/clr AND u3/cnt(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(20) AND u3/cnt(21) AND u3/cnt(22) AND u3/cnt(23)));
+</td></tr><tr><td>
+FTCPE_u3/cnt25: FTCPE port map (u3/cnt(25),u3/cnt_T(25),p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/cnt_T(25) <= ((u3/clr AND u3/cnt(25))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(20) AND u3/cnt(21) AND u3/cnt(22) AND u3/cnt(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	u3/cnt(24)));
+</td></tr><tr><td>
+FDCPE_u3/dclr: FDCPE port map (u3/dclr,u3/clr,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u3/endown: FDCPE port map (u3/endown,NOT u3/dclr,p_clk,'0','0',NOT prom_rdat.COMB);
+</td></tr><tr><td>
+FDCPE_u3/sdown: FDCPE port map (u3/sdown,u3/sdown_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u3/sdown_D <= (NOT u3/cnt(0) AND NOT u3/cnt(10) AND u3/cnt(1) AND NOT u3/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(3) AND NOT u3/cnt(4) AND NOT u3/cnt(5) AND u3/cnt(6) AND NOT u3/cnt(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(8) AND NOT u3/cnt(9) AND NOT u3/cnt(11) AND NOT u3/cnt(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(13) AND NOT u3/cnt(14) AND NOT u3/cnt(15) AND NOT u3/cnt(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(17) AND NOT u3/cnt(18) AND NOT u3/cnt(19) AND NOT u3/cnt(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(21) AND NOT u3/cnt(22) AND NOT u3/cnt(23) AND NOT u3/cnt(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT u3/cnt(25));
+</td></tr><tr><td>
+</td></tr><tr><td>
+u5/cpld_cs.COMB <= (NOT u3/clr AND NOT download);FDCPE_u5/cpld_cs: FDCPE port map (u5/cpld_cs,p_cpld_cs,p_clk,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+u5/cpld_sck.COMB <= (NOT u2/scom AND NOT u2/ecs);FDCPE_u5/cpld_sck: FDCPE port map (u5/cpld_sck,p_cpld_sck,p_clk,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+u5/cpld_sdi.COMB <= (NOT u2/ecs AND NOT u2/sdat);FDCPE_u5/cpld_sdi: FDCPE port map (u5/cpld_sdi,p_cpld_sdi,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u5/d2cpld_sck: FDCPE port map (u5/d2cpld_sck,u5/dcpld_sck,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u5/dcpld_cs: FDCPE port map (u5/dcpld_cs,u5/cpld_cs,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u5/dcpld_sck: FDCPE port map (u5/dcpld_sck,u5/cpld_sck,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u5/dcpld_sdi: FDCPE port map (u5/dcpld_sdi,u5/cpld_sdi,p_clk,'0','0','1');
+</td></tr><tr><td>
+FDCPE_u5/mux0: FDCPE port map (u5/mux(0),u5/dcpld_sdi,p_clk,'0','0',u5/set_mux);
+</td></tr><tr><td>
+FDCPE_u5/mux1: FDCPE port map (u5/mux(1),u5/mux(0),p_clk,'0','0',u5/set_mux);
+</td></tr><tr><td>
+FDCPE_u5/mux2: FDCPE port map (u5/mux(2),u5/mux(1),p_clk,'0','0',u5/set_mux);
+</td></tr><tr><td>
+FDCPE_u5/mux3: FDCPE port map (u5/mux(3),u5/mux(2),p_clk,'0','0',u5/set_mux);
+</td></tr><tr><td>
+FDCPE_u5/set_mux: FDCPE port map (u5/set_mux,u5/set_mux_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u5/set_mux_D <= (u5/dcpld_cs AND NOT u5/dcpld_sck AND u5/d2cpld_sck);
+</td></tr><tr><td>
+FDCPE_wprom_cs: FDCPE port map (wprom_cs,wprom_cs_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wprom_cs_D <= (u2/dcen AND u2/mux(0) AND NOT u2/mux(1));
+</td></tr><tr><td>
+FDCPE_wprom_sck: FDCPE port map (wprom_sck,wprom_sck_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wprom_sck_D <= (u2/mux(0) AND NOT u2/mux(1) AND u2/dat_sck);
+</td></tr><tr><td>
+FDCPE_wprom_sdi: FDCPE port map (wprom_sdi,wprom_sdi_D,p_clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wprom_sdi_D <= (p_spi_sdi AND u2/dcen AND u2/mux(0) AND NOT u2/mux(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

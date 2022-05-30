@@ -1,0 +1,6 @@
+vhdl work "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_cpld\get_command.vhd"
+vhdl work "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_cpld\fpga_serial.vhd"
+vhdl work "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_cpld\flash_memory.vhd"
+vhdl work "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_cpld\download_fpga.vhd"
+vhdl work "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_cpld\clock.vhd"
+vhdl work "D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_daq_cpld\ys_sipm_daq_cpld.vhd"

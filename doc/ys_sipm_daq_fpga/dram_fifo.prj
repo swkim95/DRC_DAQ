@@ -1,0 +1,2 @@
+vhdl work "ys_sipm_daq_fpga_type.vhd"
+vhdl work "dram_fifo.vhd"

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">IOB</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">ext_trigger_in_nim</arg> may hinder XST clustering optimizations.
+</msg>
+
+<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">IOB</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">ext_trigger_in_ttl</arg> may hinder XST clustering optimizations.
+</msg>
+
+<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">IOB</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">usb_on</arg> may hinder XST clustering optimizations.
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">iddr_ad</arg> in unit <arg fmt="%s" index="2">tcb_sync</arg> of type <arg fmt="%s" index="3">IDDR</arg> has been replaced by <arg fmt="%s" index="4">IDDR_2CLK</arg>
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="new" >Instance <arg fmt="%s" index="1">u1/mmcme2_clk</arg> in unit <arg fmt="%s" index="2">ys_sipm_tcb_fpga</arg> of type <arg fmt="%s" index="3">MMCME2_BASE</arg> has been replaced by <arg fmt="%s" index="4">MMCME2_ADV</arg>
+</msg>
+
+</messages>
+

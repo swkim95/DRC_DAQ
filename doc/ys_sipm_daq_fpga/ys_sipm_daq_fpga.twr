@@ -1,0 +1,1461 @@
+--------------------------------------------------------------------------------
+Release 14.3 Trace  (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.3\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 1 -n
+3 -fastpaths -xml ys_sipm_daq_fpga.twx ys_sipm_daq_fpga.ncd -o
+ys_sipm_daq_fpga.twr ys_sipm_daq_fpga.pcf -ucf ys_sipm_daq_fpga.ucf
+
+Design file:              ys_sipm_daq_fpga.ncd
+Physical constraint file: ys_sipm_daq_fpga.pcf
+Device,package,speed:     xc7k70t,fbg484,C,-1 (ADVANCED 1.07 2012-10-12)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS1 = PERIOD TIMEGRP "tcb_clkp" 11.11 ns HIGH 50% 
+INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS1 = PERIOD TIMEGRP "tcb_clkp" 11.11 ns HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 3.751ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_clk/CLKOUT0
+  Logical resource: u1/mmcme2_clk/CLKOUT0
+  Location pin: MMCME2_ADV_X1Y1.CLKOUT0
+  Clock network: u1/lrefclk
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_clk/CLKOUT1
+  Logical resource: u1/mmcme2_clk/CLKOUT1
+  Location pin: MMCME2_ADV_X1Y1.CLKOUT1
+  Clock network: u1/lx2clk
+--------------------------------------------------------------------------------
+Slack: 5.110ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 11.110ns
+  Low pulse: 5.555ns
+  Low pulse limit: 3.000ns (Tmmcmpw_CLKIN1_50_100)
+  Physical resource: u1/mmcme2_clk/CLKIN1
+  Logical resource: u1/mmcme2_clk/CLKIN1
+  Location pin: MMCME2_ADV_X1Y1.CLKIN1
+  Clock network: u1/clk_in
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS2 = PERIOD TIMEGRP "tcb_clkn" TS1 HIGH 50% INPUT_JITTER 
+0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS2 = PERIOD TIMEGRP "tcb_clkn" TS1 HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 3.751ns (period - min period limit)
+  Period: 5.000ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_clk/CLKOUT0
+  Logical resource: u1/mmcme2_clk/CLKOUT0
+  Location pin: MMCME2_ADV_X1Y1.CLKOUT0
+  Clock network: u1/lrefclk
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_clk/CLKOUT1
+  Logical resource: u1/mmcme2_clk/CLKOUT1
+  Location pin: MMCME2_ADV_X1Y1.CLKOUT1
+  Clock network: u1/lx2clk
+--------------------------------------------------------------------------------
+Slack: 5.110ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 11.110ns
+  Low pulse: 5.555ns
+  Low pulse limit: 3.000ns (Tmmcmpw_CLKIN1_50_100)
+  Physical resource: u1/mmcme2_clk/CLKIN1
+  Logical resource: u1/mmcme2_clk/CLKIN1
+  Location pin: MMCME2_ADV_X1Y1.CLKIN1
+  Clock network: u1/clk_in
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lx2clk = PERIOD TIMEGRP "u1_lx2clk" TS1 / 2 HIGH 50% 
+INPUT_JITTER 0.3         ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.600ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lx2clk = PERIOD TIMEGRP "u1_lx2clk" TS1 / 2 HIGH 50% INPUT_JITTER 0.3
+        ns;
+--------------------------------------------------------------------------------
+Slack: 3.955ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_x2clk/I0
+  Logical resource: u1/bufg_x2clk/I0
+  Location pin: BUFGCTRL_X0Y6.I0
+  Clock network: u1/lx2clk
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tickper)
+  Physical resource: u2/u1/ad_trig<1>/CLK
+  Logical resource: u2/u1/iddr_tcb_trig/CK
+  Location pin: ILOGIC_X0Y158.CLK
+  Clock network: x2clk
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tickper)
+  Physical resource: u2/u1/ad_trig<1>/CLKB
+  Logical resource: u2/u1/iddr_tcb_trig/CKB
+  Location pin: ILOGIC_X0Y158.CLKB
+  Clock network: x2clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lrefclk = PERIOD TIMEGRP "u1_lrefclk" TS1 / 2.22222222 
+HIGH 50%         INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.761ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lrefclk = PERIOD TIMEGRP "u1_lrefclk" TS1 / 2.22222222 HIGH 50%
+        INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 0.238ns (period - min period limit)
+  Period: 4.999ns
+  Min period limit: 4.761ns (210.040MHz) (Tdlycper_REFCLK)
+  Physical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Logical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Location pin: IDELAYCTRL_X1Y0.REFCLK
+  Clock network: u1/refclk
+--------------------------------------------------------------------------------
+Slack: 0.265ns (max period limit - period)
+  Period: 4.999ns
+  Max period limit: 5.264ns (189.970MHz) (Tdlycper_REFCLK)
+  Physical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Logical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Location pin: IDELAYCTRL_X1Y0.REFCLK
+  Clock network: u1/refclk
+--------------------------------------------------------------------------------
+Slack: 3.399ns (period - min period limit)
+  Period: 4.999ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_refclk/I0
+  Logical resource: u1/bufg_refclk/I0
+  Location pin: BUFGCTRL_X0Y5.I0
+  Clock network: u1/lrefclk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lclk = PERIOD TIMEGRP "u1_lclk" TS1 HIGH 50% 
+INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lclk = PERIOD TIMEGRP "u1_lclk" TS1 HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 1.529ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_dram_clk/CLKOUT0
+  Logical resource: u1/mmcme2_dram_clk/CLKOUT0
+  Location pin: MMCME2_ADV_X0Y0.CLKOUT0
+  Clock network: u1/lx2clk_dram
+--------------------------------------------------------------------------------
+Slack: 1.529ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_dram_clk/CLKOUT1
+  Logical resource: u1/mmcme2_dram_clk/CLKOUT1
+  Location pin: MMCME2_ADV_X0Y0.CLKOUT1
+  Clock network: u1/lx2clk90_dram
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_dram_clk/CLKOUT2
+  Logical resource: u1/mmcme2_dram_clk/CLKOUT2
+  Location pin: MMCME2_ADV_X0Y0.CLKOUT2
+  Clock network: u1/lclk_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lx2clk_0 = PERIOD TIMEGRP "u1_lx2clk_0" TS2 / 2 HIGH 
+50% INPUT_JITTER         0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 32 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.192ns.
+--------------------------------------------------------------------------------
+
+Paths for end point u7/myloop1[15].u2/dxd (SLICE_X11Y28.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.363ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u7/myloop1[15].u2/xd (FF)
+  Destination:          u7/myloop1[15].u2/dxd (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      1.892ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.227ns (0.650 - 0.877)
+  Source Clock:         x2clk rising at 0.000ns
+  Destination Clock:    x2clk rising at 5.555ns
+  Clock Uncertainty:    0.073ns
+
+  Clock Uncertainty:          0.073ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.127ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u7/myloop1[15].u2/xd to u7/myloop1[15].u2/dxd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    ILOGIC_X0Y12.Q1      Tickq                 0.502   u7/myloop1[15].u2/xd
+                                                       u7/myloop1[15].u2/xd
+    SLICE_X11Y28.DX      net (fanout=2)        1.372   u7/myloop1[15].u2/xd
+    SLICE_X11Y28.CLK     Tdick                 0.018   u7/myloop1[15].u2/dxd
+                                                       u7/myloop1[15].u2/dxd
+    -------------------------------------------------  ---------------------------
+    Total                                      1.892ns (0.520ns logic, 1.372ns route)
+                                                       (27.5% logic, 72.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u7/myloop1[20].u2/dxd (SLICE_X23Y113.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.410ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u7/myloop1[20].u2/xd (FF)
+  Destination:          u7/myloop1[20].u2/dxd (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      1.862ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.210ns (0.654 - 0.864)
+  Source Clock:         x2clk rising at 0.000ns
+  Destination Clock:    x2clk rising at 5.555ns
+  Clock Uncertainty:    0.073ns
+
+  Clock Uncertainty:          0.073ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.127ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u7/myloop1[20].u2/xd to u7/myloop1[20].u2/dxd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    ILOGIC_X0Y124.Q1     Tickq                 0.502   u7/myloop1[20].u2/xd
+                                                       u7/myloop1[20].u2/xd
+    SLICE_X23Y113.DX     net (fanout=2)        1.342   u7/myloop1[20].u2/xd
+    SLICE_X23Y113.CLK    Tdick                 0.018   u7/myloop1[20].u2/dxd
+                                                       u7/myloop1[20].u2/dxd
+    -------------------------------------------------  ---------------------------
+    Total                                      1.862ns (0.520ns logic, 1.342ns route)
+                                                       (27.9% logic, 72.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u7/myloop1[19].u2/dxd (SLICE_X8Y99.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.634ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u7/myloop1[19].u2/xd (FF)
+  Destination:          u7/myloop1[19].u2/dxd (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      1.557ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.291ns (1.289 - 1.580)
+  Source Clock:         x2clk rising at 0.000ns
+  Destination Clock:    x2clk rising at 5.555ns
+  Clock Uncertainty:    0.073ns
+
+  Clock Uncertainty:          0.073ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.127ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u7/myloop1[19].u2/xd to u7/myloop1[19].u2/dxd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    ILOGIC_X0Y114.Q1     Tickq                 0.502   u7/myloop1[19].u2/xd
+                                                       u7/myloop1[19].u2/xd
+    SLICE_X8Y99.AX       net (fanout=2)        1.046   u7/myloop1[19].u2/xd
+    SLICE_X8Y99.CLK      Tdick                 0.009   u7/myloop1[19].u2/dxd
+                                                       u7/myloop1[19].u2/dxd
+    -------------------------------------------------  ---------------------------
+    Total                                      1.557ns (0.511ns logic, 1.046ns route)
+                                                       (32.8% logic, 67.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_u1_lx2clk_0 = PERIOD TIMEGRP "u1_lx2clk_0" TS2 / 2 HIGH 50% INPUT_JITTER
+        0.3 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point u7/myloop1[9].u2/dxd (SLICE_X7Y69.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.234ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u7/myloop1[9].u2/xd (FF)
+  Destination:          u7/myloop1[9].u2/dxd (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.267ns (Levels of Logic = 0)
+  Clock Path Skew:      0.033ns (0.351 - 0.318)
+  Source Clock:         x2clk rising at 5.555ns
+  Destination Clock:    x2clk rising at 5.555ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u7/myloop1[9].u2/xd to u7/myloop1[9].u2/dxd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y71.AQ       Tcko                  0.100   u7/myloop1[9].u2/xd
+                                                       u7/myloop1[9].u2/xd
+    SLICE_X7Y69.AX       net (fanout=2)        0.207   u7/myloop1[9].u2/xd
+    SLICE_X7Y69.CLK      Tckdi       (-Th)     0.040   u7/myloop1[9].u2/dxd
+                                                       u7/myloop1[9].u2/dxd
+    -------------------------------------------------  ---------------------------
+    Total                                      0.267ns (0.060ns logic, 0.207ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u7/myloop1[8].u2/dxd (SLICE_X0Y72.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.249ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u7/myloop1[8].u2/xd (FF)
+  Destination:          u7/myloop1[8].u2/dxd (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.283ns (Levels of Logic = 0)
+  Clock Path Skew:      0.034ns (0.349 - 0.315)
+  Source Clock:         x2clk rising at 5.555ns
+  Destination Clock:    x2clk rising at 5.555ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u7/myloop1[8].u2/xd to u7/myloop1[8].u2/dxd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y75.CQ       Tcko                  0.100   u7/myloop1[8].u2/xd
+                                                       u7/myloop1[8].u2/xd
+    SLICE_X0Y72.AX       net (fanout=2)        0.230   u7/myloop1[8].u2/xd
+    SLICE_X0Y72.CLK      Tckdi       (-Th)     0.047   u7/myloop1[10].u2/xd
+                                                       u7/myloop1[8].u2/dxd
+    -------------------------------------------------  ---------------------------
+    Total                                      0.283ns (0.053ns logic, 0.230ns route)
+                                                       (18.7% logic, 81.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u7/myloop1[0].u2/dxd (SLICE_X6Y35.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.261ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u7/myloop1[0].u2/xd (FF)
+  Destination:          u7/myloop1[0].u2/dxd (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.297ns (Levels of Logic = 0)
+  Clock Path Skew:      0.036ns (0.356 - 0.320)
+  Source Clock:         x2clk rising at 5.555ns
+  Destination Clock:    x2clk rising at 5.555ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u7/myloop1[0].u2/xd to u7/myloop1[0].u2/dxd
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X1Y29.DQ       Tcko                  0.100   u7/myloop1[0].u2/xd
+                                                       u7/myloop1[0].u2/xd
+    SLICE_X6Y35.AX       net (fanout=2)        0.234   u7/myloop1[0].u2/xd
+    SLICE_X6Y35.CLK      Tckdi       (-Th)     0.037   u7/myloop1[0].u2/dxd
+                                                       u7/myloop1[0].u2/dxd
+    -------------------------------------------------  ---------------------------
+    Total                                      0.297ns (0.063ns logic, 0.234ns route)
+                                                       (21.2% logic, 78.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lx2clk_0 = PERIOD TIMEGRP "u1_lx2clk_0" TS2 / 2 HIGH 50% INPUT_JITTER
+        0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 3.955ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_x2clk/I0
+  Logical resource: u1/bufg_x2clk/I0
+  Location pin: BUFGCTRL_X0Y6.I0
+  Clock network: u1/lx2clk
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tickper)
+  Physical resource: u2/u1/ad_trig<1>/CLK
+  Logical resource: u2/u1/iddr_tcb_trig/CK
+  Location pin: ILOGIC_X0Y158.CLK
+  Clock network: x2clk
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tickper)
+  Physical resource: u2/u1/ad_trig<1>/CLKB
+  Logical resource: u2/u1/iddr_tcb_trig/CKB
+  Location pin: ILOGIC_X0Y158.CLKB
+  Clock network: x2clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lrefclk_0 = PERIOD TIMEGRP "u1_lrefclk_0" TS2 / 
+2.22222222 HIGH 50%         INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.761ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lrefclk_0 = PERIOD TIMEGRP "u1_lrefclk_0" TS2 / 2.22222222 HIGH 50%
+        INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 0.238ns (period - min period limit)
+  Period: 4.999ns
+  Min period limit: 4.761ns (210.040MHz) (Tdlycper_REFCLK)
+  Physical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Logical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Location pin: IDELAYCTRL_X1Y0.REFCLK
+  Clock network: u1/refclk
+--------------------------------------------------------------------------------
+Slack: 0.265ns (max period limit - period)
+  Period: 4.999ns
+  Max period limit: 5.264ns (189.970MHz) (Tdlycper_REFCLK)
+  Physical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Logical resource: u1/idelayctrl_1_MapLib_replicate4/REFCLK
+  Location pin: IDELAYCTRL_X1Y0.REFCLK
+  Clock network: u1/refclk
+--------------------------------------------------------------------------------
+Slack: 3.399ns (period - min period limit)
+  Period: 4.999ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_refclk/I0
+  Logical resource: u1/bufg_refclk/I0
+  Location pin: BUFGCTRL_X0Y5.I0
+  Clock network: u1/lrefclk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lclk_0 = PERIOD TIMEGRP "u1_lclk_0" TS2 HIGH 50% 
+INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 28438 paths analyzed, 16532 endpoints analyzed, 1 failing endpoint
+ 1 timing error detected. (1 setup error, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.888ns.
+--------------------------------------------------------------------------------
+
+Paths for end point u18/reg_rdata_reg_0 (SLICE_X24Y27.C6), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.389ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u14/u1/dram_ready_reg (FF)
+  Destination:          u18/reg_rdata_reg_0 (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      1.718ns (Levels of Logic = 1)
+  Clock Path Skew:      -3.994ns (1.465 - 5.459)
+  Source Clock:         clk_dram rising at 5.555ns
+  Destination Clock:    clk rising at 11.110ns
+  Clock Uncertainty:    0.232ns
+
+  Clock Uncertainty:          0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: u14/u1/dram_ready_reg to u18/reg_rdata_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y40.AMUX    Tshcko                0.382   u14/u1/rwcyc_start
+                                                       u14/u1/dram_ready_reg
+    SLICE_X24Y27.C6      net (fanout=6)        1.188   u14/u1/dram_ready_reg
+    SLICE_X24Y27.CLK     Tas                   0.148   u18/reg_rdata_reg<0>
+                                                       u18/Mmux__n020013_G
+                                                       u18/Mmux__n020013
+                                                       u18/reg_rdata_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.718ns (0.530ns logic, 1.188ns route)
+                                                       (30.8% logic, 69.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u9/dram_test_pattern_reg_57 (SLICE_X45Y17.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.485ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u14/u9/pdram_test_pattern_57 (FF)
+  Destination:          u14/u9/dram_test_pattern_reg_57 (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      0.845ns (Levels of Logic = 0)
+  Clock Path Skew:      -3.993ns (1.462 - 5.455)
+  Source Clock:         clk_dram rising at 5.555ns
+  Destination Clock:    clk rising at 11.110ns
+  Clock Uncertainty:    0.232ns
+
+  Clock Uncertainty:          0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: u14/u9/pdram_test_pattern_57 to u14/u9/dram_test_pattern_reg_57
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y15.BQ      Tcko                  0.308   u14/u9/pdram_test_pattern<59>
+                                                       u14/u9/pdram_test_pattern_57
+    SLICE_X45Y17.BX      net (fanout=2)        0.492   u14/u9/pdram_test_pattern<57>
+    SLICE_X45Y17.CLK     Tdick                 0.045   u14/u9/dram_test_pattern_reg<59>
+                                                       u14/u9/dram_test_pattern_reg_57
+    -------------------------------------------------  ---------------------------
+    Total                                      0.845ns (0.353ns logic, 0.492ns route)
+                                                       (41.8% logic, 58.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u9/dram_test_pattern_reg_59 (SLICE_X45Y17.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.486ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u14/u9/pdram_test_pattern_59 (FF)
+  Destination:          u14/u9/dram_test_pattern_reg_59 (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      0.844ns (Levels of Logic = 0)
+  Clock Path Skew:      -3.993ns (1.462 - 5.455)
+  Source Clock:         clk_dram rising at 5.555ns
+  Destination Clock:    clk rising at 11.110ns
+  Clock Uncertainty:    0.232ns
+
+  Clock Uncertainty:          0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: u14/u9/pdram_test_pattern_59 to u14/u9/dram_test_pattern_reg_59
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y15.DQ      Tcko                  0.308   u14/u9/pdram_test_pattern<59>
+                                                       u14/u9/pdram_test_pattern_59
+    SLICE_X45Y17.DX      net (fanout=2)        0.504   u14/u9/pdram_test_pattern<59>
+    SLICE_X45Y17.CLK     Tdick                 0.032   u14/u9/dram_test_pattern_reg<59>
+                                                       u14/u9/dram_test_pattern_reg_59
+    -------------------------------------------------  ---------------------------
+    Total                                      0.844ns (0.340ns logic, 0.504ns route)
+                                                       (40.3% logic, 59.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_u1_lclk_0 = PERIOD TIMEGRP "u1_lclk_0" TS2 HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point u13/myloop1[3].ramb36e1_dram_fifo (RAMB36_X1Y17.DIBDI9), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.000ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u12/u1/dram_fifo_wdata_reg_263 (FF)
+  Destination:          u13/myloop1[3].ramb36e1_dram_fifo (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.047ns (Levels of Logic = 0)
+  Clock Path Skew:      0.047ns (0.108 - 0.061)
+  Source Clock:         clk rising at 11.110ns
+  Destination Clock:    clk rising at 11.110ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u12/u1/dram_fifo_wdata_reg_263 to u13/myloop1[3].ramb36e1_dram_fifo
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X22Y84.DQ         Tcko                  0.118   u12/u1/dram_fifo_wdata_reg<263>
+                                                          u12/u1/dram_fifo_wdata_reg_263
+    RAMB36_X1Y17.DIBDI9     net (fanout=1)        0.225   u12/u1/dram_fifo_wdata_reg<263>
+    RAMB36_X1Y17.CLKBWRCLKU Trckd_DIB   (-Th)     0.296   u13/myloop1[3].ramb36e1_dram_fifo
+                                                          u13/myloop1[3].ramb36e1_dram_fifo
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.047ns (-0.178ns logic, 0.225ns route)
+                                                          (-378.7% logic, 478.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u11/myloop1[1].ramb36e1_dram_fifo (RAMB36_X0Y11.DIBDI4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.000ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u10/drs_fifo_wdata_reg_3_0 (FF)
+  Destination:          u11/myloop1[1].ramb36e1_dram_fifo (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.036ns (Levels of Logic = 0)
+  Clock Path Skew:      0.036ns (0.364 - 0.328)
+  Source Clock:         clk rising at 11.110ns
+  Destination Clock:    clk rising at 11.110ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u10/drs_fifo_wdata_reg_3_0 to u11/myloop1[1].ramb36e1_dram_fifo
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X6Y52.AMUX        Tshcko                0.143   u10/drs_fifo_wdata_reg_3<8>
+                                                          u10/drs_fifo_wdata_reg_3_0
+    RAMB36_X0Y11.DIBDI4     net (fanout=1)        0.189   u10/drs_fifo_wdata_reg_3<0>
+    RAMB36_X0Y11.CLKBWRCLKL Trckd_DIB   (-Th)     0.296   u11/myloop1[1].ramb36e1_dram_fifo
+                                                          u11/myloop1[1].ramb36e1_dram_fifo
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.036ns (-0.153ns logic, 0.189ns route)
+                                                          (-425.0% logic, 525.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u11/myloop1[2].ramb36e1_dram_fifo (RAMB36_X1Y9.DIBDI12), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.000ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u10/drs_fifo_wdata_reg_6_4 (FF)
+  Destination:          u11/myloop1[2].ramb36e1_dram_fifo (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.066ns (Levels of Logic = 0)
+  Clock Path Skew:      0.066ns (0.362 - 0.296)
+  Source Clock:         clk rising at 11.110ns
+  Destination Clock:    clk rising at 11.110ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u10/drs_fifo_wdata_reg_6_4 to u11/myloop1[2].ramb36e1_dram_fifo
+    Location               Delay type         Delay(ns)  Physical Resource
+                                                         Logical Resource(s)
+    ---------------------------------------------------  -------------------
+    SLICE_X20Y44.BQ        Tcko                  0.118   u10/drs_fifo_wdata_reg_6<8>
+                                                         u10/drs_fifo_wdata_reg_6_4
+    RAMB36_X1Y9.DIBDI12    net (fanout=1)        0.244   u10/drs_fifo_wdata_reg_6<4>
+    RAMB36_X1Y9.CLKBWRCLKL Trckd_DIB   (-Th)     0.296   u11/myloop1[2].ramb36e1_dram_fifo
+                                                         u11/myloop1[2].ramb36e1_dram_fifo
+    ---------------------------------------------------  ---------------------------
+    Total                                        0.066ns (-0.178ns logic, 0.244ns route)
+                                                         (-269.7% logic, 369.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lclk_0 = PERIOD TIMEGRP "u1_lclk_0" TS2 HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 1.529ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_dram_clk/CLKOUT0
+  Logical resource: u1/mmcme2_dram_clk/CLKOUT0
+  Location pin: MMCME2_ADV_X0Y0.CLKOUT0
+  Clock network: u1/lx2clk_dram
+--------------------------------------------------------------------------------
+Slack: 1.529ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_dram_clk/CLKOUT1
+  Logical resource: u1/mmcme2_dram_clk/CLKOUT1
+  Location pin: MMCME2_ADV_X0Y0.CLKOUT1
+  Clock network: u1/lx2clk90_dram
+--------------------------------------------------------------------------------
+Slack: 4.306ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: u1/mmcme2_dram_clk/CLKOUT2
+  Logical resource: u1/mmcme2_dram_clk/CLKOUT2
+  Location pin: MMCME2_ADV_X0Y0.CLKOUT2
+  Clock network: u1/lclk_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lclk45_dram = PERIOD TIMEGRP "u1_lclk45_dram" 
+TS_u1_lclk / 2 PHASE         0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.600ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lclk45_dram = PERIOD TIMEGRP "u1_lclk45_dram" TS_u1_lclk / 2 PHASE
+        0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 3.955ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_clk45_dram/I0
+  Logical resource: u1/bufg_clk45_dram/I0
+  Location pin: BUFGCTRL_X0Y3.I0
+  Clock network: u1/lclk45_dram
+--------------------------------------------------------------------------------
+Slack: 3.995ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 5.555ns
+  Low pulse: 2.777ns
+  Low pulse limit: 0.780ns (Tmpw)
+  Physical resource: u1/dlocked_mds/CLK
+  Logical resource: u1/srl16e_dlocked_mds/CLK
+  Location pin: SLICE_X22Y9.CLK
+  Clock network: clk45_dram
+--------------------------------------------------------------------------------
+Slack: 3.995ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 5.555ns
+  High pulse: 2.777ns
+  High pulse limit: 0.780ns (Tmpw)
+  Physical resource: u1/dlocked_mds/CLK
+  Logical resource: u1/srl16e_dlocked_mds/CLK
+  Location pin: SLICE_X22Y9.CLK
+  Clock network: clk45_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lx2clk90_dram = PERIOD TIMEGRP "u1_lx2clk90_dram" 
+TS_u1_lclk / 4 PHASE         0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.600ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lx2clk90_dram = PERIOD TIMEGRP "u1_lx2clk90_dram" TS_u1_lclk / 4 PHASE
+        0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 1.177ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_x2clk90_dram/I0
+  Logical resource: u1/bufg_x2clk90_dram/I0
+  Location pin: BUFGCTRL_X0Y1.I0
+  Clock network: u1/lx2clk90_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u8/myloop1[1].OSERDESE2_mds/CLK
+  Logical resource: u14/u8/myloop1[1].OSERDESE2_mds/CLK
+  Location pin: OLOGIC_X1Y8.CLK
+  Clock network: x2clk90_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u8/myloop1[0].OSERDESE2_mds/CLK
+  Logical resource: u14/u8/myloop1[0].OSERDESE2_mds/CLK
+  Location pin: OLOGIC_X1Y2.CLK
+  Clock network: x2clk90_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lx2clk_dram = PERIOD TIMEGRP "u1_lx2clk_dram" 
+TS_u1_lclk / 4 HIGH 50%         INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.600ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lx2clk_dram = PERIOD TIMEGRP "u1_lx2clk_dram" TS_u1_lclk / 4 HIGH 50%
+        INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 1.177ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_x2clk_dram/I0
+  Logical resource: u1/bufg_x2clk_dram/I0
+  Location pin: BUFGCTRL_X0Y0.I0
+  Clock network: u1/lx2clk_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u7/myloop1[7].OSERDESE2_md/CLK
+  Logical resource: u14/u7/myloop1[7].OSERDESE2_md/CLK
+  Location pin: OLOGIC_X1Y22.CLK
+  Clock network: x2clk_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u7/myloop1[8].OSERDESE2_md/CLK
+  Logical resource: u14/u7/myloop1[8].OSERDESE2_md/CLK
+  Location pin: OLOGIC_X1Y5.CLK
+  Clock network: x2clk_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lclk_dram = PERIOD TIMEGRP "u1_lclk_dram" TS_u1_lclk / 
+2 HIGH 50%         INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.183ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lclk_dram = PERIOD TIMEGRP "u1_lclk_dram" TS_u1_lclk / 2 HIGH 50%
+        INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 3.372ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 2.183ns (458.085MHz) (Trper_CLKA)
+  Physical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKL
+  Logical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKL
+  Location pin: RAMB36_X1Y16.CLKARDCLKL
+  Clock network: clk_dram
+--------------------------------------------------------------------------------
+Slack: 3.372ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 2.183ns (458.085MHz) (Trper_CLKA)
+  Physical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKU
+  Logical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKU
+  Location pin: RAMB36_X1Y16.CLKARDCLKU
+  Clock network: clk_dram
+--------------------------------------------------------------------------------
+Slack: 3.372ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 2.183ns (458.085MHz) (Trper_CLKA)
+  Physical resource: u13/myloop1[6].ramb36e1_dram_fifo/CLKARDCLKL
+  Logical resource: u13/myloop1[6].ramb36e1_dram_fifo/CLKARDCLKL
+  Location pin: RAMB36_X1Y19.CLKARDCLKL
+  Clock network: clk_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lclk45_dram_0 = PERIOD TIMEGRP "u1_lclk45_dram_0" 
+TS_u1_lclk_0 / 2 PHASE         0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 26 paths analyzed, 26 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.868ns.
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u8/myloop1[1].OSERDESE2_mds (OLOGIC_X1Y8.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.687ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/reset_serdes_mds_reg (FF)
+  Destination:          u14/u8/myloop1[1].OSERDESE2_mds (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      3.887ns (Levels of Logic = 0)
+  Clock Path Skew:      0.100ns (0.776 - 0.676)
+  Source Clock:         clk45_dram rising at 0.694ns
+  Destination Clock:    clk45_dram rising at 6.249ns
+  Clock Uncertainty:    0.081ns
+
+  Clock Uncertainty:          0.081ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u1/reset_serdes_mds_reg to u14/u8/myloop1[1].OSERDESE2_mds
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y9.AQ       Tcko                  0.308   u1/reset_serdes_mds_reg
+                                                       u1/reset_serdes_mds_reg
+    OLOGIC_X1Y8.SR       net (fanout=3)        2.834   u1/reset_serdes_mds_reg
+    OLOGIC_X1Y8.CLKDIV   Toscck_SR_SYNC        0.745   u14/u8/myloop1[1].OSERDESE2_mds
+                                                       u14/u8/myloop1[1].OSERDESE2_mds
+    -------------------------------------------------  ---------------------------
+    Total                                      3.887ns (1.053ns logic, 2.834ns route)
+                                                       (27.1% logic, 72.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u8/p3emds (SLICE_X60Y16.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     2.135ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u14/u8/p4emds (FF)
+  Destination:          u14/u8/p3emds (FF)
+  Requirement:          3.472ns
+  Data Path Delay:      0.931ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.205ns (3.490 - 3.695)
+  Source Clock:         clk_dram falling at 2.777ns
+  Destination Clock:    clk45_dram rising at 6.249ns
+  Clock Uncertainty:    0.201ns
+
+  Clock Uncertainty:          0.201ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: u14/u8/p4emds to u14/u8/p3emds
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y23.DMUX    Tshcko                0.352   u14/u8/p4emds
+                                                       u14/u8/p4emds
+    SLICE_X60Y16.AX      net (fanout=1)        0.570   u14/u8/p4emds
+    SLICE_X60Y16.CLK     Tdick                 0.009   u14/u8/p3emds
+                                                       u14/u8/p3emds
+    -------------------------------------------------  ---------------------------
+    Total                                      0.931ns (0.361ns logic, 0.570ns route)
+                                                       (38.8% logic, 61.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u8/p3omds (SLICE_X61Y13.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     2.202ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u14/u8/p4omds (FF)
+  Destination:          u14/u8/p3omds (FF)
+  Requirement:          3.472ns
+  Data Path Delay:      0.860ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.209ns (3.492 - 3.701)
+  Source Clock:         clk_dram falling at 2.777ns
+  Destination Clock:    clk45_dram rising at 6.249ns
+  Clock Uncertainty:    0.201ns
+
+  Clock Uncertainty:          0.201ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: u14/u8/p4omds to u14/u8/p3omds
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X61Y18.BQ      Tcko                  0.272   u14/u8/p4omds
+                                                       u14/u8/p4omds
+    SLICE_X61Y13.AX      net (fanout=1)        0.554   u14/u8/p4omds
+    SLICE_X61Y13.CLK     Tdick                 0.034   u14/u8/p3omds
+                                                       u14/u8/p3omds
+    -------------------------------------------------  ---------------------------
+    Total                                      0.860ns (0.306ns logic, 0.554ns route)
+                                                       (35.6% logic, 64.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_u1_lclk45_dram_0 = PERIOD TIMEGRP "u1_lclk45_dram_0" TS_u1_lclk_0 / 2 PHASE
+        0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u8/pemds_1 (SLICE_X61Y7.D5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.171ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u14/u8/p2emds_1 (FF)
+  Destination:          u14/u8/pemds_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.171ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk45_dram rising at 6.249ns
+  Destination Clock:    clk45_dram rising at 6.249ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u14/u8/p2emds_1 to u14/u8/pemds_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X61Y7.BMUX     Tshcko                0.127   u14/u8/pemds<1>
+                                                       u14/u8/p2emds_1
+    SLICE_X61Y7.D5       net (fanout=1)        0.077   u14/u8/p2emds<1>
+    SLICE_X61Y7.CLK      Tah         (-Th)     0.033   u14/u8/pemds<1>
+                                                       u14/u8/p2emds[1]_inv_0_OUT<1>1_INV_0
+                                                       u14/u8/pemds_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.171ns (0.094ns logic, 0.077ns route)
+                                                       (55.0% logic, 45.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u1/OSERDESE2_dram_clk (OLOGIC_X1Y20.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.203ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u1/reset_serdes_mds_reg (FF)
+  Destination:          u1/OSERDESE2_dram_clk (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.288ns (Levels of Logic = 0)
+  Clock Path Skew:      0.085ns (0.373 - 0.288)
+  Source Clock:         clk45_dram rising at 6.249ns
+  Destination Clock:    clk45_dram rising at 6.249ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u1/reset_serdes_mds_reg to u1/OSERDESE2_dram_clk
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X48Y9.AQ       Tcko                  0.118   u1/reset_serdes_mds_reg
+                                                       u1/reset_serdes_mds_reg
+    OLOGIC_X1Y20.SR      net (fanout=3)        0.777   u1/reset_serdes_mds_reg
+    OLOGIC_X1Y20.CLKDIV  Tosckc_SR_SYNC(-Th)     0.607   u1/OSERDESE2_dram_clk
+                                                       u1/OSERDESE2_dram_clk
+    -------------------------------------------------  ---------------------------
+    Total                                      0.288ns (-0.489ns logic, 0.777ns route)
+                                                       (-169.8% logic, 269.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u8/pemds_0 (SLICE_X61Y7.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.212ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u14/u8/p2emds_0 (FF)
+  Destination:          u14/u8/pemds_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.212ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk45_dram rising at 6.249ns
+  Destination Clock:    clk45_dram rising at 6.249ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: u14/u8/p2emds_0 to u14/u8/pemds_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X61Y7.AMUX     Tshcko                0.129   u14/u8/pemds<1>
+                                                       u14/u8/p2emds_0
+    SLICE_X61Y7.C4       net (fanout=1)        0.116   u14/u8/p2emds<0>
+    SLICE_X61Y7.CLK      Tah         (-Th)     0.033   u14/u8/pemds<1>
+                                                       u14/u8/p2emds[1]_inv_0_OUT<0>1_INV_0
+                                                       u14/u8/pemds_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.212ns (0.096ns logic, 0.116ns route)
+                                                       (45.3% logic, 54.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lclk45_dram_0 = PERIOD TIMEGRP "u1_lclk45_dram_0" TS_u1_lclk_0 / 2 PHASE
+        0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 3.955ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_clk45_dram/I0
+  Logical resource: u1/bufg_clk45_dram/I0
+  Location pin: BUFGCTRL_X0Y3.I0
+  Clock network: u1/lclk45_dram
+--------------------------------------------------------------------------------
+Slack: 3.995ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 5.555ns
+  Low pulse: 2.777ns
+  Low pulse limit: 0.780ns (Tmpw)
+  Physical resource: u1/dlocked_mds/CLK
+  Logical resource: u1/srl16e_dlocked_mds/CLK
+  Location pin: SLICE_X22Y9.CLK
+  Clock network: clk45_dram
+--------------------------------------------------------------------------------
+Slack: 3.995ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 5.555ns
+  High pulse: 2.777ns
+  High pulse limit: 0.780ns (Tmpw)
+  Physical resource: u1/dlocked_mds/CLK
+  Logical resource: u1/srl16e_dlocked_mds/CLK
+  Location pin: SLICE_X22Y9.CLK
+  Clock network: clk45_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lx2clk90_dram_0 = PERIOD TIMEGRP "u1_lx2clk90_dram_0" 
+TS_u1_lclk_0 / 4         PHASE 0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.600ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lx2clk90_dram_0 = PERIOD TIMEGRP "u1_lx2clk90_dram_0" TS_u1_lclk_0 / 4
+        PHASE 0.694375 ns HIGH 50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 1.177ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_x2clk90_dram/I0
+  Logical resource: u1/bufg_x2clk90_dram/I0
+  Location pin: BUFGCTRL_X0Y1.I0
+  Clock network: u1/lx2clk90_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u8/myloop1[1].OSERDESE2_mds/CLK
+  Logical resource: u14/u8/myloop1[1].OSERDESE2_mds/CLK
+  Location pin: OLOGIC_X1Y8.CLK
+  Clock network: x2clk90_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u8/myloop1[0].OSERDESE2_mds/CLK
+  Logical resource: u14/u8/myloop1[0].OSERDESE2_mds/CLK
+  Location pin: OLOGIC_X1Y2.CLK
+  Clock network: x2clk90_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lx2clk_dram_0 = PERIOD TIMEGRP "u1_lx2clk_dram_0" 
+TS_u1_lclk_0 / 4 HIGH         50% INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.600ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lx2clk_dram_0 = PERIOD TIMEGRP "u1_lx2clk_dram_0" TS_u1_lclk_0 / 4 HIGH
+        50% INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 1.177ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: u1/bufg_x2clk_dram/I0
+  Logical resource: u1/bufg_x2clk_dram/I0
+  Location pin: BUFGCTRL_X0Y0.I0
+  Clock network: u1/lx2clk_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u7/myloop1[7].OSERDESE2_md/CLK
+  Logical resource: u14/u7/myloop1[7].OSERDESE2_md/CLK
+  Location pin: OLOGIC_X1Y22.CLK
+  Clock network: x2clk_dram
+--------------------------------------------------------------------------------
+Slack: 1.528ns (period - min period limit)
+  Period: 2.777ns
+  Min period limit: 1.249ns (800.641MHz) (Tosper_CLK)
+  Physical resource: u14/u7/myloop1[8].OSERDESE2_md/CLK
+  Logical resource: u14/u7/myloop1[8].OSERDESE2_md/CLK
+  Location pin: OLOGIC_X1Y5.CLK
+  Clock network: x2clk_dram
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_u1_lclk_dram_0 = PERIOD TIMEGRP "u1_lclk_dram_0" 
+TS_u1_lclk_0 / 2 HIGH 50%         INPUT_JITTER 0.3 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 4679 paths analyzed, 3684 endpoints analyzed, 4 failing endpoints
+ 4 timing errors detected. (0 setup errors, 4 hold errors, 0 component switching limit errors)
+ Minimum period is   4.829ns.
+--------------------------------------------------------------------------------
+
+Paths for end point u13/myloop1[7].ramb36e1_dram_fifo (RAMB36_X1Y20.ADDRARDADDRL1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.726ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u14/u2/dram_fifo_raddr_reg_0 (FF)
+  Destination:          u13/myloop1[7].ramb36e1_dram_fifo (RAM)
+  Requirement:          5.555ns
+  Data Path Delay:      4.417ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.331ns (1.309 - 1.640)
+  Source Clock:         clk_dram rising at 0.000ns
+  Destination Clock:    clk_dram rising at 5.555ns
+  Clock Uncertainty:    0.081ns
+
+  Clock Uncertainty:          0.081ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u14/u2/dram_fifo_raddr_reg_0 to u13/myloop1[7].ramb36e1_dram_fifo
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X56Y46.DMUX          Tshcko                0.385   u14/u2/dram_wmwe_reg
+                                                             u14/u2/dram_fifo_raddr_reg_0
+    RAMB36_X1Y20.ADDRARDADDRL1 net (fanout=64)       3.553   u14/u2/dram_fifo_raddr_reg<0>
+    RAMB36_X1Y20.CLKARDCLKL    Trcck_ADDRA           0.479   u13/myloop1[7].ramb36e1_dram_fifo
+                                                             u13/myloop1[7].ramb36e1_dram_fifo
+    -------------------------------------------------------  ---------------------------
+    Total                                            4.417ns (0.864ns logic, 3.553ns route)
+                                                             (19.6% logic, 80.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u13/myloop1[7].ramb36e1_dram_fifo (RAMB36_X1Y20.ADDRARDADDRU1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.727ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u14/u2/dram_fifo_raddr_reg_0 (FF)
+  Destination:          u13/myloop1[7].ramb36e1_dram_fifo (RAM)
+  Requirement:          5.555ns
+  Data Path Delay:      4.416ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.331ns (1.309 - 1.640)
+  Source Clock:         clk_dram rising at 0.000ns
+  Destination Clock:    clk_dram rising at 5.555ns
+  Clock Uncertainty:    0.081ns
+
+  Clock Uncertainty:          0.081ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u14/u2/dram_fifo_raddr_reg_0 to u13/myloop1[7].ramb36e1_dram_fifo
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X56Y46.DMUX          Tshcko                0.385   u14/u2/dram_wmwe_reg
+                                                             u14/u2/dram_fifo_raddr_reg_0
+    RAMB36_X1Y20.ADDRARDADDRU1 net (fanout=64)       3.552   u14/u2/dram_fifo_raddr_reg<0>
+    RAMB36_X1Y20.CLKARDCLKU    Trcck_ADDRA           0.479   u13/myloop1[7].ramb36e1_dram_fifo
+                                                             u13/myloop1[7].ramb36e1_dram_fifo
+    -------------------------------------------------------  ---------------------------
+    Total                                            4.416ns (0.864ns logic, 3.552ns route)
+                                                             (19.6% logic, 80.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u14/u7/myloop1[13].OSERDESE2_md (OLOGIC_X1Y17.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.905ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u1/reset_serdes_md_reg (FF)
+  Destination:          u14/u7/myloop1[13].OSERDESE2_md (FF)
+  Requirement:          5.555ns
+  Data Path Delay:      4.671ns (Levels of Logic = 0)
+  Clock Path Skew:      0.102ns (0.771 - 0.669)
+  Source Clock:         clk_dram rising at 0.000ns
+  Destination Clock:    clk_dram rising at 5.555ns
+  Clock Uncertainty:    0.081ns
+
+  Clock Uncertainty:          0.081ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: u1/reset_serdes_md_reg to u14/u7/myloop1[13].OSERDESE2_md
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X41Y14.DQ      Tcko                  0.269   u1/reset_serdes_md_reg
+                                                       u1/reset_serdes_md_reg
+    OLOGIC_X1Y17.SR      net (fanout=54)       3.657   u1/reset_serdes_md_reg
+    OLOGIC_X1Y17.CLKDIV  Toscck_SR_SYNC        0.745   u14/u7/myloop1[13].OSERDESE2_md
+                                                       u14/u7/myloop1[13].OSERDESE2_md
+    -------------------------------------------------  ---------------------------
+    Total                                      4.671ns (1.014ns logic, 3.657ns route)
+                                                       (21.7% logic, 78.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_u1_lclk_dram_0 = PERIOD TIMEGRP "u1_lclk_dram_0" TS_u1_lclk_0 / 2 HIGH 50%
+        INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point u17/dram_idly_reg_0_3 (SLICE_X47Y10.D5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      -3.995ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u17/dram_idly_clk_0_3 (FF)
+  Destination:          u17/dram_idly_reg_0_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.227ns (Levels of Logic = 1)
+  Clock Path Skew:      3.990ns (5.458 - 1.468)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk_dram rising at 0.000ns
+  Clock Uncertainty:    0.232ns
+
+  Clock Uncertainty:          0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Slow Process Corner: u17/dram_idly_clk_0_3 to u17/dram_idly_reg_0_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y10.DQ      Tcko                  0.248   u17/dram_idly_clk_0<3>
+                                                       u17/dram_idly_clk_0_3
+    SLICE_X47Y10.D5      net (fanout=1)        0.158   u17/dram_idly_clk_0<3>
+    SLICE_X47Y10.CLK     Tah         (-Th)     0.179   u17/dram_idly_reg_1<3>
+                                                       u17/dram_idly_clk_0<3>_rt
+                                                       u17/dram_idly_reg_0_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.227ns (0.069ns logic, 0.158ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u17/dram_idly_reg_0_1 (SLICE_X47Y10.B4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      -3.897ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u17/dram_idly_clk_0_1 (FF)
+  Destination:          u17/dram_idly_reg_0_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.325ns (Levels of Logic = 1)
+  Clock Path Skew:      3.990ns (5.458 - 1.468)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk_dram rising at 0.000ns
+  Clock Uncertainty:    0.232ns
+
+  Clock Uncertainty:          0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Slow Process Corner: u17/dram_idly_clk_0_1 to u17/dram_idly_reg_0_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y10.BQ      Tcko                  0.248   u17/dram_idly_clk_0<3>
+                                                       u17/dram_idly_clk_0_1
+    SLICE_X47Y10.B4      net (fanout=1)        0.247   u17/dram_idly_clk_0<1>
+    SLICE_X47Y10.CLK     Tah         (-Th)     0.170   u17/dram_idly_reg_1<3>
+                                                       u17/dram_idly_clk_0<1>_rt
+                                                       u17/dram_idly_reg_0_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.325ns (0.078ns logic, 0.247ns route)
+                                                       (24.0% logic, 76.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u17/osic_dram_test_rd/Mshreg_p2rsig (SLICE_X44Y38.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      -3.768ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u17/osic_dram_test_rd/sig_enable (FF)
+  Destination:          u17/osic_dram_test_rd/Mshreg_p2rsig (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.460ns (Levels of Logic = 0)
+  Clock Path Skew:      3.996ns (5.457 - 1.461)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk_dram rising at 0.000ns
+  Clock Uncertainty:    0.232ns
+
+  Clock Uncertainty:          0.232ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.145ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Slow Process Corner: u17/osic_dram_test_rd/sig_enable to u17/osic_dram_test_rd/Mshreg_p2rsig
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X41Y36.DQ      Tcko                  0.216   u17/osic_dram_test_rd/sig_enable
+                                                       u17/osic_dram_test_rd/sig_enable
+    SLICE_X44Y38.AX      net (fanout=1)        0.414   u17/osic_dram_test_rd/sig_enable
+    SLICE_X44Y38.CLK     Tdh         (-Th)     0.170   u17/osic_dram_test_rd/p2rsig
+                                                       u17/osic_dram_test_rd/Mshreg_p2rsig
+    -------------------------------------------------  ---------------------------
+    Total                                      0.460ns (0.046ns logic, 0.414ns route)
+                                                       (10.0% logic, 90.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_u1_lclk_dram_0 = PERIOD TIMEGRP "u1_lclk_dram_0" TS_u1_lclk_0 / 2 HIGH 50%
+        INPUT_JITTER 0.3 ns;
+--------------------------------------------------------------------------------
+Slack: 3.372ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 2.183ns (458.085MHz) (Trper_CLKA)
+  Physical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKL
+  Logical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKL
+  Location pin: RAMB36_X1Y16.CLKARDCLKL
+  Clock network: clk_dram
+--------------------------------------------------------------------------------
+Slack: 3.372ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 2.183ns (458.085MHz) (Trper_CLKA)
+  Physical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKU
+  Logical resource: u13/myloop1[5].ramb36e1_dram_fifo/CLKARDCLKU
+  Location pin: RAMB36_X1Y16.CLKARDCLKU
+  Clock network: clk_dram
+--------------------------------------------------------------------------------
+Slack: 3.372ns (period - min period limit)
+  Period: 5.555ns
+  Min period limit: 2.183ns (458.085MHz) (Trper_CLKA)
+  Physical resource: u13/myloop1[6].ramb36e1_dram_fifo/CLKARDCLKL
+  Logical resource: u13/myloop1[6].ramb36e1_dram_fifo/CLKARDCLKL
+  Location pin: RAMB36_X1Y19.CLKARDCLKL
+  Clock network: clk_dram
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS1
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS1                            |     11.110ns|      6.000ns|     11.888ns|            0|            5|            0|        33175|
+| TS2                           |     11.110ns|      6.000ns|     11.888ns|            0|            5|            0|        33175|
+|  TS_u1_lx2clk_0               |      5.555ns|      2.192ns|          N/A|            0|            0|           32|            0|
+|  TS_u1_lrefclk_0              |      5.000ns|      4.761ns|          N/A|            0|            0|            0|            0|
+|  TS_u1_lclk_0                 |     11.110ns|     11.888ns|      9.658ns|            1|            4|        28438|         4705|
+|   TS_u1_lclk45_dram_0         |      5.555ns|      3.868ns|          N/A|            0|            0|           26|            0|
+|   TS_u1_lx2clk90_dram_0       |      2.777ns|      1.600ns|          N/A|            0|            0|            0|            0|
+|   TS_u1_lx2clk_dram_0         |      2.777ns|      1.600ns|          N/A|            0|            0|            0|            0|
+|   TS_u1_lclk_dram_0           |      5.555ns|      4.829ns|          N/A|            4|            0|         4679|            0|
+| TS_u1_lx2clk                  |      5.555ns|      1.600ns|          N/A|            0|            0|            0|            0|
+| TS_u1_lrefclk                 |      5.000ns|      4.761ns|          N/A|            0|            0|            0|            0|
+| TS_u1_lclk                    |     11.110ns|      6.000ns|      6.400ns|            0|            0|            0|            0|
+|  TS_u1_lclk45_dram            |      5.555ns|      1.600ns|          N/A|            0|            0|            0|            0|
+|  TS_u1_lx2clk90_dram          |      2.777ns|      1.600ns|          N/A|            0|            0|            0|            0|
+|  TS_u1_lx2clk_dram            |      2.777ns|      1.600ns|          N/A|            0|            0|            0|            0|
+|  TS_u1_lclk_dram              |      5.555ns|      2.183ns|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+2 constraints not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock p_tcb_clkn
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+p_tcb_clkn     |    5.944|    1.337|    2.645|         |
+p_tcb_clkp     |    5.944|    1.337|    2.645|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock p_tcb_clkp
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+p_tcb_clkn     |    5.944|    1.337|    2.645|         |
+p_tcb_clkp     |    5.944|    1.337|    2.645|         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 5  Score: 15682  (Setup/Max: 389, Hold: 15293)
+
+Constraints cover 33175 paths, 0 nets, and 20620 connections
+
+Design statistics:
+   Minimum period:  11.888ns{1}   (Maximum frequency:  84.118MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Feb 16 17:42:17 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 436 MB
+
+
+

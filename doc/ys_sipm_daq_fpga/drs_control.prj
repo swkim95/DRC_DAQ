@@ -1,0 +1,6 @@
+vhdl work "ys_sipm_daq_fpga_type.vhd"
+vhdl work "drs_ctrl_status.vhd"
+vhdl work "drs_ctrl_setup.vhd"
+vhdl work "drs_ctrl_init.vhd"
+vhdl work "drs_ctrl_daq.vhd"
+vhdl work "drs_control.vhd"

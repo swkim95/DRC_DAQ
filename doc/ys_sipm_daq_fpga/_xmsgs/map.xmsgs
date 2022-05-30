@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="LIT" num="701" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;p_tcb_clkp&quot;</arg> has an undefined IOSTANDARD.
+</msg>
+
+<msg type="info" file="MapLib" num="1078" delta="old" ><arg fmt="%s" index="1">IDELAYCTRL symbol &quot;u1/idelayctrl_1&quot; (output signal=&lt;none&gt;)</arg> does not have assigned IODELAY_GROUP. A default GROUP &quot;<arg fmt="%s" index="2">MapGeneratedIodelayGroup</arg>&quot; will be assigned.
+The following IODELAY Components are assigned to the same GROUP:
+<arg fmt="%s" index="3">IDELAYE2 symbol &quot;u14/u7/myloop1[15].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;15&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[14].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;14&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[13].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;13&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[12].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;12&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[11].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;11&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[10].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;10&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[9].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;9&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[8].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;8&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[7].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;7&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[6].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;6&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[5].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;5&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[4].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;4&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[3].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;3&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[2].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;2&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[1].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;1&gt;)
+IDELAYE2 symbol &quot;u14/u7/myloop1[0].idelaye2_md&quot; (output signal=u14/u7/dsin&lt;0&gt;)
+</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[3].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[8].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[9].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[0].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[2].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[10].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[11].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[12].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[21].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[22].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[23].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[24].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[25].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[26].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[27].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[28].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2780" delta="old" >The register &quot;<arg fmt="%s" index="1">u7/myloop1[29].u2/xd</arg>&quot; has the property IOB=<arg fmt="%s" index="2">TRUE</arg>, but it did not join an IO component because it is not connected to any IO element.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;30&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;31&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;16&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;15&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;18&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;17&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;19&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;10&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;12&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;11&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;14&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;13&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;26&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;25&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;28&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;27&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;29&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;20&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;22&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;21&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;24&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;23&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_tcb_trign</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_tcb_trigp</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;30&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;31&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;16&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;15&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;18&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;17&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;19&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;10&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;12&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;11&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;14&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;13&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;26&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;25&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;28&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;27&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;29&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;20&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_tcb_timern</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_tcb_timerp</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;22&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;21&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;24&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;23&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;7&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;8&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;5&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;6&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;9&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;0&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;3&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;4&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;1&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dp&lt;2&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;7&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;8&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;5&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;6&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;9&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;0&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;3&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;4&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;1&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="warning" file="Pack" num="2949" delta="old" >The I/O component <arg fmt="%s" index="1">p_adc_dn&lt;2&gt;</arg> uses an DQS_BIAS attribute with I/O standard <arg fmt="%s" index="2">LVDS_25</arg>. The DQS_BIAS attribute will be ignored since the selected I/O standard does not support DQS_BIAS usage.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">0.970</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">0.970</arg> to <arg fmt="%0.3f" index="3">1.030</arg> Volts)
+</msg>
+
+<msg type="info" file="Timing" num="3386" delta="old" >Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.</msg>
+
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+</messages>
+

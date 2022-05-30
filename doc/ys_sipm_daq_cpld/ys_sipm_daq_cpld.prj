@@ -1,0 +1,6 @@
+vhdl work "get_command.vhd"
+vhdl work "fpga_serial.vhd"
+vhdl work "flash_memory.vhd"
+vhdl work "download_fpga.vhd"
+vhdl work "clock.vhd"
+vhdl work "ys_sipm_daq_cpld.vhd"

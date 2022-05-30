@@ -1,0 +1,35 @@
+Release 14.3 - xst P.40xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/get_command.vhd" in Library work.
+Entity <get_command> compiled.
+Entity <get_command> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> 
+
+Total memory usage is 174164 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,67 @@
+    1  source /usr/local/notice/notice_env.sh 
+    2  cd /usr/local/notice/src/
+    3  ls
+    4  cd sipm_daq_v2/
+    5  ls -l
+    6  pwd
+    7  cd ..
+    8  cd doc/
+    9  ls -l
+   10  gedit MEMORYMAP.txt
+   11  ls -l
+   12  cd firmware/
+   13  ls -l
+   14  gedit peripheral.c&
+   15  gedit user_code.c
+   16  gedit user_code.h
+   17  ls
+   18  cd ..
+   19  ls
+   20  cd ys_sipm_tcb_fpga
+   21  ls -l *.vhd
+   22  more readout.vhd 
+   23  more commands.vhd 
+   24  grep trig_enable *
+   25  ls
+   26  ls -l *.vhd
+   27  more trigger_send.vhd
+   28  more commands.vhd 
+   29  cd ..
+   30  ls
+   31  cd ys_sipm_daq_fpga
+   32  more commands.vhd 
+   33  grep reg_wch *
+   34  cd ..
+   35  cd src/
+   36  ls -l
+   37  cd ku_drs_proto/
+   38  ls -l
+   39  cd ku_drs_proto
+   40  gedit NoticeKU_DRS_PROTO.c&
+   41  gedit NoticeKU_DRS_PROTO.h&
+   42  cd ..
+   43  cd doc/
+   44  ls
+   45  cd ys_sipm_daq_fpga
+   46  more commands.vhd 
+   47  cd ..
+   48  ls
+   49  cd firmware/
+   50  ls -l
+   51  more peripheral.h
+   52  ls -l *.h
+   53  more description.c
+   54  cd /usr/local/notice/test/sipm_daq_kaist/
+   55  make -f Makefile_set clean
+   56  make -f Makefile_set 
+   57  gedit Makefile_set &
+   58  more set_SIPMDAQ.
+   59  more set_SIPMDAQ.c
+   60  cd ..
+   61  cd doc/
+   62  ls -l
+   63  cd ys_sipm_tcb_fpga
+   64  pwd
+   65  ls -l *.bit
+   66  /usr/local/notice/doc/ys_sipm_tcb_fpga
+   67  history >> history1.txt

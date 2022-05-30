@@ -1,0 +1,106 @@
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include "NoticeCALTCB.h"
+#include "NoticeCALDAQ.h"
+
+#define BUF_SIZE (65536)           // in kbyte
+
+// 1st argument : 0 = charge data, 1 = charge data + FADC data
+int main(int argc, char *argv[])
+{
+  int sid = 0;
+  int mid;
+  unsigned long link_data[2];
+  int linked[40];
+  unsigned long mid_data[40];
+  unsigned long ch;
+  char *data;
+  unsigned long data_size;
+  FILE *fp;
+  int nevt = 100;
+  int run;
+  int evt = 0;
+
+  // assign data array
+  data = (char *)malloc(BUF_SIZE * 1024); 
+
+  // open data file
+  fp = fopen("cal.dat", "wb");
+
+  // init LIBUSB
+  USB3Init();
+    
+  // open TCB
+  CALTCBopen(sid);
+
+  // get link status
+  CALTCBread_LINK(0, link_data);
+  CALTCBread_LINK(sid, link_data);
+
+  for (ch = 0; ch < 32; ch++)
+    linked[ch] = (link_data[0] >> ch) & 0x1;
+  for (ch = 32; ch < 40; ch++)
+    linked[ch] = (link_data[1] >> (ch - 32)) & 0x1;
+  
+  // read mid of linked DAQ modules
+  CALTCBread_MID(sid, mid_data);
+
+  for (ch = 0; ch < 40; ch++) {
+    if (linked[ch]) {
+      mid = mid_data[ch];
+      printf("mid %d is found at ch%ld\n", mid, ch + 1);
+      // first come, first served
+      ch = 40;
+    }
+  }
+
+  // open DAQ
+  CALDAQopen(mid);
+
+  // reset DAQ
+  CALTCBreset(sid);
+
+  // start DAQ
+  CALTCBstart_DAQ(sid);
+  printf("Run status = %ld\n", CALTCBread_RUN(sid, mid));
+
+  run = 1;  
+  while (run) {
+    CALTCBsend_TRIG(sid);  // optional software trigger
+    
+    data_size = CALDAQread_DATASIZE(mid);
+    if (data_size > BUF_SIZE)
+      data_size = BUF_SIZE;
+
+    if (data_size) {
+      printf("data size = %ld\n", data_size);
+      CALDAQread_DATA(mid, data_size, data);
+      fwrite(data, 1, data_size * 1024, fp);
+      evt = evt + (data_size / 64);
+      printf("%d / %d events are taken\n", evt, nevt);
+      if (evt >= nevt) {
+        CALTCBstop_DAQ(sid);
+        run = 0;
+      }  
+    }
+  }
+
+  // close file  
+  fclose(fp);  
+  
+  // release memory
+  free(data);
+
+  // close DAQ
+  CALDAQclose(mid);
+
+  // close TCB
+  CALTCBclose(sid);
+  
+  // exit LIBUSB
+  USB3Exit();
+
+  return 0;
+}
+

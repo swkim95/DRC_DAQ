@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_tcb_fpga\ys_sipm_tcb_fpga.ncd
+OUTFILE=D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_tcb_fpga\ys_sipm_tcb_fpga.bit
+FAMILY=Kintex7
+PART=xc7k160t-1fbg676
+WORKINGDIR=D:\sykim\notice\yk_sipm_daq\xilinx\ys_sipm_tcb_fpga
+LICENSE=ISE
+USER_INFO=178742753_1777490197_0_604

@@ -1,0 +1,1271 @@
+ 
+cpldfit:  version P.40xd                            Xilinx Inc.
+                                  Fitter Report
+Design Name: ys_sipm_daq_cpld                    Date:  2-16-2022,  0:08AM
+Device Used: XC2C128-7-VQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+113/128 ( 88%) 160 /448  ( 36%) 155 /320  ( 48%) 110/128 ( 86%) 51 /80  ( 64%)
+
+** Function Block Resources **
+
+Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
+Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
+FB1      16/16*    17/40    25/56     2/10    0/1      0/1      0/1      0/1
+FB2      16/16*    21/40    21/56     8/10    0/1      0/1      0/1      0/1
+FB3      16/16*    20/40    25/56     3/11    0/1      0/1      0/1      0/1
+FB4      16/16*    11/40    16/56    11/11*   0/1      0/1      0/1      0/1
+FB5      16/16*    28/40    30/56     0/10    0/1      0/1      0/1      0/1
+FB6      16/16*    32/40    23/56     2/ 9    0/1      0/1      0/1      0/1
+FB7       9/16     19/40    12/56     4/10    0/1      0/1      0/1      0/1
+FB8       8/16      7/40     8/56     8/ 9    0/1      0/1      0/1      0/1
+         -----    -------  -------   -----    ---      ---      ---      ---
+Total   113/128   155/320  160/448   38/80    0/8      0/8      0/8      0/8 
+
+CTC - Control Term Clock
+CTR - Control Term Reset
+CTS - Control Term Set
+CTE - Control Term Output Enable
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+GCK         GSR         GTS         DGE         
+Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+1/3         0/1         0/4         0/1
+
+Signal 'p_clk' mapped onto global clock net GCK0.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   12          12    |  I/O              :    46     70
+Output        :   38          38    |  GCK/IO           :     3      3
+Bidirectional :    0           0    |  GTS/IO           :     0      4
+GCK           :    1           1    |  GSR/IO           :     0      1
+GTS           :    0           0    |  CDR/IO           :     1      1
+GSR           :    0           0    |  DGE/IO           :     1      1
+                 ----        ----
+        Total     51          51
+
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'ys_sipm_daq_cpld.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'u1/p_clk' based upon the LOC
+   constraint 'P22'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+*************************  Summary of Mapped Logic  ************************
+
+** 38 Outputs **
+
+Signal              Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+p_mgt_def_l         1     1     2    FB1_5   10    I/O       O       LVCMOS18           SLOW         
+p_mgt_loss_l        1     1     2    FB1_6   9     I/O       O       LVCMOS18           SLOW         
+p_bias_sdi<3>       1     6     1    FB2_3   15    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_bias_sck<3>       1     6     1    FB2_4   16    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_bias_cs<3>        1     5     1    FB2_5   17    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_bias_sdi<0>       1     6     1    FB2_6   18    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_bias_sck<0>       1     6     1    FB2_11  19    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_bias_cs<0>        1     5     1    FB2_14  23    GCK/I/O   O       LVCMOS18           SLOW DFF     RESET
+p_bias_sdi<2>       1     6     1    FB2_15  24    CDR/I/O   O       LVCMOS18           SLOW DFF     RESET
+p_bias_sck<2>       1     6     1    FB2_16  27    GCK/I/O   O       LVCMOS18           SLOW DFF     RESET
+p_fpga_prog         2     6     2    FB3_6   96    I/O       O       LVCMOS18           SLOW DEFF/S  SET
+p_fpga_din          2     3     2    FB3_14  92    I/O       O       LVCMOS18           FAST DFF     RESET
+p_fpga_cclk         1     2     2    FB3_16  90    I/O       O       LVCMOS18           FAST DFF     RESET
+p_bias_cs<2>        1     5     1    FB4_1   28    DGE/I/O   O       LVCMOS18           SLOW DFF     RESET
+p_bias_sdi<1>       1     6     1    FB4_4   29    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_bias_sck<1>       1     6     1    FB4_5   30    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_bias_cs<1>        1     5     1    FB4_6   32    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_cs<4>         1     5     1    FB4_7   33    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sck<4>        1     6     1    FB4_11  34    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sdi<4>        1     6     1    FB4_12  35    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sdi<0>        1     6     1    FB4_13  36    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sck<0>        1     6     1    FB4_14  37    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_cs<0>         1     5     1    FB4_15  39    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sdi<1>        1     6     1    FB4_16  40    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_spi_sdo           2     4     1    FB6_4   60    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_mgt_txdis         1     1     1    FB6_16  54    I/O       O       LVCMOS18           SLOW         
+p_prom_sdi          1     2     2    FB7_5   80    I/O       O       LVCMOS18           FAST DFF     RESET
+p_prom_sck          1     2     2    FB7_6   81    I/O       O       LVCMOS18           FAST DFF     RESET
+p_prom_cs           1     2     2    FB7_11  82    I/O       O       LVCMOS18           FAST DFF     RESET
+p_prom_wp           2     6     2    FB7_14  86    I/O       O       LVCMOS18           SLOW DEFF    RESET
+p_dac_cs<3>         1     5     1    FB8_3   52    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sck<3>        1     6     1    FB8_4   50    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sdi<3>        1     6     1    FB8_6   49    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_cs<2>         1     5     1    FB8_12  46    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sck<2>        1     6     1    FB8_13  44    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sdi<2>        1     6     1    FB8_14  43    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_cs<1>         1     5     1    FB8_15  42    I/O       O       LVCMOS18           SLOW DFF     RESET
+p_dac_sck<1>        1     6     1    FB8_16  41    I/O       O       LVCMOS18           SLOW DFF     RESET
+
+** 75 Buried Nodes **
+
+Signal              Total Total Loc     Reg     Reg Init
+Name                Pts   Inps          Use     State
+u5/cpld_cs          1     2     FB1_1   DFF     RESET
+u3/cnt<3>           2     6     FB1_2   TFF     RESET
+u5/cpld_sck         1     2     FB1_3   DFF     RESET
+u5/cpld_sdi         1     2     FB1_4   DFF     RESET
+u3/cnt<2>           2     5     FB1_7   TFF     RESET
+u3/cnt<1>           2     4     FB1_8   TFF     RESET
+u3/cnt<0>           2     3     FB1_9   DFF     RESET
+rprom_cs            1     1     FB1_10  DFF     RESET
+u3/cnt<8>           2     11    FB1_11  TFF     RESET
+u3/cnt<7>           2     10    FB1_12  TFF     RESET
+u3/cnt<6>           2     9     FB1_13  TFF     RESET
+down_done           1     1     FB1_14  DFF/S   SET
+u3/cnt<5>           2     8     FB1_15  TFF     RESET
+u3/cnt<4>           2     7     FB1_16  TFF     RESET
+u5/mux<3>           2     2     FB2_1   DEFF    RESET
+u3/cnt<9>           2     12    FB2_2   TFF     RESET
+u5/mux<2>           2     2     FB2_7   DEFF    RESET
+u5/mux<1>           2     2     FB2_8   DEFF    RESET
+u5/mux<0>           2     2     FB2_9   DEFF    RESET
+u5/d2cpld_sck       1     1     FB2_10  DFF     RESET
+u5/set_mux          1     3     FB2_12  DFF     RESET
+rprom_sck           1     1     FB2_13  DFF     RESET
+u2/ccnt<1>          2     5     FB3_1   TFF     RESET
+wprom_sck           1     3     FB3_2   DFF     RESET
+wprom_cs            1     3     FB3_3   DFF     RESET
+wprom_sdi           1     4     FB3_4   DFF     RESET
+u2/enflag           2     2     FB3_5   DEFF    RESET
+u2/sdat             1     3     FB3_7   DFF     RESET
+u2/ccnt<2>          2     6     FB3_8   TFF     RESET
+u2/mux<1>           2     6     FB3_9   DEFF    RESET
+u2/mux<0>           2     6     FB3_10  DEFF    RESET
+u2/scom             1     3     FB3_11  DFF     RESET
+download            1     6     FB3_12  DFF     RESET
+u2/cpld_sdo         3     6     FB3_13  DFF     RESET
+u2/ccnt<0>          2     4     FB3_15  TFF     RESET
+u2/ecs              1     2     FB4_2   DFF     RESET
+u2/bcs              1     2     FB4_3   DFF     RESET
+u2/d3spi_cs         1     1     FB4_8   DFF     RESET
+u2/d2spi_sck        1     1     FB4_9   DFF     RESET
+u2/d2spi_cs         1     1     FB4_10  DFF     RESET
+
+Signal              Total Total Loc     Reg     Reg Init
+Name                Pts   Inps          Use     State
+u3/cnt<13>          2     16    FB5_1   TFF     RESET
+u3/cnt<14>          2     17    FB5_2   TFF     RESET
+u3/cnt<15>          2     18    FB5_3   TFF     RESET
+rprom_sdi           2     25    FB5_4   DFF     RESET
+u3/cnt<16>          2     19    FB5_5   TFF     RESET
+u3/cnt<23>          2     26    FB5_6   TFF     RESET
+u3/cnt<17>          2     20    FB5_7   TFF     RESET
+u3/sdown            1     26    FB5_8   DFF     RESET
+u3/clr              1     26    FB5_9   DFF     RESET
+u3/cnt<24>          2     27    FB5_10  TFF     RESET
+u3/cnt<18>          2     21    FB5_11  TFF     RESET
+u3/cnt<19>          2     22    FB5_12  TFF     RESET
+u3/cnt<20>          2     23    FB5_13  TFF     RESET
+u3/cnt<21>          2     24    FB5_14  TFF     RESET
+u3/cnt<22>          2     25    FB5_15  TFF     RESET
+u3/cnt<25>          2     28    FB5_16  TFF     RESET
+u2/dspi_sck         2     3     FB6_1   DFF     RESET
+calib               1     5     FB6_2   DEFF    RESET
+u2/dspi_cs          1     2     FB6_3   DFF     RESET
+u5/dcpld_sck        1     1     FB6_5   DFF     RESET
+u5/dcpld_cs         1     1     FB6_6   DFF     RESET
+u3/cnt<10>          2     13    FB6_7   TFF     RESET
+u3/cen              2     2     FB6_8   DEFF    RESET
+u3/dclr             1     1     FB6_9   DFF     RESET
+u2/sclk             1     2     FB6_10  DFF     RESET
+u2/eclk             1     2     FB6_11  DFF     RESET
+u3/cnt<12>          2     15    FB6_12  TFF     RESET
+u2/d3spi_sck        1     1     FB6_13  DFF     RESET
+u3/cnt<11>          2     14    FB6_14  TFF     RESET
+u2/dat_sck          2     2     FB6_15  DEFF    RESET
+u3/endown           2     2     FB7_8   DEFF    RESET
+u2/dcen             2     2     FB7_9   DEFF    RESET
+u2/ccen             2     2     FB7_10  DEFF    RESET
+u5/dcpld_sdi        1     1     FB7_12  DFF     RESET
+prom_rdat           1     2     FB7_13  DFF     RESET
+
+** 13 Inputs **
+
+Signal              Bank Loc     Pin   Pin       Pin     I/O      I/O
+Name                             No.   Type      Use     STD      Style
+p_cpld_cs           2    FB1_1   13    I/O       I       LVCMOS18 KPR
+p_cpld_sck          2    FB1_3   12    I/O       I       LVCMOS18 KPR
+p_cpld_sdi          2    FB1_4   11    I/O       I       LVCMOS18 KPR
+p_mgt_txdis_l       2    FB1_11  8     I/O       I       LVCMOS18 KPR
+p_fpga_done         2    FB1_12  7     I/O       I       LVCMOS18 KPR
+p_clk               1    FB2_13  22    GCK/I/O   GCK     LVCMOS18 KPR
+p_fpga_init         2    FB3_11  94    I/O       I       LVCMOS18 KPR
+p_spi_sck           1    FB6_1   64    I/O       I       LVCMOS18 KPR
+p_spi_sdi           1    FB6_2   63    I/O       I       LVCMOS18 KPR
+p_spi_cs            1    FB6_3   61    I/O       I       LVCMOS18 KPR
+p_mgt_loss          1    FB6_6   58    I/O       I       LVCMOS18 KPR
+p_mgt_def           1    FB6_12  56    I/O       I       LVCMOS18 KPR
+p_prom_sdo          2    FB7_13  85    I/O       I       LVCMOS18 KPR
+
+Legend:
+Pin No.   - ~     - User Assigned
+I/O Style - OD    - OpenDrain
+          - PU    - Pullup
+          - KPR   - Keeper
+          - S     - SchmittTrigger
+          - DG    - DataGate
+Reg Use   - LATCH - Transparent latch
+          - DFF   - D-flip-flop
+          - DEFF  - D-flip-flop with clock enable
+          - TFF   - T-flip-flop
+          - TDFF  - Dual-edge-triggered T-flip-flop
+          - DDFF  - Dual-edge-triggered flip-flop
+          - DDEFF - Dual-edge-triggered flip-flop with clock enable
+          /S (after any above flop/latch type) indicates initial state is Set
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+              VRF - Vref
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               17/23
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   25/31
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+u5/cpld_cs                    1     FB1_1   13   I/O     I                 
+u3/cnt<3>                     2     FB1_2        (b)     (b)               
+u5/cpld_sck                   1     FB1_3   12   I/O     I                 
+u5/cpld_sdi                   1     FB1_4   11   I/O     I                 
+p_mgt_def_l                   1     FB1_5   10   I/O     O                 
+p_mgt_loss_l                  1     FB1_6   9    I/O     O                 
+u3/cnt<2>                     2     FB1_7        (b)     (b)               
+u3/cnt<1>                     2     FB1_8        (b)     (b)               
+u3/cnt<0>                     2     FB1_9        (b)     (b)               
+rprom_cs                      1     FB1_10       (b)     (b)               
+u3/cnt<8>                     2     FB1_11  8    I/O     I                 
+u3/cnt<7>                     2     FB1_12  7    I/O     I                 
+u3/cnt<6>                     2     FB1_13  6    I/O     (b)               
+down_done                     1     FB1_14       (b)     (b)               
+u3/cnt<5>                     2     FB1_15  4    GTS/I/O (b)               
+u3/cnt<4>                     2     FB1_16  3    GTS/I/O (b)               
+
+Signals Used by Logic in Function Block
+  1: download           7: u3/cen            13: u3/cnt<4> 
+  2: p_mgt_def          8: u3/clr            14: u3/cnt<5> 
+  3: p_mgt_loss         9: u3/cnt<0>         15: u3/cnt<6> 
+  4: u2/ecs            10: u3/cnt<1>         16: u3/cnt<7> 
+  5: u2/scom           11: u3/cnt<2>         17: u3/cnt<8> 
+  6: u2/sdat           12: u3/cnt<3>        
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+u5/cpld_cs        X......X................................ 2       
+u3/cnt<3>         ......XXXXXX............................ 6       
+u5/cpld_sck       ...XX................................... 2       
+u5/cpld_sdi       ...X.X.................................. 2       
+p_mgt_def_l       .X...................................... 1       
+p_mgt_loss_l      ..X..................................... 1       
+u3/cnt<2>         ......XXXXX............................. 5       
+u3/cnt<1>         ......XXXX.............................. 4       
+u3/cnt<0>         ......XXX............................... 3       
+rprom_cs          ......X................................. 1       
+u3/cnt<8>         ......XXXXXXXXXXX....................... 11      
+u3/cnt<7>         ......XXXXXXXXXX........................ 10      
+u3/cnt<6>         ......XXXXXXXXX......................... 9       
+down_done         ......X................................. 1       
+u3/cnt<5>         ......XXXXXXXX.......................... 8       
+u3/cnt<4>         ......XXXXXXX........................... 7       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB2  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               21/19
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   21/35
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+u5/mux<3>                     2     FB2_1        (b)     (b)               
+u3/cnt<9>                     2     FB2_2   14   I/O     (b)               
+p_bias_sdi<3>                 1     FB2_3   15   I/O     O                 
+p_bias_sck<3>                 1     FB2_4   16   I/O     O                 
+p_bias_cs<3>                  1     FB2_5   17   I/O     O                 
+p_bias_sdi<0>                 1     FB2_6   18   I/O     O                 
+u5/mux<2>                     2     FB2_7        (b)     (b)               
+u5/mux<1>                     2     FB2_8        (b)     (b)               
+u5/mux<0>                     2     FB2_9        (b)     (b)               
+u5/d2cpld_sck                 1     FB2_10       (b)     (b)               
+p_bias_sck<0>                 1     FB2_11  19   I/O     O                 
+u5/set_mux                    1     FB2_12       (b)     (b)               
+rprom_sck                     1     FB2_13  22   GCK/I/O GCK               
+p_bias_cs<0>                  1     FB2_14  23   GCK/I/O O                 
+p_bias_sdi<2>                 1     FB2_15  24   CDR/I/O O                 
+p_bias_sck<2>                 1     FB2_16  27   GCK/I/O O                 
+
+Signals Used by Logic in Function Block
+  1: u3/cen             8: u3/cnt<5>         15: u5/dcpld_sck 
+  2: u3/clr             9: u3/cnt<6>         16: u5/dcpld_sdi 
+  3: u3/cnt<0>         10: u3/cnt<7>         17: u5/mux<0> 
+  4: u3/cnt<1>         11: u3/cnt<8>         18: u5/mux<1> 
+  5: u3/cnt<2>         12: u3/cnt<9>         19: u5/mux<2> 
+  6: u3/cnt<3>         13: u5/d2cpld_sck     20: u5/mux<3> 
+  7: u3/cnt<4>         14: u5/dcpld_cs       21: u5/set_mux 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+u5/mux<3>         ..................X.X................... 2       
+u3/cnt<9>         XXXXXXXXXXXX............................ 12      
+p_bias_sdi<3>     .............X.XXXXX.................... 6       
+p_bias_sck<3>     .............XX.XXXX.................... 6       
+p_bias_cs<3>      .............X..XXXX.................... 5       
+p_bias_sdi<0>     .............X.XXXXX.................... 6       
+u5/mux<2>         .................X..X................... 2       
+u5/mux<1>         ................X...X................... 2       
+u5/mux<0>         ...............X....X................... 2       
+u5/d2cpld_sck     ..............X......................... 1       
+p_bias_sck<0>     .............XX.XXXX.................... 6       
+u5/set_mux        ............XXX......................... 3       
+rprom_sck         ..X..................................... 1       
+p_bias_cs<0>      .............X..XXXX.................... 5       
+p_bias_sdi<2>     .............X.XXXXX.................... 6       
+p_bias_sck<2>     .............XX.XXXX.................... 6       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB3  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               20/20
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   25/31
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+u2/ccnt<1>                    2     FB3_1        (b)     (b)               
+wprom_sck                     1     FB3_2   2    GTS/I/O (b)               
+wprom_cs                      1     FB3_3   1    GTS/I/O (b)               
+wprom_sdi                     1     FB3_4   99   GSR/I/O (b)               
+u2/enflag                     2     FB3_5   97   I/O     (b)               
+p_fpga_prog                   2     FB3_6   96   I/O     O                 
+u2/sdat                       1     FB3_7   95   I/O     (b)               
+u2/ccnt<2>                    2     FB3_8        (b)     (b)               
+u2/mux<1>                     2     FB3_9        (b)     (b)               
+u2/mux<0>                     2     FB3_10       (b)     (b)               
+u2/scom                       1     FB3_11  94   I/O     I                 
+download                      1     FB3_12       (b)     (b)               
+u2/cpld_sdo                   3     FB3_13  93   I/O     (b)               
+p_fpga_din                    2     FB3_14  92   I/O     O                 
+u2/ccnt<0>                    2     FB3_15  91   I/O     (b)               
+p_fpga_cclk                   1     FB3_16  90   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: calib              8: u2/ccen           15: u2/enflag 
+  2: down_done          9: u2/ccnt<0>        16: u2/mux<0> 
+  3: p_fpga_done       10: u2/ccnt<1>        17: u2/mux<1> 
+  4: p_fpga_init       11: u2/ccnt<2>        18: u2/sclk 
+  5: p_spi_sdi         12: u2/dat_sck        19: u2/scom 
+  6: prom_rdat         13: u2/dcen           20: u3/endown 
+  7: rprom_sck         14: u2/dspi_cs.COMB  
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+u2/ccnt<1>        .......XXX.......XX..................... 5       
+wprom_sck         ...........X...XX....................... 3       
+wprom_cs          ............X..XX....................... 3       
+wprom_sdi         ....X.......X..XX....................... 4       
+u2/enflag         .............X...X...................... 2       
+p_fpga_prog       ....X..XXXX......X...................... 6       
+u2/sdat           ....X.........X..X...................... 3       
+u2/ccnt<2>        .......XXXX......XX..................... 6       
+u2/mux<1>         ....X..XXXX......X...................... 6       
+u2/mux<0>         ....X..XXXX......X...................... 6       
+u2/scom           ....X.........X..X...................... 3       
+download          ....X..XXXX......X...................... 6       
+u2/cpld_sdo       .XXX....XXX............................. 6       
+p_fpga_din        X....X.............X.................... 3       
+u2/ccnt<0>        .......XX........XX..................... 4       
+p_fpga_cclk       ......X............X.................... 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB4  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               11/29
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   16/40
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+p_bias_cs<2>                  1     FB4_1   28   DGE/I/O O                 
+u2/ecs                        1     FB4_2        (b)     (b)               
+u2/bcs                        1     FB4_3        (b)     (b)               
+p_bias_sdi<1>                 1     FB4_4   29   I/O     O                 
+p_bias_sck<1>                 1     FB4_5   30   I/O     O                 
+p_bias_cs<1>                  1     FB4_6   32   I/O     O                 
+p_dac_cs<4>                   1     FB4_7   33   I/O     O                 
+u2/d3spi_cs                   1     FB4_8        (b)     (b)               
+u2/d2spi_sck                  1     FB4_9        (b)     (b)               
+u2/d2spi_cs                   1     FB4_10       (b)     (b)               
+p_dac_sck<4>                  1     FB4_11  34   I/O     O                 
+p_dac_sdi<4>                  1     FB4_12  35   I/O     O                 
+p_dac_sdi<0>                  1     FB4_13  36   I/O     O                 
+p_dac_sck<0>                  1     FB4_14  37   I/O     O                 
+p_dac_cs<0>                   1     FB4_15  39   I/O     O                 
+p_dac_sdi<1>                  1     FB4_16  40   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: u2/d2spi_cs        5: u5/dcpld_cs        9: u5/mux<1> 
+  2: u2/d3spi_cs        6: u5/dcpld_sck      10: u5/mux<2> 
+  3: u2/dspi_cs         7: u5/dcpld_sdi      11: u5/mux<3> 
+  4: u2/dspi_sck        8: u5/mux<0>        
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+p_bias_cs<2>      ....X..XXXX............................. 5       
+u2/ecs            XX...................................... 2       
+u2/bcs            XX...................................... 2       
+p_bias_sdi<1>     ....X.XXXXX............................. 6       
+p_bias_sck<1>     ....XX.XXXX............................. 6       
+p_bias_cs<1>      ....X..XXXX............................. 5       
+p_dac_cs<4>       ....X..XXXX............................. 5       
+u2/d3spi_cs       X....................................... 1       
+u2/d2spi_sck      ...X.................................... 1       
+u2/d2spi_cs       ..X..................................... 1       
+p_dac_sck<4>      ....XX.XXXX............................. 6       
+p_dac_sdi<4>      ....X.XXXXX............................. 6       
+p_dac_sdi<0>      ....X.XXXXX............................. 6       
+p_dac_sck<0>      ....XX.XXXX............................. 6       
+p_dac_cs<0>       ....X..XXXX............................. 5       
+p_dac_sdi<1>      ....X.XXXXX............................. 6       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB5  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               28/12
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   30/26
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+u3/cnt<13>                    2     FB5_1   65   I/O     (b)               
+u3/cnt<14>                    2     FB5_2   66   I/O     (b)               
+u3/cnt<15>                    2     FB5_3   67   I/O     (b)               
+rprom_sdi                     2     FB5_4        (b)     (b)               
+u3/cnt<16>                    2     FB5_5   68   I/O     (b)               
+u3/cnt<23>                    2     FB5_6        (b)     (b)               
+u3/cnt<17>                    2     FB5_7   70   I/O     (b)               
+u3/sdown                      1     FB5_8        (b)     (b)               
+u3/clr                        1     FB5_9        (b)     (b)               
+u3/cnt<24>                    2     FB5_10       (b)     (b)               
+u3/cnt<18>                    2     FB5_11  71   I/O     (b)               
+u3/cnt<19>                    2     FB5_12  72   I/O     (b)               
+u3/cnt<20>                    2     FB5_13  73   I/O     (b)               
+u3/cnt<21>                    2     FB5_14  74   I/O     (b)               
+u3/cnt<22>                    2     FB5_15  76   I/O     (b)               
+u3/cnt<25>                    2     FB5_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: u3/cen            11: u3/cnt<17>        20: u3/cnt<25> 
+  2: u3/clr            12: u3/cnt<18>        21: u3/cnt<2> 
+  3: u3/cnt<0>         13: u3/cnt<19>        22: u3/cnt<3> 
+  4: u3/cnt<10>        14: u3/cnt<1>         23: u3/cnt<4> 
+  5: u3/cnt<11>        15: u3/cnt<20>        24: u3/cnt<5> 
+  6: u3/cnt<12>        16: u3/cnt<21>        25: u3/cnt<6> 
+  7: u3/cnt<13>        17: u3/cnt<22>        26: u3/cnt<7> 
+  8: u3/cnt<14>        18: u3/cnt<23>        27: u3/cnt<8> 
+  9: u3/cnt<15>        19: u3/cnt<24>        28: u3/cnt<9> 
+ 10: u3/cnt<16>       
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+u3/cnt<13>        XXXXXXX......X......XXXXXXXX............ 16      
+u3/cnt<14>        XXXXXXXX.....X......XXXXXXXX............ 17      
+u3/cnt<15>        XXXXXXXXX....X......XXXXXXXX............ 18      
+rprom_sdi         ...XXXXXXXXXXXXXXXXXXXXXXXXX............ 25      
+u3/cnt<16>        XXXXXXXXXX...X......XXXXXXXX............ 19      
+u3/cnt<23>        XXXXXXXXXXXXXXXXXX..XXXXXXXX............ 26      
+u3/cnt<17>        XXXXXXXXXXX..X......XXXXXXXX............ 20      
+u3/sdown          ..XXXXXXXXXXXXXXXXXXXXXXXXXX............ 26      
+u3/clr            ..XXXXXXXXXXXXXXXXXXXXXXXXXX............ 26      
+u3/cnt<24>        XXXXXXXXXXXXXXXXXXX.XXXXXXXX............ 27      
+u3/cnt<18>        XXXXXXXXXXXX.X......XXXXXXXX............ 21      
+u3/cnt<19>        XXXXXXXXXXXXXX......XXXXXXXX............ 22      
+u3/cnt<20>        XXXXXXXXXXXXXXX.....XXXXXXXX............ 23      
+u3/cnt<21>        XXXXXXXXXXXXXXXX....XXXXXXXX............ 24      
+u3/cnt<22>        XXXXXXXXXXXXXXXXX...XXXXXXXX............ 25      
+u3/cnt<25>        XXXXXXXXXXXXXXXXXXXXXXXXXXXX............ 28      
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB6  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               32/8
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   23/33
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+u2/dspi_sck                   2     FB6_1   64   I/O     I                 
+calib                         1     FB6_2   63   I/O     I                 
+u2/dspi_cs                    1     FB6_3   61   I/O     I                 
+p_spi_sdo                     2     FB6_4   60   I/O     O                 
+u5/dcpld_sck                  1     FB6_5   59   I/O     (b)               
+u5/dcpld_cs                   1     FB6_6   58   I/O     I                 
+u3/cnt<10>                    2     FB6_7        (b)     (b)               
+u3/cen                        2     FB6_8        (b)     (b)               
+u3/dclr                       1     FB6_9        (b)     (b)               
+u2/sclk                       1     FB6_10       (b)     (b)               
+u2/eclk                       1     FB6_11       (b)     (b)               
+u3/cnt<12>                    2     FB6_12  56   I/O     I                 
+u2/d3spi_sck                  1     FB6_13       (b)     (b)               
+u3/cnt<11>                    2     FB6_14  55   I/O     (b)               
+u2/dat_sck                    2     FB6_15       (b)     (b)               
+p_mgt_txdis                   1     FB6_16  54   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: p_mgt_txdis_l     12: u2/dspi_sck.COMB  23: u3/cnt<3> 
+  2: prom_rdat         13: u2/eclk           24: u3/cnt<4> 
+  3: u2/bcs            14: u2/sclk           25: u3/cnt<5> 
+  4: u2/ccen           15: u3/cen            26: u3/cnt<6> 
+  5: u2/ccnt<0>        16: u3/clr            27: u3/cnt<7> 
+  6: u2/ccnt<1>        17: u3/cnt<0>         28: u3/cnt<8> 
+  7: u2/ccnt<2>        18: u3/cnt<10>        29: u3/cnt<9> 
+  8: u2/cpld_sdo       19: u3/cnt<11>        30: u5/cpld_cs 
+  9: u2/d2spi_sck      20: u3/cnt<12>        31: u5/cpld_cs.COMB 
+ 10: u2/d3spi_sck      21: u3/cnt<1>         32: u5/cpld_sck 
+ 11: u2/dcen           22: u3/cnt<2>        
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+u2/dspi_sck       ..........X.XX.......................... 3       
+u2/dspi_cs        ..X..........X.......................... 2       
+p_spi_sdo         .X.X...X..X............................. 4       
+u5/dcpld_sck      ...............................X........ 1       
+u5/dcpld_cs       .............................X.......... 1       
+u3/cnt<10>        ..............XXXX..XXXXXXXXX........... 13      
+u3/cen            ...............X..............X......... 2       
+u3/dclr           ...............X........................ 1       
+u2/sclk           ........XX.............................. 2       
+u2/eclk           ........XX.............................. 2       
+u3/cnt<12>        ..............XXXXXXXXXXXXXXX........... 15      
+u2/d3spi_sck      ........X............................... 1       
+u3/cnt<11>        ..............XXXXX.XXXXXXXXX........... 14      
+u2/dat_sck        ...........XX........................... 2       
+p_mgt_txdis       X....................................... 1       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB7  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               19/21
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   12/44
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB7_1   77   I/O           
+(unused)                      0     FB7_2   78   I/O           
+(unused)                      0     FB7_3        (b)           
+(unused)                      0     FB7_4   79   I/O           
+p_prom_sdi                    1     FB7_5   80   I/O     O                 
+p_prom_sck                    1     FB7_6   81   I/O     O                 
+(unused)                      0     FB7_7        (b)           
+u3/endown                     2     FB7_8        (b)     (b)               
+u2/dcen                       2     FB7_9        (b)     (b)               
+u2/ccen                       2     FB7_10       (b)     (b)               
+p_prom_cs                     1     FB7_11  82   I/O     O                 
+u5/dcpld_sdi                  1     FB7_12       (b)     (b)               
+prom_rdat                     1     FB7_13  85   I/O     I                 
+p_prom_wp                     2     FB7_14  86   I/O     O                 
+(unused)                      0     FB7_15  87   I/O           
+(unused)                      0     FB7_16  89   I/O           
+
+Signals Used by Logic in Function Block
+  1: p_spi_sdi          8: u2/ccnt<1>        14: u5/cpld_sck.COMB 
+  2: prom_rdat.COMB     9: u2/ccnt<2>        15: u5/cpld_sdi 
+  3: rprom_cs          10: u2/ecs            16: u5/cpld_sdi.COMB 
+  4: rprom_sck         11: u2/sclk           17: wprom_cs 
+  5: rprom_sdi         12: u3/dclr           18: wprom_sck 
+  6: u2/ccen           13: u3/sdown          19: wprom_sdi 
+  7: u2/ccnt<0>       
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+p_prom_sdi        ....X.............X..................... 2       
+p_prom_sck        ...X.............X...................... 2       
+u3/endown         .X.........X............................ 2       
+u2/dcen           .........X.....X........................ 2       
+u2/ccen           .........X...X.......................... 2       
+p_prom_cs         ..X.............X....................... 2       
+u5/dcpld_sdi      ..............X......................... 1       
+prom_rdat         ...........XX........................... 2       
+p_prom_wp         X....XXXX.X............................. 6       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB8  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               7/33
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   8/48
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB8_1        (b)           
+(unused)                      0     FB8_2   53   I/O           
+p_dac_cs<3>                   1     FB8_3   52   I/O     O                 
+p_dac_sck<3>                  1     FB8_4   50   I/O     O                 
+(unused)                      0     FB8_5        (b)           
+p_dac_sdi<3>                  1     FB8_6   49   I/O     O                 
+(unused)                      0     FB8_7        (b)           
+(unused)                      0     FB8_8        (b)           
+(unused)                      0     FB8_9        (b)           
+(unused)                      0     FB8_10       (b)           
+(unused)                      0     FB8_11       (b)           
+p_dac_cs<2>                   1     FB8_12  46   I/O     O                 
+p_dac_sck<2>                  1     FB8_13  44   I/O     O                 
+p_dac_sdi<2>                  1     FB8_14  43   I/O     O                 
+p_dac_cs<1>                   1     FB8_15  42   I/O     O                 
+p_dac_sck<1>                  1     FB8_16  41   I/O     O                 
+
+Signals Used by Logic in Function Block
+  1: u5/dcpld_cs        4: u5/mux<0>          6: u5/mux<2> 
+  2: u5/dcpld_sck       5: u5/mux<1>          7: u5/mux<3> 
+  3: u5/dcpld_sdi     
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+p_dac_cs<3>       X..XXXX................................. 5       
+p_dac_sck<3>      XX.XXXX................................. 6       
+p_dac_sdi<3>      X.XXXXX................................. 6       
+p_dac_cs<2>       X..XXXX................................. 5       
+p_dac_sck<2>      XX.XXXX................................. 6       
+p_dac_sdi<2>      X.XXXXX................................. 6       
+p_dac_cs<1>       X..XXXX................................. 5       
+p_dac_sck<1>      XX.XXXX................................. 6       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+FDCPE_calib: FDCPE port map (calib,p_spi_sdi,p_clk,'0','0',calib_CE);
+calib_CE <= (NOT u2/ccnt(0) AND u2/sclk AND u2/ccen AND u2/ccnt(1) AND 
+	u2/ccnt(2));
+
+FDCPE_down_done: FDCPE port map (down_done,NOT u3/cen,p_clk,'0','0','1');
+
+FDCPE_download: FDCPE port map (download,download_D,p_clk,'0','0','1');
+download_D <= (NOT u2/ccnt(0) AND p_spi_sdi AND u2/sclk AND u2/ccen AND 
+	NOT u2/ccnt(1) AND u2/ccnt(2));
+
+FDCPE_p_bias_cs0: FDCPE port map (p_bias_cs(0),p_bias_cs_D(0),p_clk,'0','0','1');
+p_bias_cs_D(0) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+	NOT u5/mux(3)));
+
+FDCPE_p_bias_cs1: FDCPE port map (p_bias_cs(1),p_bias_cs_D(1),p_clk,'0','0','1');
+p_bias_cs_D(1) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+	NOT u5/mux(3)));
+
+FDCPE_p_bias_cs2: FDCPE port map (p_bias_cs(2),p_bias_cs_D(2),p_clk,'0','0','1');
+p_bias_cs_D(2) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+	NOT u5/mux(3)));
+
+FDCPE_p_bias_cs3: FDCPE port map (p_bias_cs(3),p_bias_cs_D(3),p_clk,'0','0','1');
+p_bias_cs_D(3) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+	NOT u5/mux(3)));
+
+FDCPE_p_bias_sck0: FDCPE port map (p_bias_sck(0),p_bias_sck_D(0),p_clk,'0','0','1');
+p_bias_sck_D(0) <= (NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_bias_sck1: FDCPE port map (p_bias_sck(1),p_bias_sck_D(1),p_clk,'0','0','1');
+p_bias_sck_D(1) <= (u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_bias_sck2: FDCPE port map (p_bias_sck(2),p_bias_sck_D(2),p_clk,'0','0','1');
+p_bias_sck_D(2) <= (NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_bias_sck3: FDCPE port map (p_bias_sck(3),p_bias_sck_D(3),p_clk,'0','0','1');
+p_bias_sck_D(3) <= (u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_bias_sdi0: FDCPE port map (p_bias_sdi(0),p_bias_sdi_D(0),p_clk,'0','0','1');
+p_bias_sdi_D(0) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_bias_sdi1: FDCPE port map (p_bias_sdi(1),p_bias_sdi_D(1),p_clk,'0','0','1');
+p_bias_sdi_D(1) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_bias_sdi2: FDCPE port map (p_bias_sdi(2),p_bias_sdi_D(2),p_clk,'0','0','1');
+p_bias_sdi_D(2) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_bias_sdi3: FDCPE port map (p_bias_sdi(3),p_bias_sdi_D(3),p_clk,'0','0','1');
+p_bias_sdi_D(3) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	u5/mux(1) AND NOT u5/mux(2) AND NOT u5/mux(3));
+
+FDCPE_p_dac_cs0: FDCPE port map (p_dac_cs(0),p_dac_cs_D(0),p_clk,'0','0','1');
+p_dac_cs_D(0) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+	u5/mux(3)));
+
+FDCPE_p_dac_cs1: FDCPE port map (p_dac_cs(1),p_dac_cs_D(1),p_clk,'0','0','1');
+p_dac_cs_D(1) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND NOT u5/mux(2) AND 
+	u5/mux(3)));
+
+FDCPE_p_dac_cs2: FDCPE port map (p_dac_cs(2),p_dac_cs_D(2),p_clk,'0','0','1');
+p_dac_cs_D(2) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+	u5/mux(3)));
+
+FDCPE_p_dac_cs3: FDCPE port map (p_dac_cs(3),p_dac_cs_D(3),p_clk,'0','0','1');
+p_dac_cs_D(3) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/mux(1) AND NOT u5/mux(2) AND 
+	u5/mux(3)));
+
+FDCPE_p_dac_cs4: FDCPE port map (p_dac_cs(4),p_dac_cs_D(4),p_clk,'0','0','1');
+p_dac_cs_D(4) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND NOT u5/mux(1) AND u5/mux(2) AND 
+	u5/mux(3)));
+
+FDCPE_p_dac_sck0: FDCPE port map (p_dac_sck(0),p_dac_sck_D(0),p_clk,'0','0','1');
+p_dac_sck_D(0) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+
+FDCPE_p_dac_sck1: FDCPE port map (p_dac_sck(1),p_dac_sck_D(1),p_clk,'0','0','1');
+p_dac_sck_D(1) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+
+FDCPE_p_dac_sck2: FDCPE port map (p_dac_sck(2),p_dac_sck_D(2),p_clk,'0','0','1');
+p_dac_sck_D(2) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+
+FDCPE_p_dac_sck3: FDCPE port map (p_dac_sck(3),p_dac_sck_D(3),p_clk,'0','0','1');
+p_dac_sck_D(3) <= NOT ((u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3)));
+
+FDCPE_p_dac_sck4: FDCPE port map (p_dac_sck(4),p_dac_sck_D(4),p_clk,'0','0','1');
+p_dac_sck_D(4) <= NOT ((NOT u5/mux(0) AND NOT u5/dcpld_cs AND u5/dcpld_sck AND 
+	NOT u5/mux(1) AND u5/mux(2) AND u5/mux(3)));
+
+FDCPE_p_dac_sdi0: FDCPE port map (p_dac_sdi(0),p_dac_sdi_D(0),p_clk,'0','0','1');
+p_dac_sdi_D(0) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+
+FDCPE_p_dac_sdi1: FDCPE port map (p_dac_sdi(1),p_dac_sdi_D(1),p_clk,'0','0','1');
+p_dac_sdi_D(1) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	NOT u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+
+FDCPE_p_dac_sdi2: FDCPE port map (p_dac_sdi(2),p_dac_sdi_D(2),p_clk,'0','0','1');
+p_dac_sdi_D(2) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+
+FDCPE_p_dac_sdi3: FDCPE port map (p_dac_sdi(3),p_dac_sdi_D(3),p_clk,'0','0','1');
+p_dac_sdi_D(3) <= (u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	u5/mux(1) AND NOT u5/mux(2) AND u5/mux(3));
+
+FDCPE_p_dac_sdi4: FDCPE port map (p_dac_sdi(4),p_dac_sdi_D(4),p_clk,'0','0','1');
+p_dac_sdi_D(4) <= (NOT u5/mux(0) AND u5/dcpld_sdi AND NOT u5/dcpld_cs AND 
+	NOT u5/mux(1) AND u5/mux(2) AND u5/mux(3));
+
+FDCPE_p_fpga_cclk: FDCPE port map (p_fpga_cclk,p_fpga_cclk_D,p_clk,'0','0','1');
+p_fpga_cclk_D <= (u3/endown AND rprom_sck);
+
+FDCPE_p_fpga_din: FDCPE port map (p_fpga_din,p_fpga_din_D,p_clk,'0','0','1');
+p_fpga_din_D <= NOT (((NOT u3/endown AND NOT calib)
+	OR (NOT prom_rdat AND NOT calib)));
+
+FDCPE_p_fpga_prog: FDCPE port map (p_fpga_prog,NOT p_spi_sdi,p_clk,'0','0',p_fpga_prog_CE);
+p_fpga_prog_CE <= (u2/ccnt(0) AND u2/sclk AND u2/ccen AND NOT u2/ccnt(1) AND 
+	u2/ccnt(2));
+
+
+p_mgt_def_l <= p_mgt_def;
+
+
+p_mgt_loss_l <= p_mgt_loss;
+
+
+p_mgt_txdis <= p_mgt_txdis_l;
+
+FDCPE_p_prom_cs: FDCPE port map (p_prom_cs,p_prom_cs_D,p_clk,'0','0','1');
+p_prom_cs_D <= (NOT rprom_cs AND NOT wprom_cs);
+
+FDCPE_p_prom_sck: FDCPE port map (p_prom_sck,p_prom_sck_D,p_clk,'0','0','1');
+p_prom_sck_D <= NOT ((NOT rprom_sck AND NOT wprom_sck));
+
+FDCPE_p_prom_sdi: FDCPE port map (p_prom_sdi,p_prom_sdi_D,p_clk,'0','0','1');
+p_prom_sdi_D <= NOT ((NOT rprom_sdi AND NOT wprom_sdi));
+
+FDCPE_p_prom_wp: FDCPE port map (p_prom_wp,p_spi_sdi,p_clk,'0','0',p_prom_wp_CE);
+p_prom_wp_CE <= (NOT u2/ccnt(0) AND u2/sclk AND u2/ccen AND u2/ccnt(1) AND 
+	NOT u2/ccnt(2));
+
+FDCPE_p_spi_sdo: FDCPE port map (p_spi_sdo,p_spi_sdo_D,p_clk,'0','0','1');
+p_spi_sdo_D <= ((prom_rdat AND u2/dcen)
+	OR (u2/ccen AND u2/cpld_sdo));
+
+
+prom_rdat.COMB <= (NOT u3/dclr AND NOT u3/sdown);FDCPE_prom_rdat: FDCPE port map (prom_rdat,p_prom_sdo,p_clk,'0','0','1');
+
+FDCPE_rprom_cs: FDCPE port map (rprom_cs,u3/cen,p_clk,'0','0','1');
+
+FDCPE_rprom_sck: FDCPE port map (rprom_sck,u3/cnt(0),p_clk,'0','0','1');
+
+FDCPE_rprom_sdi: FDCPE port map (rprom_sdi,rprom_sdi_D,p_clk,'0','0','1');
+rprom_sdi_D <= ((NOT u3/cnt(10) AND NOT u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND 
+	NOT u3/cnt(5) AND NOT u3/cnt(6) AND NOT u3/cnt(7) AND NOT u3/cnt(8) AND NOT u3/cnt(9) AND 
+	NOT u3/cnt(11) AND NOT u3/cnt(12) AND NOT u3/cnt(13) AND NOT u3/cnt(14) AND 
+	NOT u3/cnt(15) AND NOT u3/cnt(16) AND NOT u3/cnt(17) AND NOT u3/cnt(18) AND 
+	NOT u3/cnt(19) AND NOT u3/cnt(20) AND NOT u3/cnt(21) AND NOT u3/cnt(22) AND 
+	NOT u3/cnt(23) AND NOT u3/cnt(24) AND NOT u3/cnt(25))
+	OR (NOT u3/cnt(10) AND u3/cnt(2) AND u3/cnt(3) AND NOT u3/cnt(4) AND 
+	NOT u3/cnt(5) AND NOT u3/cnt(6) AND NOT u3/cnt(7) AND NOT u3/cnt(8) AND NOT u3/cnt(9) AND 
+	NOT u3/cnt(11) AND NOT u3/cnt(12) AND NOT u3/cnt(13) AND NOT u3/cnt(14) AND 
+	NOT u3/cnt(15) AND NOT u3/cnt(16) AND NOT u3/cnt(17) AND NOT u3/cnt(18) AND 
+	NOT u3/cnt(19) AND NOT u3/cnt(20) AND NOT u3/cnt(21) AND NOT u3/cnt(22) AND 
+	NOT u3/cnt(23) AND NOT u3/cnt(24) AND NOT u3/cnt(25)));
+
+FDCPE_u2/bcs: FDCPE port map (u2/bcs,u2/bcs_D,p_clk,'0','0','1');
+u2/bcs_D <= (NOT u2/d2spi_cs AND u2/d3spi_cs);
+
+FDCPE_u2/ccen: FDCPE port map (u2/ccen,NOT u2/ecs,p_clk,'0','0',NOT u5/cpld_sck.COMB);
+
+FTCPE_u2/ccnt0: FTCPE port map (u2/ccnt(0),u2/ccnt_T(0),p_clk,'0','0','1');
+u2/ccnt_T(0) <= ((u2/ccnt(0) AND u2/scom)
+	OR (NOT u2/scom AND u2/sclk AND u2/ccen));
+
+FTCPE_u2/ccnt1: FTCPE port map (u2/ccnt(1),u2/ccnt_T(1),p_clk,'0','0','1');
+u2/ccnt_T(1) <= ((u2/scom AND u2/ccnt(1))
+	OR (u2/ccnt(0) AND NOT u2/scom AND u2/sclk AND u2/ccen));
+
+FTCPE_u2/ccnt2: FTCPE port map (u2/ccnt(2),u2/ccnt_T(2),p_clk,'0','0','1');
+u2/ccnt_T(2) <= ((u2/scom AND u2/ccnt(2))
+	OR (u2/ccnt(0) AND NOT u2/scom AND u2/sclk AND u2/ccen AND 
+	u2/ccnt(1)));
+
+FDCPE_u2/cpld_sdo: FDCPE port map (u2/cpld_sdo,u2/cpld_sdo_D,p_clk,'0','0','1');
+u2/cpld_sdo_D <= ((u2/ccnt(0) AND u2/ccnt(1) AND u2/ccnt(2) AND 
+	down_done)
+	OR (u2/ccnt(0) AND NOT u2/ccnt(1) AND u2/ccnt(2) AND 
+	p_fpga_done)
+	OR (NOT u2/ccnt(0) AND u2/ccnt(1) AND u2/ccnt(2) AND 
+	p_fpga_init));
+
+FDCPE_u2/d2spi_cs: FDCPE port map (u2/d2spi_cs,u2/dspi_cs,p_clk,'0','0','1');
+
+FDCPE_u2/d2spi_sck: FDCPE port map (u2/d2spi_sck,u2/dspi_sck,p_clk,'0','0','1');
+
+FDCPE_u2/d3spi_cs: FDCPE port map (u2/d3spi_cs,u2/d2spi_cs,p_clk,'0','0','1');
+
+FDCPE_u2/d3spi_sck: FDCPE port map (u2/d3spi_sck,u2/d2spi_sck,p_clk,'0','0','1');
+
+FDCPE_u2/dat_sck: FDCPE port map (u2/dat_sck,NOT u2/eclk,p_clk,'0','0',u2/dspi_sck.COMB);
+
+FDCPE_u2/dcen: FDCPE port map (u2/dcen,NOT u2/ecs,p_clk,'0','0',NOT u5/cpld_sdi.COMB);
+
+
+u2/dspi_cs.COMB <= (NOT u2/sclk AND NOT u2/bcs);FDCPE_u2/dspi_cs: FDCPE port map (u2/dspi_cs,p_spi_cs,p_clk,'0','0','1');
+
+
+u2/dspi_sck.COMB <= ((u2/eclk)
+	OR (u2/sclk AND u2/dcen));FDCPE_u2/dspi_sck: FDCPE port map (u2/dspi_sck,p_spi_sck,p_clk,'0','0','1');
+
+FDCPE_u2/eclk: FDCPE port map (u2/eclk,u2/eclk_D,p_clk,'0','0','1');
+u2/eclk_D <= (NOT u2/d2spi_sck AND u2/d3spi_sck);
+
+FDCPE_u2/ecs: FDCPE port map (u2/ecs,u2/ecs_D,p_clk,'0','0','1');
+u2/ecs_D <= (u2/d2spi_cs AND NOT u2/d3spi_cs);
+
+FDCPE_u2/enflag: FDCPE port map (u2/enflag,NOT u2/sclk,p_clk,'0','0',NOT u2/dspi_cs.COMB);
+
+FDCPE_u2/mux0: FDCPE port map (u2/mux(0),p_spi_sdi,p_clk,'0','0',u2/mux_CE(0));
+u2/mux_CE(0) <= (u2/ccnt(0) AND u2/sclk AND u2/ccen AND NOT u2/ccnt(1) AND 
+	NOT u2/ccnt(2));
+
+FDCPE_u2/mux1: FDCPE port map (u2/mux(1),p_spi_sdi,p_clk,'0','0',u2/mux_CE(1));
+u2/mux_CE(1) <= (NOT u2/ccnt(0) AND u2/sclk AND u2/ccen AND NOT u2/ccnt(1) AND 
+	NOT u2/ccnt(2));
+
+FDCPE_u2/sclk: FDCPE port map (u2/sclk,u2/sclk_D,p_clk,'0','0','1');
+u2/sclk_D <= (u2/d2spi_sck AND NOT u2/d3spi_sck);
+
+FDCPE_u2/scom: FDCPE port map (u2/scom,u2/scom_D,p_clk,'0','0','1');
+u2/scom_D <= (NOT p_spi_sdi AND u2/enflag AND u2/sclk);
+
+FDCPE_u2/sdat: FDCPE port map (u2/sdat,u2/sdat_D,p_clk,'0','0','1');
+u2/sdat_D <= (p_spi_sdi AND u2/enflag AND u2/sclk);
+
+FDCPE_u3/cen: FDCPE port map (u3/cen,NOT u3/clr,p_clk,'0','0',NOT u5/cpld_cs.COMB);
+
+FDCPE_u3/clr: FDCPE port map (u3/clr,u3/clr_D,p_clk,'0','0','1');
+u3/clr_D <= (NOT u3/cnt(0) AND u3/cnt(10) AND NOT u3/cnt(1) AND NOT u3/cnt(2) AND 
+	NOT u3/cnt(3) AND u3/cnt(4) AND NOT u3/cnt(5) AND NOT u3/cnt(6) AND NOT u3/cnt(7) AND 
+	u3/cnt(8) AND NOT u3/cnt(9) AND u3/cnt(11) AND u3/cnt(12) AND 
+	u3/cnt(13) AND NOT u3/cnt(14) AND NOT u3/cnt(15) AND u3/cnt(16) AND 
+	u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND u3/cnt(20) AND 
+	NOT u3/cnt(21) AND u3/cnt(22) AND u3/cnt(23) AND NOT u3/cnt(24) AND 
+	u3/cnt(25));
+
+FDCPE_u3/cnt0: FDCPE port map (u3/cnt(0),u3/cnt_D(0),p_clk,'0','0','1');
+u3/cnt_D(0) <= ((NOT u3/clr AND u3/cnt(0) AND NOT u3/cen)
+	OR (NOT u3/clr AND NOT u3/cnt(0) AND u3/cen));
+
+FTCPE_u3/cnt1: FTCPE port map (u3/cnt(1),u3/cnt_T(1),p_clk,'0','0','1');
+u3/cnt_T(1) <= ((u3/clr AND u3/cnt(1))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen));
+
+FTCPE_u3/cnt2: FTCPE port map (u3/cnt(2),u3/cnt_T(2),p_clk,'0','0','1');
+u3/cnt_T(2) <= ((u3/clr AND u3/cnt(2))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1)));
+
+FTCPE_u3/cnt3: FTCPE port map (u3/cnt(3),u3/cnt_T(3),p_clk,'0','0','1');
+u3/cnt_T(3) <= ((u3/clr AND u3/cnt(3))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2)));
+
+FTCPE_u3/cnt4: FTCPE port map (u3/cnt(4),u3/cnt_T(4),p_clk,'0','0','1');
+u3/cnt_T(4) <= ((u3/clr AND u3/cnt(4))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2) AND u3/cnt(3)));
+
+FTCPE_u3/cnt5: FTCPE port map (u3/cnt(5),u3/cnt_T(5),p_clk,'0','0','1');
+u3/cnt_T(5) <= ((u3/clr AND u3/cnt(5))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4)));
+
+FTCPE_u3/cnt6: FTCPE port map (u3/cnt(6),u3/cnt_T(6),p_clk,'0','0','1');
+u3/cnt_T(6) <= ((u3/clr AND u3/cnt(6))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5)));
+
+FTCPE_u3/cnt7: FTCPE port map (u3/cnt(7),u3/cnt_T(7),p_clk,'0','0','1');
+u3/cnt_T(7) <= ((u3/clr AND u3/cnt(7))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6)));
+
+FTCPE_u3/cnt8: FTCPE port map (u3/cnt(8),u3/cnt_T(8),p_clk,'0','0','1');
+u3/cnt_T(8) <= ((u3/clr AND u3/cnt(8))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6) AND 
+	u3/cnt(7)));
+
+FTCPE_u3/cnt9: FTCPE port map (u3/cnt(9),u3/cnt_T(9),p_clk,'0','0','1');
+u3/cnt_T(9) <= ((u3/clr AND u3/cnt(9))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6) AND 
+	u3/cnt(7) AND u3/cnt(8)));
+
+FTCPE_u3/cnt10: FTCPE port map (u3/cnt(10),u3/cnt_T(10),p_clk,'0','0','1');
+u3/cnt_T(10) <= ((u3/clr AND u3/cnt(10))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(1) AND 
+	u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND u3/cnt(6) AND 
+	u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9)));
+
+FTCPE_u3/cnt11: FTCPE port map (u3/cnt(11),u3/cnt_T(11),p_clk,'0','0','1');
+u3/cnt_T(11) <= ((u3/clr AND u3/cnt(11))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9)));
+
+FTCPE_u3/cnt12: FTCPE port map (u3/cnt(12),u3/cnt_T(12),p_clk,'0','0','1');
+u3/cnt_T(12) <= ((u3/clr AND u3/cnt(12))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11)));
+
+FTCPE_u3/cnt13: FTCPE port map (u3/cnt(13),u3/cnt_T(13),p_clk,'0','0','1');
+u3/cnt_T(13) <= ((u3/clr AND u3/cnt(13))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12)));
+
+FTCPE_u3/cnt14: FTCPE port map (u3/cnt(14),u3/cnt_T(14),p_clk,'0','0','1');
+u3/cnt_T(14) <= ((u3/clr AND u3/cnt(14))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13)));
+
+FTCPE_u3/cnt15: FTCPE port map (u3/cnt(15),u3/cnt_T(15),p_clk,'0','0','1');
+u3/cnt_T(15) <= ((u3/clr AND u3/cnt(15))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14)));
+
+FTCPE_u3/cnt16: FTCPE port map (u3/cnt(16),u3/cnt_T(16),p_clk,'0','0','1');
+u3/cnt_T(16) <= ((u3/clr AND u3/cnt(16))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15)));
+
+FTCPE_u3/cnt17: FTCPE port map (u3/cnt(17),u3/cnt_T(17),p_clk,'0','0','1');
+u3/cnt_T(17) <= ((u3/clr AND u3/cnt(17))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16)));
+
+FTCPE_u3/cnt18: FTCPE port map (u3/cnt(18),u3/cnt_T(18),p_clk,'0','0','1');
+u3/cnt_T(18) <= ((u3/clr AND u3/cnt(18))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17)));
+
+FTCPE_u3/cnt19: FTCPE port map (u3/cnt(19),u3/cnt_T(19),p_clk,'0','0','1');
+u3/cnt_T(19) <= ((u3/clr AND u3/cnt(19))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18)));
+
+FTCPE_u3/cnt20: FTCPE port map (u3/cnt(20),u3/cnt_T(20),p_clk,'0','0','1');
+u3/cnt_T(20) <= ((u3/clr AND u3/cnt(20))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19)));
+
+FTCPE_u3/cnt21: FTCPE port map (u3/cnt(21),u3/cnt_T(21),p_clk,'0','0','1');
+u3/cnt_T(21) <= ((u3/clr AND u3/cnt(21))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+	u3/cnt(20)));
+
+FTCPE_u3/cnt22: FTCPE port map (u3/cnt(22),u3/cnt_T(22),p_clk,'0','0','1');
+u3/cnt_T(22) <= ((u3/clr AND u3/cnt(22))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+	u3/cnt(20) AND u3/cnt(21)));
+
+FTCPE_u3/cnt23: FTCPE port map (u3/cnt(23),u3/cnt_T(23),p_clk,'0','0','1');
+u3/cnt_T(23) <= ((u3/clr AND u3/cnt(23))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+	u3/cnt(20) AND u3/cnt(21) AND u3/cnt(22)));
+
+FTCPE_u3/cnt24: FTCPE port map (u3/cnt(24),u3/cnt_T(24),p_clk,'0','0','1');
+u3/cnt_T(24) <= ((u3/clr AND u3/cnt(24))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+	u3/cnt(20) AND u3/cnt(21) AND u3/cnt(22) AND u3/cnt(23)));
+
+FTCPE_u3/cnt25: FTCPE port map (u3/cnt(25),u3/cnt_T(25),p_clk,'0','0','1');
+u3/cnt_T(25) <= ((u3/clr AND u3/cnt(25))
+	OR (NOT u3/clr AND u3/cnt(0) AND u3/cen AND u3/cnt(10) AND 
+	u3/cnt(1) AND u3/cnt(2) AND u3/cnt(3) AND u3/cnt(4) AND u3/cnt(5) AND 
+	u3/cnt(6) AND u3/cnt(7) AND u3/cnt(8) AND u3/cnt(9) AND u3/cnt(11) AND 
+	u3/cnt(12) AND u3/cnt(13) AND u3/cnt(14) AND u3/cnt(15) AND 
+	u3/cnt(16) AND u3/cnt(17) AND u3/cnt(18) AND u3/cnt(19) AND 
+	u3/cnt(20) AND u3/cnt(21) AND u3/cnt(22) AND u3/cnt(23) AND 
+	u3/cnt(24)));
+
+FDCPE_u3/dclr: FDCPE port map (u3/dclr,u3/clr,p_clk,'0','0','1');
+
+FDCPE_u3/endown: FDCPE port map (u3/endown,NOT u3/dclr,p_clk,'0','0',NOT prom_rdat.COMB);
+
+FDCPE_u3/sdown: FDCPE port map (u3/sdown,u3/sdown_D,p_clk,'0','0','1');
+u3/sdown_D <= (NOT u3/cnt(0) AND NOT u3/cnt(10) AND u3/cnt(1) AND NOT u3/cnt(2) AND 
+	NOT u3/cnt(3) AND NOT u3/cnt(4) AND NOT u3/cnt(5) AND u3/cnt(6) AND NOT u3/cnt(7) AND 
+	NOT u3/cnt(8) AND NOT u3/cnt(9) AND NOT u3/cnt(11) AND NOT u3/cnt(12) AND 
+	NOT u3/cnt(13) AND NOT u3/cnt(14) AND NOT u3/cnt(15) AND NOT u3/cnt(16) AND 
+	NOT u3/cnt(17) AND NOT u3/cnt(18) AND NOT u3/cnt(19) AND NOT u3/cnt(20) AND 
+	NOT u3/cnt(21) AND NOT u3/cnt(22) AND NOT u3/cnt(23) AND NOT u3/cnt(24) AND 
+	NOT u3/cnt(25));
+
+
+u5/cpld_cs.COMB <= (NOT u3/clr AND NOT download);FDCPE_u5/cpld_cs: FDCPE port map (u5/cpld_cs,p_cpld_cs,p_clk,'0','0','1');
+
+
+u5/cpld_sck.COMB <= (NOT u2/scom AND NOT u2/ecs);FDCPE_u5/cpld_sck: FDCPE port map (u5/cpld_sck,p_cpld_sck,p_clk,'0','0','1');
+
+
+u5/cpld_sdi.COMB <= (NOT u2/ecs AND NOT u2/sdat);FDCPE_u5/cpld_sdi: FDCPE port map (u5/cpld_sdi,p_cpld_sdi,p_clk,'0','0','1');
+
+FDCPE_u5/d2cpld_sck: FDCPE port map (u5/d2cpld_sck,u5/dcpld_sck,p_clk,'0','0','1');
+
+FDCPE_u5/dcpld_cs: FDCPE port map (u5/dcpld_cs,u5/cpld_cs,p_clk,'0','0','1');
+
+FDCPE_u5/dcpld_sck: FDCPE port map (u5/dcpld_sck,u5/cpld_sck,p_clk,'0','0','1');
+
+FDCPE_u5/dcpld_sdi: FDCPE port map (u5/dcpld_sdi,u5/cpld_sdi,p_clk,'0','0','1');
+
+FDCPE_u5/mux0: FDCPE port map (u5/mux(0),u5/dcpld_sdi,p_clk,'0','0',u5/set_mux);
+
+FDCPE_u5/mux1: FDCPE port map (u5/mux(1),u5/mux(0),p_clk,'0','0',u5/set_mux);
+
+FDCPE_u5/mux2: FDCPE port map (u5/mux(2),u5/mux(1),p_clk,'0','0',u5/set_mux);
+
+FDCPE_u5/mux3: FDCPE port map (u5/mux(3),u5/mux(2),p_clk,'0','0',u5/set_mux);
+
+FDCPE_u5/set_mux: FDCPE port map (u5/set_mux,u5/set_mux_D,p_clk,'0','0','1');
+u5/set_mux_D <= (u5/dcpld_cs AND NOT u5/dcpld_sck AND u5/d2cpld_sck);
+
+FDCPE_wprom_cs: FDCPE port map (wprom_cs,wprom_cs_D,p_clk,'0','0','1');
+wprom_cs_D <= (u2/dcen AND u2/mux(0) AND NOT u2/mux(1));
+
+FDCPE_wprom_sck: FDCPE port map (wprom_sck,wprom_sck_D,p_clk,'0','0','1');
+wprom_sck_D <= (u2/mux(0) AND NOT u2/mux(1) AND u2/dat_sck);
+
+FDCPE_wprom_sdi: FDCPE port map (wprom_sdi,wprom_sdi_D,p_clk,'0','0','1');
+wprom_sdi_D <= (p_spi_sdi AND u2/dcen AND u2/mux(0) AND NOT u2/mux(1));
+
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FDDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ FTDCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC2C128-7-VQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13                XC2C128-7-VQ100               63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 KPR                              51 VCCIO-1.8                     
+  2 KPR                              52 p_dac_cs<3>                   
+  3 KPR                              53 KPR                           
+  4 KPR                              54 p_mgt_txdis                   
+  5 VCCAUX                           55 KPR                           
+  6 KPR                              56 p_mgt_def                     
+  7 p_fpga_done                      57 VCC                           
+  8 p_mgt_txdis_l                    58 p_mgt_loss                    
+  9 p_mgt_loss_l                     59 KPR                           
+ 10 p_mgt_def_l                      60 p_spi_sdo                     
+ 11 p_cpld_sdi                       61 p_spi_cs                      
+ 12 p_cpld_sck                       62 GND                           
+ 13 p_cpld_cs                        63 p_spi_sdi                     
+ 14 KPR                              64 p_spi_sck                     
+ 15 p_bias_sdi<3>                    65 KPR                           
+ 16 p_bias_sck<3>                    66 KPR                           
+ 17 p_bias_cs<3>                     67 KPR                           
+ 18 p_bias_sdi<0>                    68 KPR                           
+ 19 p_bias_sck<0>                    69 GND                           
+ 20 VCCIO-1.8                        70 KPR                           
+ 21 GND                              71 KPR                           
+ 22 p_clk                            72 KPR                           
+ 23 p_bias_cs<0>                     73 KPR                           
+ 24 p_bias_sdi<2>                    74 KPR                           
+ 25 GND                              75 GND                           
+ 26 VCC                              76 KPR                           
+ 27 p_bias_sck<2>                    77 KPR                           
+ 28 p_bias_cs<2>                     78 KPR                           
+ 29 p_bias_sdi<1>                    79 KPR                           
+ 30 p_bias_sck<1>                    80 p_prom_sdi                    
+ 31 GND                              81 p_prom_sck                    
+ 32 p_bias_cs<1>                     82 p_prom_cs                     
+ 33 p_dac_cs<4>                      83 TDO                           
+ 34 p_dac_sck<4>                     84 GND                           
+ 35 p_dac_sdi<4>                     85 p_prom_sdo                    
+ 36 p_dac_sdi<0>                     86 p_prom_wp                     
+ 37 p_dac_sck<0>                     87 KPR                           
+ 38 VCCIO-1.8                        88 VCCIO-1.8                     
+ 39 p_dac_cs<0>                      89 KPR                           
+ 40 p_dac_sdi<1>                     90 p_fpga_cclk                   
+ 41 p_dac_sck<1>                     91 KPR                           
+ 42 p_dac_cs<1>                      92 p_fpga_din                    
+ 43 p_dac_sdi<2>                     93 KPR                           
+ 44 p_dac_sck<2>                     94 p_fpga_init                   
+ 45 TDI                              95 KPR                           
+ 46 p_dac_cs<2>                      96 p_fpga_prog                   
+ 47 TMS                              97 KPR                           
+ 48 TCK                              98 VCCIO-1.8                     
+ 49 p_dac_sdi<3>                     99 KPR                           
+ 50 p_dac_sck<3>                    100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+        PGND  = Unused I/O configured as additional Ground pin
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         WPU  = Unused I/O with weak pull up (leave unconnected)
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+      VCCAUX  = Power supply for JTAG pins
+   VCCIO-3.3  = I/O supply voltage for LVTTL, LVCMOS33, SSTL3_I
+   VCCIO-2.5  = I/O supply voltage for LVCMOS25, SSTL2_I
+   VCCIO-1.8  = I/O supply voltage for LVCMOS18
+   VCCIO-1.5  = I/O supply voltage for LVCMOS15, HSTL_I
+        VREF  = Reference voltage for indicated input standard
+       *VREF  = Reference voltage pin selected by software
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc2c128-7-VQ100
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Set Unused I/O Pin Termination              : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Enable Input Registers                      : ON
+Function Block Fan-in Limit                 : 38
+Use DATA_GATE Attribute                     : ON
+Set Tristate Outputs to Termination Mode    : KEEPER
+Default Voltage Standard for All Outputs    : LVCMOS18
+Input Limit                                 : 32
+Pterm Limit                                 : 36

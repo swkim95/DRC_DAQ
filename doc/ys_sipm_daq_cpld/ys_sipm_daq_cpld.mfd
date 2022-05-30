@@ -1,0 +1,1340 @@
+MDF Database:  version 1.0
+MDF_INFO | ys_sipm_daq_cpld | XC2C128-7-VQ100
+MACROCELL | 1 | 13 | p_bias_cs<0>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_bias_cs<0> := !u5/mux<0> & !u5/dcpld_cs & !u5/mux<1> & !u5/mux<2> & 
+	!u5/mux<3>;	// (1 pt, 5 inp)
+   p_bias_cs<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 8 | u5/mux<0>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 28 | 1 | 7 | 1 | 13 | 3 | 5 | 3 | 0 | 1 | 4 | 1 | 10 | 3 | 4 | 1 | 15 | 1 | 3 | 1 | 5 | 3 | 3 | 1 | 14 | 1 | 2 | 3 | 14 | 7 | 14 | 7 | 11 | 7 | 2 | 3 | 6 | 3 | 13 | 7 | 15 | 7 | 12 | 7 | 3 | 3 | 10 | 3 | 12 | 3 | 15 | 7 | 13 | 7 | 5 | 3 | 11
+INPUTS | 2 | u5/dcpld_sdi  | u5/set_mux
+INPUTMC | 2 | 6 | 11 | 1 | 11
+EQ | 3 | 
+   u5/mux<0> := u5/dcpld_sdi;	// (1 pt, 1 inp)
+   u5/mux<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u5/mux<0>.CE = u5/set_mux;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 11 | u5/dcpld_sdi_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 10 | 1 | 8 | 1 | 5 | 3 | 3 | 1 | 14 | 1 | 2 | 3 | 12 | 3 | 15 | 7 | 13 | 7 | 5 | 3 | 11
+INPUTS | 1 | u5/cpld_sdi
+INPUTMC | 1 | 0 | 3
+EQ | 2 | 
+   u5/dcpld_sdi := u5/cpld_sdi;	// (1 pt, 1 inp)
+   u5/dcpld_sdi.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 3 | u5/cpld_sdi_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 2 | 6 | 11 | 6 | 8
+INPUTS | 2 | u2/ecs  | u2/sdat
+INPUTMC | 2 | 3 | 1 | 2 | 6
+EQ | 4 | 
+   u5/cpld_sdi.COMB =  !u2/ecs & !u2/sdat;	// (1 pt, 2 inp)
+// Direct Input Register
+u5/cpld_sdi := p_cpld_sdi;	// (0 pt, 0 inp)
+   u5/cpld_sdi.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 11 | u5/set_mux_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 0
+INPUTS | 3 | u5/dcpld_cs  | u5/dcpld_sck  | u5/d2cpld_sck
+INPUTMC | 3 | 5 | 5 | 5 | 4 | 1 | 9
+EQ | 2 | 
+   u5/set_mux := u5/dcpld_cs & !u5/dcpld_sck & u5/d2cpld_sck;	// (1 pt, 3 inp)
+   u5/set_mux.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 5 | u5/dcpld_cs_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 28 | 1 | 11 | 1 | 13 | 3 | 5 | 3 | 0 | 1 | 4 | 1 | 10 | 3 | 4 | 1 | 15 | 1 | 3 | 1 | 5 | 3 | 3 | 1 | 14 | 1 | 2 | 3 | 14 | 7 | 14 | 7 | 11 | 7 | 2 | 3 | 6 | 3 | 13 | 7 | 15 | 7 | 12 | 7 | 3 | 3 | 10 | 3 | 12 | 3 | 15 | 7 | 13 | 7 | 5 | 3 | 11
+INPUTS | 1 | u5/cpld_cs
+INPUTMC | 1 | 0 | 0
+EQ | 2 | 
+   u5/dcpld_cs := u5/cpld_cs;	// (1 pt, 1 inp)
+   u5/dcpld_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 0 | u5/cpld_cs_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 2 | 5 | 5 | 5 | 7
+INPUTS | 2 | u3/clr  | download
+INPUTMC | 2 | 4 | 8 | 2 | 11
+EQ | 4 | 
+   u5/cpld_cs.COMB =  !u3/clr & !download;	// (1 pt, 2 inp)
+// Direct Input Register
+u5/cpld_cs := p_cpld_cs;	// (0 pt, 0 inp)
+   u5/cpld_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 4 | u5/dcpld_sck_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 11 | 1 | 9 | 1 | 11 | 1 | 10 | 3 | 4 | 1 | 15 | 1 | 3 | 3 | 13 | 7 | 15 | 7 | 12 | 7 | 3 | 3 | 10
+INPUTS | 1 | u5/cpld_sck
+INPUTMC | 1 | 0 | 2
+EQ | 2 | 
+   u5/dcpld_sck := u5/cpld_sck;	// (1 pt, 1 inp)
+   u5/dcpld_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 2 | u5/cpld_sck_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 2 | 5 | 4 | 6 | 9
+INPUTS | 2 | u2/scom  | u2/ecs
+INPUTMC | 2 | 2 | 10 | 3 | 1
+EQ | 4 | 
+   u5/cpld_sck.COMB =  !u2/scom & !u2/ecs;	// (1 pt, 2 inp)
+// Direct Input Register
+u5/cpld_sck := p_cpld_sck;	// (0 pt, 0 inp)
+   u5/cpld_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 9 | u5/d2cpld_sck_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 1 | 11
+INPUTS | 1 | u5/dcpld_sck
+INPUTMC | 1 | 5 | 4
+EQ | 2 | 
+   u5/d2cpld_sck := u5/dcpld_sck;	// (1 pt, 1 inp)
+   u5/d2cpld_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 7 | u5/mux<1>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 28 | 1 | 6 | 1 | 13 | 3 | 5 | 3 | 0 | 1 | 4 | 1 | 10 | 3 | 4 | 1 | 15 | 1 | 3 | 1 | 5 | 3 | 3 | 1 | 14 | 1 | 2 | 3 | 14 | 7 | 14 | 7 | 11 | 7 | 2 | 3 | 6 | 3 | 13 | 7 | 15 | 7 | 12 | 7 | 3 | 3 | 10 | 3 | 12 | 3 | 15 | 7 | 13 | 7 | 5 | 3 | 11
+INPUTS | 2 | u5/mux<0>  | u5/set_mux
+INPUTMC | 2 | 1 | 8 | 1 | 11
+EQ | 3 | 
+   u5/mux<1> := u5/mux<0>;	// (1 pt, 1 inp)
+   u5/mux<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u5/mux<1>.CE = u5/set_mux;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 6 | u5/mux<2>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 28 | 1 | 0 | 1 | 13 | 3 | 5 | 3 | 0 | 1 | 4 | 1 | 10 | 3 | 4 | 1 | 15 | 1 | 3 | 1 | 5 | 3 | 3 | 1 | 14 | 1 | 2 | 3 | 14 | 7 | 14 | 7 | 11 | 7 | 2 | 3 | 6 | 3 | 13 | 7 | 15 | 7 | 12 | 7 | 3 | 3 | 10 | 3 | 12 | 3 | 15 | 7 | 13 | 7 | 5 | 3 | 11
+INPUTS | 2 | u5/mux<1>  | u5/set_mux
+INPUTMC | 2 | 1 | 7 | 1 | 11
+EQ | 3 | 
+   u5/mux<2> := u5/mux<1>;	// (1 pt, 1 inp)
+   u5/mux<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u5/mux<2>.CE = u5/set_mux;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 0 | u5/mux<3>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 27 | 1 | 13 | 3 | 5 | 3 | 0 | 1 | 4 | 1 | 10 | 3 | 4 | 1 | 15 | 1 | 3 | 1 | 5 | 3 | 3 | 1 | 14 | 1 | 2 | 3 | 14 | 7 | 14 | 7 | 11 | 7 | 2 | 3 | 6 | 3 | 13 | 7 | 15 | 7 | 12 | 7 | 3 | 3 | 10 | 3 | 12 | 3 | 15 | 7 | 13 | 7 | 5 | 3 | 11
+INPUTS | 2 | u5/mux<2>  | u5/set_mux
+INPUTMC | 2 | 1 | 6 | 1 | 11
+EQ | 3 | 
+   u5/mux<3> := u5/mux<2>;	// (1 pt, 1 inp)
+   u5/mux<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u5/mux<3>.CE = u5/set_mux;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 5 | p_bias_cs<1>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_bias_cs<1> := u5/mux<0> & !u5/dcpld_cs & !u5/mux<1> & !u5/mux<2> & 
+	!u5/mux<3>;	// (1 pt, 5 inp)
+   p_bias_cs<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 0 | p_bias_cs<2>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_bias_cs<2> := !u5/mux<0> & !u5/dcpld_cs & u5/mux<1> & !u5/mux<2> & 
+	!u5/mux<3>;	// (1 pt, 5 inp)
+   p_bias_cs<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 4 | p_bias_cs<3>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_bias_cs<3> := u5/mux<0> & !u5/dcpld_cs & u5/mux<1> & !u5/mux<2> & 
+	!u5/mux<3>;	// (1 pt, 5 inp)
+   p_bias_cs<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 10 | p_bias_sck<0>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sck<0> := !u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	!u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sck<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 4 | p_bias_sck<1>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sck<1> := u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	!u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sck<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 15 | p_bias_sck<2>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sck<2> := !u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sck<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 3 | p_bias_sck<3>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sck<3> := u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sck<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 5 | p_bias_sdi<0>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sdi<0> := !u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	!u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sdi<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 3 | p_bias_sdi<1>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sdi<1> := u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	!u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sdi<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 14 | p_bias_sdi<2>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sdi<2> := !u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sdi<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 2 | p_bias_sdi<3>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_bias_sdi<3> := u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	u5/mux<1> & !u5/mux<2> & !u5/mux<3>;	// (1 pt, 6 inp)
+   p_bias_sdi<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 14 | p_dac_cs<0>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_cs<0> := !u5/mux<0> & !u5/dcpld_cs & !u5/mux<1> & !u5/mux<2> & 
+	u5/mux<3>;	// (1 pt, 5 inp)
+   p_dac_cs<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 14 | p_dac_cs<1>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_cs<1> := u5/mux<0> & !u5/dcpld_cs & !u5/mux<1> & !u5/mux<2> & 
+	u5/mux<3>;	// (1 pt, 5 inp)
+   p_dac_cs<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 11 | p_dac_cs<2>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_cs<2> := !u5/mux<0> & !u5/dcpld_cs & u5/mux<1> & !u5/mux<2> & 
+	u5/mux<3>;	// (1 pt, 5 inp)
+   p_dac_cs<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 2 | p_dac_cs<3>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_cs<3> := u5/mux<0> & !u5/dcpld_cs & u5/mux<1> & !u5/mux<2> & 
+	u5/mux<3>;	// (1 pt, 5 inp)
+   p_dac_cs<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 6 | p_dac_cs<4>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 5 | u5/mux<0>  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 5 | 1 | 8 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_cs<4> := !u5/mux<0> & !u5/dcpld_cs & !u5/mux<1> & u5/mux<2> & 
+	u5/mux<3>;	// (1 pt, 5 inp)
+   p_dac_cs<4>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 13 | p_dac_sck<0>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_sck<0> := !u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	!u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sck<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 15 | p_dac_sck<1>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_sck<1> := u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	!u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sck<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 12 | p_dac_sck<2>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_sck<2> := !u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sck<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 3 | p_dac_sck<3>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_sck<3> := u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sck<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 10 | p_dac_sck<4>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_cs  | u5/dcpld_sck  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 5 | 5 | 5 | 4 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   !p_dac_sck<4> := !u5/mux<0> & !u5/dcpld_cs & u5/dcpld_sck & 
+	!u5/mux<1> & u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sck<4>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 12 | p_dac_sdi<0>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_dac_sdi<0> := !u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	!u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sdi<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 15 | p_dac_sdi<1>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_dac_sdi<1> := u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	!u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sdi<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 13 | p_dac_sdi<2>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_dac_sdi<2> := !u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sdi<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 7 | 5 | p_dac_sdi<3>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_dac_sdi<3> := u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	u5/mux<1> & !u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sdi<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 11 | p_dac_sdi<4>_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 6 | u5/mux<0>  | u5/dcpld_sdi  | u5/dcpld_cs  | u5/mux<1>  | u5/mux<2>  | u5/mux<3>
+INPUTMC | 6 | 1 | 8 | 6 | 11 | 5 | 5 | 1 | 7 | 1 | 6 | 1 | 0
+EQ | 3 | 
+   p_dac_sdi<4> := !u5/mux<0> & u5/dcpld_sdi & !u5/dcpld_cs & 
+	!u5/mux<1> & u5/mux<2> & u5/mux<3>;	// (1 pt, 6 inp)
+   p_dac_sdi<4>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 15 | p_fpga_cclk_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | u3/endown  | rprom_sck
+INPUTMC | 2 | 6 | 7 | 1 | 12
+EQ | 2 | 
+   p_fpga_cclk := u3/endown & rprom_sck;	// (1 pt, 2 inp)
+   p_fpga_cclk.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 7 | u3/endown_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 2 | 15 | 2 | 13
+INPUTS | 2 | u3/dclr  | prom_rdat.COMB
+INPUTMC | 2 | 5 | 8 | 6 | 12
+EQ | 3 | 
+   u3/endown := !u3/dclr;	// (1 pt, 1 inp)
+   u3/endown.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u3/endown.CE = !prom_rdat.COMB;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 8 | u3/dclr_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 6 | 7 | 6 | 12
+INPUTS | 1 | u3/clr
+INPUTMC | 1 | 4 | 8
+EQ | 2 | 
+   u3/dclr := u3/clr;	// (1 pt, 1 inp)
+   u3/dclr.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 8 | u3/clr_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 29 | 5 | 7 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 5 | 8 | 0 | 0
+INPUTS | 26 | u3/cnt<0>  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>  | u3/cnt<21>  | u3/cnt<22>  | u3/cnt<23>  | u3/cnt<24>  | u3/cnt<25>
+INPUTMC | 26 | 0 | 8 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15
+EQ | 8 | 
+   u3/clr := !u3/cnt<0> & u3/cnt<10> & !u3/cnt<1> & !u3/cnt<2> & 
+	!u3/cnt<3> & u3/cnt<4> & !u3/cnt<5> & !u3/cnt<6> & !u3/cnt<7> & 
+	u3/cnt<8> & !u3/cnt<9> & u3/cnt<11> & u3/cnt<12> & 
+	u3/cnt<13> & !u3/cnt<14> & !u3/cnt<15> & u3/cnt<16> & 
+	u3/cnt<17> & u3/cnt<18> & u3/cnt<19> & u3/cnt<20> & 
+	!u3/cnt<21> & u3/cnt<22> & u3/cnt<23> & !u3/cnt<24> & 
+	u3/cnt<25>;	// (1 pt, 26 inp)
+   u3/clr.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 8 | u3/cnt<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 29 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 1 | 12 | 4 | 7
+INPUTS | 3 | u3/clr  | u3/cnt<0>  | u3/cen
+INPUTMC | 3 | 4 | 8 | 0 | 8 | 5 | 7
+EQ | 3 | 
+   u3/cnt<0> := !u3/clr & u3/cnt<0> & !u3/cen
+	# !u3/clr & !u3/cnt<0> & u3/cen;	// (2 pt, 3 inp)
+   u3/cnt<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 7 | u3/cen_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 28 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 0 | 9 | 0 | 13
+INPUTS | 2 | u3/clr  | u5/cpld_cs.COMB
+INPUTMC | 2 | 4 | 8 | 0 | 0
+EQ | 3 | 
+   u3/cen := !u3/clr;	// (1 pt, 1 inp)
+   u3/cen.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u3/cen.CE = !u5/cpld_cs.COMB;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 6 | u3/cnt<10>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 19 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 13 | u3/clr  | u3/cnt<10>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>
+INPUTMC | 13 | 4 | 8 | 5 | 6 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1
+EQ | 5 | 
+   u3/cnt<10>.T := u3/clr & u3/cnt<10>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & u3/cnt<6> & 
+	u3/cnt<7> & u3/cnt<8> & u3/cnt<9>;	// (2 pt, 13 inp)
+   u3/cnt<10>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 7 | u3/cnt<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 28 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 4 | u3/clr  | u3/cnt<1>  | u3/cnt<0>  | u3/cen
+INPUTMC | 4 | 4 | 8 | 0 | 7 | 0 | 8 | 5 | 7
+EQ | 3 | 
+   u3/cnt<1>.T := u3/clr & u3/cnt<1>
+	# !u3/clr & u3/cnt<0> & u3/cen;	// (2 pt, 4 inp)
+   u3/cnt<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 6 | u3/cnt<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 27 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 5 | u3/clr  | u3/cnt<2>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>
+INPUTMC | 5 | 4 | 8 | 0 | 6 | 0 | 8 | 5 | 7 | 0 | 7
+EQ | 3 | 
+   u3/cnt<2>.T := u3/clr & u3/cnt<2>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1>;	// (2 pt, 5 inp)
+   u3/cnt<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 1 | u3/cnt<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 26 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 6 | u3/clr  | u3/cnt<3>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>
+INPUTMC | 6 | 4 | 8 | 0 | 1 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6
+EQ | 4 | 
+   u3/cnt<3>.T := u3/clr & u3/cnt<3>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2>;	// (2 pt, 6 inp)
+   u3/cnt<3>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 15 | u3/cnt<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 25 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 7 | u3/clr  | u3/cnt<4>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>
+INPUTMC | 7 | 4 | 8 | 0 | 15 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6 | 0 | 1
+EQ | 4 | 
+   u3/cnt<4>.T := u3/clr & u3/cnt<4>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2> & u3/cnt<3>;	// (2 pt, 7 inp)
+   u3/cnt<4>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 14 | u3/cnt<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 24 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 8 | u3/clr  | u3/cnt<5>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>
+INPUTMC | 8 | 4 | 8 | 0 | 14 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15
+EQ | 4 | 
+   u3/cnt<5>.T := u3/clr & u3/cnt<5>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2> & u3/cnt<3> & u3/cnt<4>;	// (2 pt, 8 inp)
+   u3/cnt<5>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 12 | u3/cnt<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 23 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 9 | u3/clr  | u3/cnt<6>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>
+INPUTMC | 9 | 4 | 8 | 0 | 12 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14
+EQ | 4 | 
+   u3/cnt<6>.T := u3/clr & u3/cnt<6>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5>;	// (2 pt, 9 inp)
+   u3/cnt<6>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 11 | u3/cnt<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 22 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 10 | u3/clr  | u3/cnt<7>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>
+INPUTMC | 10 | 4 | 8 | 0 | 11 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12
+EQ | 4 | 
+   u3/cnt<7>.T := u3/clr & u3/cnt<7>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & u3/cnt<6>;	// (2 pt, 10 inp)
+   u3/cnt<7>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 10 | u3/cnt<8>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 21 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 11 | u3/clr  | u3/cnt<8>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>
+INPUTMC | 11 | 4 | 8 | 0 | 10 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11
+EQ | 5 | 
+   u3/cnt<8>.T := u3/clr & u3/cnt<8>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & u3/cnt<6> & 
+	u3/cnt<7>;	// (2 pt, 11 inp)
+   u3/cnt<8>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 1 | u3/cnt<9>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 20 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 12 | u3/clr  | u3/cnt<9>  | u3/cnt<0>  | u3/cen  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>
+INPUTMC | 12 | 4 | 8 | 1 | 1 | 0 | 8 | 5 | 7 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10
+EQ | 5 | 
+   u3/cnt<9>.T := u3/clr & u3/cnt<9>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<1> & 
+	u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & u3/cnt<6> & 
+	u3/cnt<7> & u3/cnt<8>;	// (2 pt, 12 inp)
+   u3/cnt<9>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 13 | u3/cnt<11>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 18 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 14 | u3/clr  | u3/cnt<11>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>
+INPUTMC | 14 | 4 | 8 | 5 | 13 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1
+EQ | 5 | 
+   u3/cnt<11>.T := u3/clr & u3/cnt<11>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9>;	// (2 pt, 14 inp)
+   u3/cnt<11>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 11 | u3/cnt<12>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 17 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 15 | u3/clr  | u3/cnt<12>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>
+INPUTMC | 15 | 4 | 8 | 5 | 11 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13
+EQ | 5 | 
+   u3/cnt<12>.T := u3/clr & u3/cnt<12>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11>;	// (2 pt, 15 inp)
+   u3/cnt<12>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 0 | u3/cnt<13>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 16 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 16 | u3/clr  | u3/cnt<13>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>
+INPUTMC | 16 | 4 | 8 | 4 | 0 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11
+EQ | 6 | 
+   u3/cnt<13>.T := u3/clr & u3/cnt<13>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12>;	// (2 pt, 16 inp)
+   u3/cnt<13>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 1 | u3/cnt<14>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 15 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 17 | u3/clr  | u3/cnt<14>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>
+INPUTMC | 17 | 4 | 8 | 4 | 1 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0
+EQ | 6 | 
+   u3/cnt<14>.T := u3/clr & u3/cnt<14>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13>;	// (2 pt, 17 inp)
+   u3/cnt<14>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 2 | u3/cnt<15>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 14 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 18 | u3/clr  | u3/cnt<15>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>
+INPUTMC | 18 | 4 | 8 | 4 | 2 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1
+EQ | 6 | 
+   u3/cnt<15>.T := u3/clr & u3/cnt<15>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14>;	// (2 pt, 18 inp)
+   u3/cnt<15>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 4 | u3/cnt<16>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 13 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 19 | u3/clr  | u3/cnt<16>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>
+INPUTMC | 19 | 4 | 8 | 4 | 4 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2
+EQ | 6 | 
+   u3/cnt<16>.T := u3/clr & u3/cnt<16>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15>;	// (2 pt, 19 inp)
+   u3/cnt<16>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 6 | u3/cnt<17>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 12 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 20 | u3/clr  | u3/cnt<17>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>
+INPUTMC | 20 | 4 | 8 | 4 | 6 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4
+EQ | 7 | 
+   u3/cnt<17>.T := u3/clr & u3/cnt<17>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16>;	// (2 pt, 20 inp)
+   u3/cnt<17>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 10 | u3/cnt<18>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 11 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 21 | u3/clr  | u3/cnt<18>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>
+INPUTMC | 21 | 4 | 8 | 4 | 10 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6
+EQ | 7 | 
+   u3/cnt<18>.T := u3/clr & u3/cnt<18>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17>;	// (2 pt, 21 inp)
+   u3/cnt<18>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 11 | u3/cnt<19>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 22 | u3/clr  | u3/cnt<19>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>
+INPUTMC | 22 | 4 | 8 | 4 | 11 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10
+EQ | 7 | 
+   u3/cnt<19>.T := u3/clr & u3/cnt<19>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17> & u3/cnt<18>;	// (2 pt, 22 inp)
+   u3/cnt<19>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 12 | u3/cnt<20>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 23 | u3/clr  | u3/cnt<20>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>
+INPUTMC | 23 | 4 | 8 | 4 | 12 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11
+EQ | 7 | 
+   u3/cnt<20>.T := u3/clr & u3/cnt<20>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17> & u3/cnt<18> & u3/cnt<19>;	// (2 pt, 23 inp)
+   u3/cnt<20>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 13 | u3/cnt<21>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 24 | u3/clr  | u3/cnt<21>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>
+INPUTMC | 24 | 4 | 8 | 4 | 13 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12
+EQ | 8 | 
+   u3/cnt<21>.T := u3/clr & u3/cnt<21>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17> & u3/cnt<18> & u3/cnt<19> & 
+	u3/cnt<20>;	// (2 pt, 24 inp)
+   u3/cnt<21>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 14 | u3/cnt<22>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 25 | u3/clr  | u3/cnt<22>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>  | u3/cnt<21>
+INPUTMC | 25 | 4 | 8 | 4 | 14 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13
+EQ | 8 | 
+   u3/cnt<22>.T := u3/clr & u3/cnt<22>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17> & u3/cnt<18> & u3/cnt<19> & 
+	u3/cnt<20> & u3/cnt<21>;	// (2 pt, 25 inp)
+   u3/cnt<22>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 5 | u3/cnt<23>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 26 | u3/clr  | u3/cnt<23>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>  | u3/cnt<21>  | u3/cnt<22>
+INPUTMC | 26 | 4 | 8 | 4 | 5 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14
+EQ | 8 | 
+   u3/cnt<23>.T := u3/clr & u3/cnt<23>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17> & u3/cnt<18> & u3/cnt<19> & 
+	u3/cnt<20> & u3/cnt<21> & u3/cnt<22>;	// (2 pt, 26 inp)
+   u3/cnt<23>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 9 | u3/cnt<24>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 27 | u3/clr  | u3/cnt<24>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>  | u3/cnt<21>  | u3/cnt<22>  | u3/cnt<23>
+INPUTMC | 27 | 4 | 8 | 4 | 9 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5
+EQ | 8 | 
+   u3/cnt<24>.T := u3/clr & u3/cnt<24>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17> & u3/cnt<18> & u3/cnt<19> & 
+	u3/cnt<20> & u3/cnt<21> & u3/cnt<22> & u3/cnt<23>;	// (2 pt, 27 inp)
+   u3/cnt<24>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 15 | u3/cnt<25>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 4 | 4 | 15 | 4 | 8 | 4 | 3 | 4 | 7
+INPUTS | 28 | u3/clr  | u3/cnt<25>  | u3/cnt<0>  | u3/cen  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>  | u3/cnt<21>  | u3/cnt<22>  | u3/cnt<23>  | u3/cnt<24>
+INPUTMC | 28 | 4 | 8 | 4 | 15 | 0 | 8 | 5 | 7 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9
+EQ | 9 | 
+   u3/cnt<25>.T := u3/clr & u3/cnt<25>
+	# !u3/clr & u3/cnt<0> & u3/cen & u3/cnt<10> & 
+	u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & u3/cnt<4> & u3/cnt<5> & 
+	u3/cnt<6> & u3/cnt<7> & u3/cnt<8> & u3/cnt<9> & u3/cnt<11> & 
+	u3/cnt<12> & u3/cnt<13> & u3/cnt<14> & u3/cnt<15> & 
+	u3/cnt<16> & u3/cnt<17> & u3/cnt<18> & u3/cnt<19> & 
+	u3/cnt<20> & u3/cnt<21> & u3/cnt<22> & u3/cnt<23> & 
+	u3/cnt<24>;	// (2 pt, 28 inp)
+   u3/cnt<25>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 12 | prom_rdat_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 3 | 2 | 13 | 5 | 3 | 6 | 7
+INPUTS | 2 | u3/dclr  | u3/sdown
+INPUTMC | 2 | 5 | 8 | 4 | 7
+EQ | 4 | 
+   prom_rdat.COMB =  !u3/dclr & !u3/sdown;	// (1 pt, 2 inp)
+// Direct Input Register
+prom_rdat := p_prom_sdo;	// (0 pt, 0 inp)
+   prom_rdat.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 1 | 12 | rprom_sck_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 2 | 15 | 6 | 5
+INPUTS | 1 | u3/cnt<0>
+INPUTMC | 1 | 0 | 8
+EQ | 2 | 
+   rprom_sck := u3/cnt<0>;	// (1 pt, 1 inp)
+   rprom_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 13 | p_fpga_din_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 3 | u3/endown  | calib  | prom_rdat
+INPUTMC | 3 | 6 | 7 | 5 | 1 | 6 | 12
+EQ | 3 | 
+   !p_fpga_din := !u3/endown & !calib
+	# !prom_rdat & !calib;	// (2 pt, 3 inp)
+   p_fpga_din.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 1 | calib_MC
+ATTRIBUTES | 2155905088 | 4
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 5 | u2/ccnt<0>  | u2/sclk  | u2/ccen  | u2/ccnt<1>  | u2/ccnt<2>
+INPUTMC | 5 | 2 | 14 | 5 | 9 | 6 | 9 | 2 | 0 | 2 | 7
+EQ | 6 | 
+   
+// Direct Input Register
+calib := p_spi_sdi;	// (0 pt, 0 inp)
+   calib.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    calib.CE = !u2/ccnt<0> & u2/sclk & u2/ccen & u2/ccnt<1> & 
+	u2/ccnt<2>;	// (1 pt, 5 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 14 | u2/ccnt<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 2 | 14 | 2 | 0 | 2 | 7 | 5 | 1 | 2 | 5 | 2 | 9 | 2 | 8 | 6 | 13 | 2 | 12 | 2 | 11
+INPUTS | 4 | u2/ccnt<0>  | u2/scom  | u2/sclk  | u2/ccen
+INPUTMC | 4 | 2 | 14 | 2 | 10 | 5 | 9 | 6 | 9
+EQ | 3 | 
+   u2/ccnt<0>.T := u2/ccnt<0> & u2/scom
+	# !u2/scom & u2/sclk & u2/ccen;	// (2 pt, 4 inp)
+   u2/ccnt<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 10 | u2/scom_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 2 | 14 | 2 | 0 | 2 | 7 | 0 | 2
+INPUTS | 3 | p_spi_sdi  | u2/enflag  | u2/sclk
+INPUTMC | 2 | 2 | 4 | 5 | 9
+INPUTP | 1 | 80
+EQ | 2 | 
+   u2/scom := !p_spi_sdi & u2/enflag & u2/sclk;	// (1 pt, 3 inp)
+   u2/scom.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 4 | u2/enflag_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 2 | 10 | 2 | 6
+INPUTS | 2 | u2/sclk  | u2/dspi_cs.COMB
+INPUTMC | 2 | 5 | 9 | 5 | 2
+EQ | 3 | 
+   u2/enflag := !u2/sclk;	// (1 pt, 1 inp)
+   u2/enflag.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u2/enflag.CE = !u2/dspi_cs.COMB;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 9 | u2/sclk_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 14 | 2 | 4 | 2 | 10 | 2 | 14 | 2 | 0 | 2 | 7 | 5 | 1 | 2 | 5 | 2 | 9 | 2 | 8 | 6 | 13 | 5 | 2 | 5 | 0 | 2 | 11 | 2 | 6
+INPUTS | 2 | u2/d2spi_sck  | u2/d3spi_sck
+INPUTMC | 2 | 3 | 8 | 5 | 12
+EQ | 2 | 
+   u2/sclk := u2/d2spi_sck & !u2/d3spi_sck;	// (1 pt, 2 inp)
+   u2/sclk.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 8 | u2/d2spi_sck_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 5 | 12 | 5 | 9 | 5 | 10
+INPUTS | 1 | u2/dspi_sck
+INPUTMC | 1 | 5 | 0
+EQ | 2 | 
+   u2/d2spi_sck := u2/dspi_sck;	// (1 pt, 1 inp)
+   u2/d2spi_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 0 | u2/dspi_sck_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 2 | 3 | 8 | 5 | 14
+INPUTS | 3 | u2/eclk  | u2/sclk  | u2/dcen
+INPUTMC | 3 | 5 | 10 | 5 | 9 | 6 | 8
+EQ | 5 | 
+   u2/dspi_sck.COMB =  u2/eclk
+	# u2/sclk & u2/dcen;	// (2 pt, 3 inp)
+// Direct Input Register
+u2/dspi_sck := p_spi_sck;	// (0 pt, 0 inp)
+   u2/dspi_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 12 | u2/d3spi_sck_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 5 | 9 | 5 | 10
+INPUTS | 1 | u2/d2spi_sck
+INPUTMC | 1 | 3 | 8
+EQ | 2 | 
+   u2/d3spi_sck := u2/d2spi_sck;	// (1 pt, 1 inp)
+   u2/d3spi_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 2 | u2/dspi_cs_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 2 | 3 | 9 | 2 | 4
+INPUTS | 2 | u2/sclk  | u2/bcs
+INPUTMC | 2 | 5 | 9 | 3 | 2
+EQ | 4 | 
+   u2/dspi_cs.COMB =  !u2/sclk & !u2/bcs;	// (1 pt, 2 inp)
+// Direct Input Register
+u2/dspi_cs := p_spi_cs;	// (0 pt, 0 inp)
+   u2/dspi_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 9 | u2/ccen_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 10 | 2 | 14 | 2 | 0 | 2 | 7 | 5 | 1 | 2 | 5 | 2 | 9 | 2 | 8 | 6 | 13 | 5 | 3 | 2 | 11
+INPUTS | 2 | u2/ecs  | u5/cpld_sck.COMB
+INPUTMC | 2 | 3 | 1 | 0 | 2
+EQ | 3 | 
+   u2/ccen := !u2/ecs;	// (1 pt, 1 inp)
+   u2/ccen.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u2/ccen.CE = !u5/cpld_sck.COMB;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 1 | u2/ecs_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 6 | 9 | 6 | 8 | 0 | 2 | 0 | 3
+INPUTS | 2 | u2/d2spi_cs  | u2/d3spi_cs
+INPUTMC | 2 | 3 | 9 | 3 | 7
+EQ | 2 | 
+   u2/ecs := u2/d2spi_cs & !u2/d3spi_cs;	// (1 pt, 2 inp)
+   u2/ecs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 9 | u2/d2spi_cs_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 3 | 3 | 7 | 3 | 1 | 3 | 2
+INPUTS | 1 | u2/dspi_cs
+INPUTMC | 1 | 5 | 2
+EQ | 2 | 
+   u2/d2spi_cs := u2/dspi_cs;	// (1 pt, 1 inp)
+   u2/d2spi_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 7 | u2/d3spi_cs_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 3 | 1 | 3 | 2
+INPUTS | 1 | u2/d2spi_cs
+INPUTMC | 1 | 3 | 9
+EQ | 2 | 
+   u2/d3spi_cs := u2/d2spi_cs;	// (1 pt, 1 inp)
+   u2/d3spi_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 0 | u2/ccnt<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 2 | 0 | 2 | 7 | 5 | 1 | 2 | 5 | 2 | 9 | 2 | 8 | 6 | 13 | 2 | 12 | 2 | 11
+INPUTS | 5 | u2/scom  | u2/ccnt<1>  | u2/ccnt<0>  | u2/sclk  | u2/ccen
+INPUTMC | 5 | 2 | 10 | 2 | 0 | 2 | 14 | 5 | 9 | 6 | 9
+EQ | 3 | 
+   u2/ccnt<1>.T := u2/scom & u2/ccnt<1>
+	# u2/ccnt<0> & !u2/scom & u2/sclk & u2/ccen;	// (2 pt, 5 inp)
+   u2/ccnt<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 7 | u2/ccnt<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 2 | 7 | 5 | 1 | 2 | 5 | 2 | 9 | 2 | 8 | 6 | 13 | 2 | 12 | 2 | 11
+INPUTS | 6 | u2/scom  | u2/ccnt<2>  | u2/ccnt<0>  | u2/sclk  | u2/ccen  | u2/ccnt<1>
+INPUTMC | 6 | 2 | 10 | 2 | 7 | 2 | 14 | 5 | 9 | 6 | 9 | 2 | 0
+EQ | 4 | 
+   u2/ccnt<2>.T := u2/scom & u2/ccnt<2>
+	# u2/ccnt<0> & !u2/scom & u2/sclk & u2/ccen & 
+	u2/ccnt<1>;	// (2 pt, 6 inp)
+   u2/ccnt<2>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 5 | p_fpga_prog_MC
+ATTRIBUTES | 8684356 | 0
+INPUTS | 6 | p_spi_sdi  | u2/ccnt<0>  | u2/sclk  | u2/ccen  | u2/ccnt<1>  | u2/ccnt<2>
+INPUTMC | 5 | 2 | 14 | 5 | 9 | 6 | 9 | 2 | 0 | 2 | 7
+INPUTP | 1 | 80
+EQ | 4 | 
+   p_fpga_prog := !p_spi_sdi;	// (1 pt, 1 inp)
+   p_fpga_prog.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    p_fpga_prog.CE = u2/ccnt<0> & u2/sclk & u2/ccen & !u2/ccnt<1> & 
+	u2/ccnt<2>;	// (1 pt, 5 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 4 | p_mgt_def_l_MC
+ATTRIBUTES | 1074004736 | 0
+INPUTS | 1 | p_mgt_def
+INPUTP | 1 | 71
+EQ | 1 | 
+   p_mgt_def_l = p_mgt_def;	// (1 pt, 1 inp)
+
+MACROCELL | 0 | 5 | p_mgt_loss_l_MC
+ATTRIBUTES | 1074004736 | 0
+INPUTS | 1 | p_mgt_loss
+INPUTP | 1 | 74
+EQ | 1 | 
+   p_mgt_loss_l = p_mgt_loss;	// (1 pt, 1 inp)
+
+MACROCELL | 5 | 15 | p_mgt_txdis_MC
+ATTRIBUTES | 1074004736 | 0
+INPUTS | 1 | p_mgt_txdis_l
+INPUTP | 1 | 11
+EQ | 1 | 
+   p_mgt_txdis = p_mgt_txdis_l;	// (1 pt, 1 inp)
+
+MACROCELL | 6 | 10 | p_prom_cs_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | rprom_cs  | wprom_cs
+INPUTMC | 2 | 0 | 9 | 2 | 2
+EQ | 2 | 
+   p_prom_cs := !rprom_cs & !wprom_cs;	// (1 pt, 2 inp)
+   p_prom_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 9 | rprom_cs_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 6 | 10
+INPUTS | 1 | u3/cen
+INPUTMC | 1 | 5 | 7
+EQ | 2 | 
+   rprom_cs := u3/cen;	// (1 pt, 1 inp)
+   rprom_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 2 | wprom_cs_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 6 | 10
+INPUTS | 3 | u2/dcen  | u2/mux<0>  | u2/mux<1>
+INPUTMC | 3 | 6 | 8 | 2 | 9 | 2 | 8
+EQ | 2 | 
+   wprom_cs := u2/dcen & u2/mux<0> & !u2/mux<1>;	// (1 pt, 3 inp)
+   wprom_cs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 8 | u2/dcen_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 4 | 2 | 2 | 2 | 3 | 5 | 3 | 5 | 0
+INPUTS | 2 | u2/ecs  | u5/cpld_sdi.COMB
+INPUTMC | 2 | 3 | 1 | 0 | 3
+EQ | 3 | 
+   u2/dcen := !u2/ecs;	// (1 pt, 1 inp)
+   u2/dcen.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u2/dcen.CE = !u5/cpld_sdi.COMB;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 9 | u2/mux<0>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 3 | 2 | 2 | 2 | 1 | 2 | 3
+INPUTS | 6 | p_spi_sdi  | u2/ccnt<0>  | u2/sclk  | u2/ccen  | u2/ccnt<1>  | u2/ccnt<2>
+INPUTMC | 5 | 2 | 14 | 5 | 9 | 6 | 9 | 2 | 0 | 2 | 7
+INPUTP | 1 | 80
+EQ | 4 | 
+   u2/mux<0> := p_spi_sdi;	// (1 pt, 1 inp)
+   u2/mux<0>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u2/mux<0>.CE = u2/ccnt<0> & u2/sclk & u2/ccen & !u2/ccnt<1> & 
+	!u2/ccnt<2>;	// (1 pt, 5 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 8 | u2/mux<1>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 3 | 2 | 2 | 2 | 1 | 2 | 3
+INPUTS | 6 | p_spi_sdi  | u2/ccnt<0>  | u2/sclk  | u2/ccen  | u2/ccnt<1>  | u2/ccnt<2>
+INPUTMC | 5 | 2 | 14 | 5 | 9 | 6 | 9 | 2 | 0 | 2 | 7
+INPUTP | 1 | 80
+EQ | 4 | 
+   u2/mux<1> := p_spi_sdi;	// (1 pt, 1 inp)
+   u2/mux<1>.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u2/mux<1>.CE = !u2/ccnt<0> & u2/sclk & u2/ccen & !u2/ccnt<1> & 
+	!u2/ccnt<2>;	// (1 pt, 5 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 5 | p_prom_sck_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | rprom_sck  | wprom_sck
+INPUTMC | 2 | 1 | 12 | 2 | 1
+EQ | 2 | 
+   !p_prom_sck := !rprom_sck & !wprom_sck;	// (1 pt, 2 inp)
+   p_prom_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 1 | wprom_sck_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 6 | 5
+INPUTS | 3 | u2/mux<0>  | u2/mux<1>  | u2/dat_sck
+INPUTMC | 3 | 2 | 9 | 2 | 8 | 5 | 14
+EQ | 2 | 
+   wprom_sck := u2/mux<0> & !u2/mux<1> & u2/dat_sck;	// (1 pt, 3 inp)
+   wprom_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 14 | u2/dat_sck_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 2 | u2/eclk  | u2/dspi_sck.COMB
+INPUTMC | 2 | 5 | 10 | 5 | 0
+EQ | 3 | 
+   u2/dat_sck := !u2/eclk;	// (1 pt, 1 inp)
+   u2/dat_sck.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    u2/dat_sck.CE = u2/dspi_sck.COMB;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 10 | u2/eclk_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 5 | 14 | 5 | 0
+INPUTS | 2 | u2/d2spi_sck  | u2/d3spi_sck
+INPUTMC | 2 | 3 | 8 | 5 | 12
+EQ | 2 | 
+   u2/eclk := !u2/d2spi_sck & u2/d3spi_sck;	// (1 pt, 2 inp)
+   u2/eclk.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 4 | p_prom_sdi_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 2 | rprom_sdi  | wprom_sdi
+INPUTMC | 2 | 4 | 3 | 2 | 3
+EQ | 2 | 
+   !p_prom_sdi := !rprom_sdi & !wprom_sdi;	// (1 pt, 2 inp)
+   p_prom_sdi.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 3 | rprom_sdi_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 6 | 4
+INPUTS | 25 | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>  | u3/cnt<21>  | u3/cnt<22>  | u3/cnt<23>  | u3/cnt<24>  | u3/cnt<25>  | u3/cnt<4>
+INPUTMC | 25 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 0 | 15
+EQ | 13 | 
+   rprom_sdi := !u3/cnt<10> & !u3/cnt<1> & u3/cnt<2> & u3/cnt<3> & 
+	!u3/cnt<5> & !u3/cnt<6> & !u3/cnt<7> & !u3/cnt<8> & !u3/cnt<9> & 
+	!u3/cnt<11> & !u3/cnt<12> & !u3/cnt<13> & !u3/cnt<14> & 
+	!u3/cnt<15> & !u3/cnt<16> & !u3/cnt<17> & !u3/cnt<18> & 
+	!u3/cnt<19> & !u3/cnt<20> & !u3/cnt<21> & !u3/cnt<22> & 
+	!u3/cnt<23> & !u3/cnt<24> & !u3/cnt<25>
+	# !u3/cnt<10> & u3/cnt<2> & u3/cnt<3> & !u3/cnt<4> & 
+	!u3/cnt<5> & !u3/cnt<6> & !u3/cnt<7> & !u3/cnt<8> & !u3/cnt<9> & 
+	!u3/cnt<11> & !u3/cnt<12> & !u3/cnt<13> & !u3/cnt<14> & 
+	!u3/cnt<15> & !u3/cnt<16> & !u3/cnt<17> & !u3/cnt<18> & 
+	!u3/cnt<19> & !u3/cnt<20> & !u3/cnt<21> & !u3/cnt<22> & 
+	!u3/cnt<23> & !u3/cnt<24> & !u3/cnt<25>;	// (2 pt, 25 inp)
+   rprom_sdi.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 3 | wprom_sdi_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 6 | 4
+INPUTS | 4 | p_spi_sdi  | u2/dcen  | u2/mux<0>  | u2/mux<1>
+INPUTMC | 3 | 6 | 8 | 2 | 9 | 2 | 8
+INPUTP | 1 | 80
+EQ | 2 | 
+   wprom_sdi := p_spi_sdi & u2/dcen & u2/mux<0> & !u2/mux<1>;	// (1 pt, 4 inp)
+   wprom_sdi.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 6 | 13 | p_prom_wp_MC
+ATTRIBUTES | 8684352 | 0
+INPUTS | 6 | p_spi_sdi  | u2/ccnt<0>  | u2/sclk  | u2/ccen  | u2/ccnt<1>  | u2/ccnt<2>
+INPUTMC | 5 | 2 | 14 | 5 | 9 | 6 | 9 | 2 | 0 | 2 | 7
+INPUTP | 1 | 80
+EQ | 4 | 
+   p_prom_wp := p_spi_sdi;	// (1 pt, 1 inp)
+   p_prom_wp.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+    p_prom_wp.CE = !u2/ccnt<0> & u2/sclk & u2/ccen & u2/ccnt<1> & 
+	!u2/ccnt<2>;	// (1 pt, 5 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 5 | 3 | p_spi_sdo_MC
+ATTRIBUTES | 8684288 | 0
+INPUTS | 4 | prom_rdat  | u2/dcen  | u2/ccen  | u2/cpld_sdo
+INPUTMC | 4 | 6 | 12 | 6 | 8 | 6 | 9 | 2 | 12
+EQ | 3 | 
+   p_spi_sdo := prom_rdat & u2/dcen
+	# u2/ccen & u2/cpld_sdo;	// (2 pt, 4 inp)
+   p_spi_sdo.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 12 | u2/cpld_sdo_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 5 | 3
+INPUTS | 6 | u2/ccnt<0>  | u2/ccnt<1>  | u2/ccnt<2>  | down_done  | p_fpga_done  | p_fpga_init
+INPUTMC | 4 | 2 | 14 | 2 | 0 | 2 | 7 | 0 | 13
+INPUTP | 2 | 10 | 120
+EQ | 7 | 
+   u2/cpld_sdo := u2/ccnt<0> & u2/ccnt<1> & u2/ccnt<2> & 
+	down_done
+	# u2/ccnt<0> & !u2/ccnt<1> & u2/ccnt<2> & 
+	p_fpga_done
+	# !u2/ccnt<0> & u2/ccnt<1> & u2/ccnt<2> & 
+	p_fpga_init;	// (3 pt, 6 inp)
+   u2/cpld_sdo.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 0 | 13 | down_done_MC
+ATTRIBUTES | 2155905796 | 0
+OUTPUTMC | 1 | 2 | 12
+INPUTS | 1 | u3/cen
+INPUTMC | 1 | 5 | 7
+EQ | 2 | 
+   down_done := !u3/cen;	// (1 pt, 1 inp)
+   down_done.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 4 | 7 | u3/sdown_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 6 | 12
+INPUTS | 26 | u3/cnt<0>  | u3/cnt<10>  | u3/cnt<1>  | u3/cnt<2>  | u3/cnt<3>  | u3/cnt<4>  | u3/cnt<5>  | u3/cnt<6>  | u3/cnt<7>  | u3/cnt<8>  | u3/cnt<9>  | u3/cnt<11>  | u3/cnt<12>  | u3/cnt<13>  | u3/cnt<14>  | u3/cnt<15>  | u3/cnt<16>  | u3/cnt<17>  | u3/cnt<18>  | u3/cnt<19>  | u3/cnt<20>  | u3/cnt<21>  | u3/cnt<22>  | u3/cnt<23>  | u3/cnt<24>  | u3/cnt<25>
+INPUTMC | 26 | 0 | 8 | 5 | 6 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15
+EQ | 8 | 
+   u3/sdown := !u3/cnt<0> & !u3/cnt<10> & u3/cnt<1> & !u3/cnt<2> & 
+	!u3/cnt<3> & !u3/cnt<4> & !u3/cnt<5> & u3/cnt<6> & !u3/cnt<7> & 
+	!u3/cnt<8> & !u3/cnt<9> & !u3/cnt<11> & !u3/cnt<12> & 
+	!u3/cnt<13> & !u3/cnt<14> & !u3/cnt<15> & !u3/cnt<16> & 
+	!u3/cnt<17> & !u3/cnt<18> & !u3/cnt<19> & !u3/cnt<20> & 
+	!u3/cnt<21> & !u3/cnt<22> & !u3/cnt<23> & !u3/cnt<24> & 
+	!u3/cnt<25>;	// (1 pt, 26 inp)
+   u3/sdown.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 3 | 2 | u2/bcs_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 5 | 2
+INPUTS | 2 | u2/d2spi_cs  | u2/d3spi_cs
+INPUTMC | 2 | 3 | 9 | 3 | 7
+EQ | 2 | 
+   u2/bcs := !u2/d2spi_cs & u2/d3spi_cs;	// (1 pt, 2 inp)
+   u2/bcs.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 11 | download_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 6 | u2/ccnt<0>  | p_spi_sdi  | u2/sclk  | u2/ccen  | u2/ccnt<1>  | u2/ccnt<2>
+INPUTMC | 5 | 2 | 14 | 5 | 9 | 6 | 9 | 2 | 0 | 2 | 7
+INPUTP | 1 | 80
+EQ | 3 | 
+   download := !u2/ccnt<0> & p_spi_sdi & u2/sclk & u2/ccen & 
+	!u2/ccnt<1> & u2/ccnt<2>;	// (1 pt, 6 inp)
+   download.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+MACROCELL | 2 | 6 | u2/sdat_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 3 | p_spi_sdi  | u2/enflag  | u2/sclk
+INPUTMC | 2 | 2 | 4 | 5 | 9
+INPUTP | 1 | 80
+EQ | 2 | 
+   u2/sdat := p_spi_sdi & u2/enflag & u2/sclk;	// (1 pt, 3 inp)
+   u2/sdat.CLK  =  p_clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | p_clk
+
+PIN | p_clk | 4096 | 16 | LVCMOS18 | 28 | 110 | 0 | 3 | 6 | 11 | 0 | 0 | 5 | 5 | 0 | 2 | 5 | 4 | 1 | 9 | 1 | 11 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 0 | 1 | 13 | 3 | 5 | 3 | 0 | 1 | 4 | 1 | 10 | 3 | 4 | 1 | 15 | 1 | 3 | 1 | 5 | 3 | 3 | 1 | 14 | 1 | 2 | 3 | 14 | 7 | 14 | 7 | 11 | 7 | 2 | 3 | 6 | 3 | 13 | 7 | 15 | 7 | 12 | 7 | 3 | 3 | 10 | 3 | 12 | 3 | 15 | 7 | 13 | 7 | 5 | 3 | 11 | 5 | 7 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 1 | 0 | 15 | 0 | 14 | 0 | 12 | 0 | 11 | 0 | 10 | 1 | 1 | 5 | 6 | 5 | 13 | 5 | 11 | 4 | 0 | 4 | 1 | 4 | 2 | 4 | 4 | 4 | 6 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 13 | 4 | 14 | 4 | 5 | 4 | 9 | 4 | 15 | 4 | 8 | 5 | 8 | 6 | 12 | 6 | 7 | 1 | 12 | 2 | 15 | 5 | 0 | 3 | 8 | 5 | 12 | 5 | 9 | 5 | 2 | 2 | 4 | 2 | 10 | 3 | 9 | 3 | 7 | 3 | 1 | 6 | 9 | 2 | 14 | 2 | 0 | 2 | 7 | 5 | 1 | 2 | 13 | 2 | 5 | 0 | 9 | 6 | 8 | 2 | 9 | 2 | 8 | 2 | 2 | 6 | 10 | 5 | 10 | 5 | 14 | 2 | 1 | 6 | 5 | 4 | 3 | 2 | 3 | 6 | 4 | 6 | 13 | 0 | 13 | 2 | 12 | 5 | 3 | 4 | 7 | 3 | 2 | 2 | 11 | 2 | 6
+PIN | p_spi_sdi | 64 | 16 | LVCMOS18 | 80 | 9 | 2 | 10 | 2 | 5 | 2 | 9 | 2 | 8 | 2 | 3 | 6 | 13 | 2 | 11 | 2 | 6 | 5 | 1
+PIN | p_fpga_done | 64 | 16 | LVCMOS18 | 10 | 1 | 2 | 12
+PIN | p_fpga_init | 64 | 16 | LVCMOS18 | 120 | 1 | 2 | 12
+PIN | p_mgt_def | 64 | 16 | LVCMOS18 | 71 | 1 | 0 | 4
+PIN | p_mgt_loss | 64 | 16 | LVCMOS18 | 74 | 1 | 0 | 5
+PIN | p_mgt_txdis_l | 64 | 16 | LVCMOS18 | 11 | 1 | 5 | 15
+PIN | p_prom_sdo | 64 | 16 | LVCMOS18 | 110 | 1 | 6 | 12
+PIN | p_spi_cs | 64 | 16 | LVCMOS18 | 77 | 1 | 5 | 2
+PIN | p_spi_sck | 64 | 16 | LVCMOS18 | 81 | 1 | 5 | 0
+PIN | p_cpld_cs | 64 | 16 | LVCMOS18 | 17 | 1 | 0 | 0
+PIN | p_cpld_sck | 64 | 16 | LVCMOS18 | 15 | 1 | 0 | 2
+PIN | p_cpld_sdi | 64 | 16 | LVCMOS18 | 14 | 1 | 0 | 3
+PIN | p_bias_cs<0> | 128 | 0 | LVCMOS18 | 29
+PIN | p_bias_cs<1> | 128 | 0 | LVCMOS18 | 40
+PIN | p_bias_cs<2> | 128 | 0 | LVCMOS18 | 34
+PIN | p_bias_cs<3> | 128 | 0 | LVCMOS18 | 22
+PIN | p_bias_sck<0> | 128 | 0 | LVCMOS18 | 24
+PIN | p_bias_sck<1> | 128 | 0 | LVCMOS18 | 38
+PIN | p_bias_sck<2> | 128 | 0 | LVCMOS18 | 33
+PIN | p_bias_sck<3> | 128 | 0 | LVCMOS18 | 21
+PIN | p_bias_sdi<0> | 128 | 0 | LVCMOS18 | 23
+PIN | p_bias_sdi<1> | 128 | 0 | LVCMOS18 | 37
+PIN | p_bias_sdi<2> | 128 | 0 | LVCMOS18 | 30
+PIN | p_bias_sdi<3> | 128 | 0 | LVCMOS18 | 20
+PIN | p_dac_cs<0> | 128 | 0 | LVCMOS18 | 47
+PIN | p_dac_cs<1> | 128 | 0 | LVCMOS18 | 50
+PIN | p_dac_cs<2> | 128 | 0 | LVCMOS18 | 55
+PIN | p_dac_cs<3> | 128 | 0 | LVCMOS18 | 64
+PIN | p_dac_cs<4> | 128 | 0 | LVCMOS18 | 41
+PIN | p_dac_sck<0> | 128 | 0 | LVCMOS18 | 45
+PIN | p_dac_sck<1> | 128 | 0 | LVCMOS18 | 49
+PIN | p_dac_sck<2> | 128 | 0 | LVCMOS18 | 52
+PIN | p_dac_sck<3> | 128 | 0 | LVCMOS18 | 61
+PIN | p_dac_sck<4> | 128 | 0 | LVCMOS18 | 42
+PIN | p_dac_sdi<0> | 128 | 0 | LVCMOS18 | 44
+PIN | p_dac_sdi<1> | 128 | 0 | LVCMOS18 | 48
+PIN | p_dac_sdi<2> | 128 | 0 | LVCMOS18 | 51
+PIN | p_dac_sdi<3> | 128 | 0 | LVCMOS18 | 59
+PIN | p_dac_sdi<4> | 128 | 0 | LVCMOS18 | 43
+PIN | p_fpga_cclk | 536871040 | 0 | LVCMOS18 | 115
+PIN | p_fpga_din | 536871040 | 0 | LVCMOS18 | 117
+PIN | p_fpga_prog | 128 | 0 | LVCMOS18 | 122
+PIN | p_mgt_def_l | 128 | 0 | LVCMOS18 | 13
+PIN | p_mgt_loss_l | 128 | 0 | LVCMOS18 | 12
+PIN | p_mgt_txdis | 128 | 0 | LVCMOS18 | 67
+PIN | p_prom_cs | 536871040 | 0 | LVCMOS18 | 106
+PIN | p_prom_sck | 536871040 | 0 | LVCMOS18 | 104
+PIN | p_prom_sdi | 536871040 | 0 | LVCMOS18 | 103
+PIN | p_prom_wp | 128 | 0 | LVCMOS18 | 111
+PIN | p_spi_sdo | 128 | 0 | LVCMOS18 | 76

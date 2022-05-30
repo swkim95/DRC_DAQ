@@ -1,0 +1,6 @@
+vhdl work "ys_sipm_daq_fpga_type.vhd"
+vhdl work "write_ep2.vhd"
+vhdl work "usb_data_readout.vhd"
+vhdl work "usb_control.vhd"
+vhdl work "read_ep6.vhd"
+vhdl work "usb_interface.vhd"

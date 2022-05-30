@@ -1,0 +1,586 @@
+Release 14.3 - xst P.40xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ys_sipm_daq_cpld.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ys_sipm_daq_cpld.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ys_sipm_daq_cpld"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : ys_sipm_daq_cpld
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : NO
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/clock.vhd" in Library work.
+Architecture behavioral of Entity clock is up to date.
+Compiling vhdl file "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/get_command.vhd" in Library work.
+Architecture behavioral of Entity get_command is up to date.
+Compiling vhdl file "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/download_fpga.vhd" in Library work.
+Architecture behavioral of Entity download_fpga is up to date.
+Compiling vhdl file "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/flash_memory.vhd" in Library work.
+Architecture behavioral of Entity flash_memory is up to date.
+Compiling vhdl file "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/fpga_serial.vhd" in Library work.
+Architecture behavioral of Entity fpga_serial is up to date.
+Compiling vhdl file "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.vhd" in Library work.
+Architecture behavioral of Entity ys_sipm_daq_cpld is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ys_sipm_daq_cpld> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clock> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <get_command> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <download_fpga> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_memory> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fpga_serial> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ys_sipm_daq_cpld> in library <work> (Architecture <behavioral>).
+Entity <ys_sipm_daq_cpld> analyzed. Unit <ys_sipm_daq_cpld> generated.
+
+Analyzing Entity <clock> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_mgt_def> in unit <clock>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_mgt_def> in unit <clock>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_mgt_def> in unit <clock>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_mgt_def> in unit <clock>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_mgt_def> in unit <clock>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_mgt_loss> in unit <clock>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_mgt_loss> in unit <clock>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_mgt_loss> in unit <clock>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_mgt_loss> in unit <clock>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_mgt_loss> in unit <clock>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_mgt_def> in unit <clock>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_mgt_def> in unit <clock>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_mgt_def> in unit <clock>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_mgt_def> in unit <clock>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_mgt_loss> in unit <clock>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_mgt_loss> in unit <clock>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_mgt_loss> in unit <clock>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_mgt_loss> in unit <clock>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_mgt_txdis> in unit <clock>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_mgt_txdis> in unit <clock>.
+Entity <clock> analyzed. Unit <clock> generated.
+
+Analyzing Entity <get_command> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_spi_cs> in unit <get_command>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_spi_cs> in unit <get_command>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_spi_cs> in unit <get_command>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_spi_cs> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_spi_cs> in unit <get_command>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_spi_sck> in unit <get_command>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_spi_sck> in unit <get_command>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_spi_sck> in unit <get_command>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_spi_sck> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_spi_sck> in unit <get_command>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_spi_sdi> in unit <get_command>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_spi_sdi> in unit <get_command>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_spi_sdi> in unit <get_command>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_spi_sdi> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_spi_sdi> in unit <get_command>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_fpga_init> in unit <get_command>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_fpga_init> in unit <get_command>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_fpga_init> in unit <get_command>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_fpga_init> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_fpga_init> in unit <get_command>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_fpga_done> in unit <get_command>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_fpga_done> in unit <get_command>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_fpga_done> in unit <get_command>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_fpga_done> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_fpga_done> in unit <get_command>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_prom_wp> in unit <get_command>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_prom_wp> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_prom_wp> in unit <get_command>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_prom_wp> in unit <get_command>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_fpga_prog> in unit <get_command>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_fpga_prog> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_fpga_prog> in unit <get_command>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_fpga_prog> in unit <get_command>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_spi_sdo> in unit <get_command>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_spi_sdo> in unit <get_command>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_spi_sdo> in unit <get_command>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_spi_sdo> in unit <get_command>.
+Entity <get_command> analyzed. Unit <get_command> generated.
+
+Analyzing Entity <download_fpga> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_fpga_cclk> in unit <download_fpga>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_fpga_cclk> in unit <download_fpga>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_fpga_cclk> in unit <download_fpga>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_fpga_cclk> in unit <download_fpga>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_fpga_din> in unit <download_fpga>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_fpga_din> in unit <download_fpga>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_fpga_din> in unit <download_fpga>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_fpga_din> in unit <download_fpga>.
+Entity <download_fpga> analyzed. Unit <download_fpga> generated.
+
+Analyzing Entity <flash_memory> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_prom_sdo> in unit <flash_memory>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_prom_sdo> in unit <flash_memory>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_prom_sdo> in unit <flash_memory>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_prom_sdo> in unit <flash_memory>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_prom_sdo> in unit <flash_memory>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_prom_cs> in unit <flash_memory>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_prom_cs> in unit <flash_memory>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_prom_cs> in unit <flash_memory>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_prom_cs> in unit <flash_memory>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_prom_sck> in unit <flash_memory>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_prom_sck> in unit <flash_memory>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_prom_sck> in unit <flash_memory>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_prom_sck> in unit <flash_memory>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <obuf_prom_sdi> in unit <flash_memory>.
+    Set user-defined property "DRIVE =  12" for instance <obuf_prom_sdi> in unit <flash_memory>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <obuf_prom_sdi> in unit <flash_memory>.
+    Set user-defined property "SLEW =  SLOW" for instance <obuf_prom_sdi> in unit <flash_memory>.
+Entity <flash_memory> analyzed. Unit <flash_memory> generated.
+
+Analyzing Entity <fpga_serial> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_cpld_cs> in unit <fpga_serial>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_cpld_cs> in unit <fpga_serial>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_cpld_cs> in unit <fpga_serial>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_cpld_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_cpld_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_cpld_sck> in unit <fpga_serial>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_cpld_sck> in unit <fpga_serial>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_cpld_sck> in unit <fpga_serial>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_cpld_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_cpld_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <ibuf_cpld_sdi> in unit <fpga_serial>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <ibuf_cpld_sdi> in unit <fpga_serial>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <ibuf_cpld_sdi> in unit <fpga_serial>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <ibuf_cpld_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <ibuf_cpld_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[0].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[0].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[0].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[0].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[0].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[0].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[0].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[0].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[0].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[0].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[0].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[0].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[1].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[1].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[1].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[1].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[1].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[1].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[1].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[1].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[1].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[1].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[1].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[1].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[2].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[2].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[2].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[2].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[2].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[2].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[2].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[2].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[2].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[2].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[2].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[2].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[3].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[3].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[3].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[3].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[3].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[3].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[3].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[3].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[3].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[3].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[3].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[3].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[4].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[4].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[4].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[4].obuf_dac_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[4].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[4].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[4].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[4].obuf_dac_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop1[4].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop1[4].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop1[4].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop1[4].obuf_dac_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[0].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[0].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[0].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[0].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[0].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[0].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[0].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[0].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[0].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[0].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[0].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[0].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[1].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[1].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[1].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[1].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[1].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[1].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[1].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[1].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[1].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[1].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[1].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[1].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[2].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[2].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[2].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[2].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[2].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[2].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[2].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[2].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[2].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[2].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[2].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[2].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[3].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[3].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[3].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[3].obuf_bias_cs> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[3].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[3].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[3].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[3].obuf_bias_sck> in unit <fpga_serial>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <myloop2[3].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "DRIVE =  12" for instance <myloop2[3].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <myloop2[3].obuf_bias_sdi> in unit <fpga_serial>.
+    Set user-defined property "SLEW =  SLOW" for instance <myloop2[3].obuf_bias_sdi> in unit <fpga_serial>.
+Entity <fpga_serial> analyzed. Unit <fpga_serial> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock>.
+    Related source file is "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/clock.vhd".
+Unit <clock> synthesized.
+
+
+Synthesizing Unit <get_command>.
+    Related source file is "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/get_command.vhd".
+    Found 1-bit register for signal <bcs>.
+    Found 1-bit register for signal <calib_reg>.
+    Found 1-bit register for signal <ccen>.
+    Found 3-bit up counter for signal <ccnt>.
+    Found 1-bit register for signal <cpld_sdo>.
+    Found 1-bit register for signal <d2spi_cs>.
+    Found 1-bit register for signal <d2spi_sck>.
+    Found 1-bit register for signal <d3spi_cs>.
+    Found 1-bit register for signal <d3spi_sck>.
+    Found 1-bit register for signal <dat_sck>.
+    Found 1-bit register for signal <dcen>.
+    Found 1-bit register for signal <download_reg>.
+    Found 1-bit register for signal <dspi_cs>.
+    Found 1-bit register for signal <dspi_sck>.
+    Found 1-bit register for signal <eclk>.
+    Found 1-bit register for signal <ecs>.
+    Found 1-bit register for signal <enflag>.
+    Found 1-bit register for signal <fpga_prog>.
+    Found 2-bit register for signal <mux>.
+    Found 1-bit register for signal <prom_wp>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <scom>.
+    Found 1-bit register for signal <sdat>.
+    Found 1-bit register for signal <spi_sdo>.
+    Found 1-bit register for signal <wprom_cs_reg>.
+    Found 1-bit register for signal <wprom_sck_reg>.
+    Found 1-bit register for signal <wprom_sdi_reg>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  23 D-type flip-flop(s).
+Unit <get_command> synthesized.
+
+
+Synthesizing Unit <download_fpga>.
+    Related source file is "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/download_fpga.vhd".
+    Found 1-bit register for signal <cen>.
+    Found 1-bit register for signal <clr>.
+    Found 26-bit up counter for signal <cnt>.
+    Found 1-bit register for signal <dclr>.
+    Found 1-bit register for signal <down_done_reg>.
+    Found 1-bit register for signal <endown>.
+    Found 1-bit register for signal <fpga_cclk>.
+    Found 1-bit register for signal <fpga_din>.
+    Found 1-bit register for signal <rprom_cs_reg>.
+    Found 1-bit register for signal <rprom_sck_reg>.
+    Found 1-bit register for signal <rprom_sdi_reg>.
+    Found 1-bit register for signal <sdown>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   9 D-type flip-flop(s).
+Unit <download_fpga> synthesized.
+
+
+Synthesizing Unit <flash_memory>.
+    Related source file is "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/flash_memory.vhd".
+    Found 1-bit register for signal <prom_cs>.
+    Found 1-bit register for signal <prom_rdat_reg>.
+    Found 1-bit register for signal <prom_sck>.
+    Found 1-bit register for signal <prom_sdi>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <flash_memory> synthesized.
+
+
+Synthesizing Unit <fpga_serial>.
+    Related source file is "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/fpga_serial.vhd".
+    Found 4-bit register for signal <bias_cs>.
+    Found 4-bit register for signal <bias_sck>.
+    Found 4-bit register for signal <bias_sdi>.
+    Found 1-bit register for signal <cpld_cs>.
+    Found 1-bit register for signal <cpld_sck>.
+    Found 1-bit register for signal <cpld_sdi>.
+    Found 1-bit register for signal <d2cpld_sck>.
+    Found 5-bit register for signal <dac_cs>.
+    Found 5-bit register for signal <dac_sck>.
+    Found 5-bit register for signal <dac_sdi>.
+    Found 1-bit register for signal <dcpld_cs>.
+    Found 1-bit register for signal <dcpld_sck>.
+    Found 1-bit register for signal <dcpld_sdi>.
+    Found 4-bit register for signal <mux>.
+    Found 1-bit register for signal <set_mux>.
+    Summary:
+	inferred  35 D-type flip-flop(s).
+Unit <fpga_serial> synthesized.
+
+
+Synthesizing Unit <ys_sipm_daq_cpld>.
+    Related source file is "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.vhd".
+Unit <ys_sipm_daq_cpld> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 78
+ 1-bit register                                        : 77
+ 4-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 71
+ Flip-Flops                                            : 71
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ys_sipm_daq_cpld> ...
+
+Optimizing unit <clock> ...
+
+Optimizing unit <flash_memory> ...
+
+Optimizing unit <fpga_serial> ...
+
+Optimizing unit <get_command> ...
+  implementation constraint: INIT=r	 : prom_wp
+  implementation constraint: INIT=s	 : fpga_prog
+
+Optimizing unit <download_fpga> ...
+  implementation constraint: INIT=r	 : clr
+  implementation constraint: INIT=s	 : down_done_reg
+  implementation constraint: INIT=r	 : cen
+  implementation constraint: INIT=r	 : cnt_25
+  implementation constraint: INIT=r	 : cnt_0
+  implementation constraint: INIT=r	 : cnt_1
+  implementation constraint: INIT=r	 : cnt_2
+  implementation constraint: INIT=r	 : cnt_22
+  implementation constraint: INIT=r	 : cnt_3
+  implementation constraint: INIT=r	 : cnt_4
+  implementation constraint: INIT=r	 : cnt_20
+  implementation constraint: INIT=r	 : cnt_5
+  implementation constraint: INIT=r	 : cnt_23
+  implementation constraint: INIT=r	 : cnt_6
+  implementation constraint: INIT=r	 : cnt_7
+  implementation constraint: INIT=r	 : cnt_21
+  implementation constraint: INIT=r	 : cnt_8
+  implementation constraint: INIT=r	 : cnt_24
+  implementation constraint: INIT=r	 : cnt_9
+  implementation constraint: INIT=r	 : cnt_10
+  implementation constraint: INIT=r	 : cnt_11
+  implementation constraint: INIT=r	 : cnt_12
+  implementation constraint: INIT=r	 : cnt_17
+  implementation constraint: INIT=r	 : cnt_13
+  implementation constraint: INIT=r	 : cnt_14
+  implementation constraint: INIT=r	 : cnt_19
+  implementation constraint: INIT=r	 : cnt_15
+  implementation constraint: INIT=r	 : cnt_18
+  implementation constraint: INIT=r	 : cnt_16
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ys_sipm_daq_cpld.ngr
+Top Level Output File Name         : ys_sipm_daq_cpld
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 51
+
+Cell Usage :
+# BELS                             : 450
+#      AND2                        : 137
+#      AND3                        : 19
+#      AND4                        : 7
+#      AND6                        : 2
+#      AND8                        : 6
+#      GND                         : 3
+#      INV                         : 195
+#      OR2                         : 42
+#      OR3                         : 7
+#      OR4                         : 4
+#      OR5                         : 1
+#      XOR2                        : 27
+# FlipFlops/Latches                : 110
+#      FD                          : 66
+#      FDCE                        : 44
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 50
+#      IBUF                        : 12
+#      OBUF                        : 38
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.03 secs
+ 
+--> 
+
+Total memory usage is 209612 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

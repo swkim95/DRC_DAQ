@@ -1,0 +1,223 @@
+    1  apt-get install synaptic
+    2  synaptic&
+    3  whoam
+    4  whoami
+    5  cd /usr/local/
+    6  ls
+    7  mkdir notice
+    8  cd notice/
+    9  ls
+   10  cp '/media/yu/D05C-759F/notice/notice_env.sh' .
+   11  cp -a '/media/yu/D05C-759F/notice/programmer' .
+   12  cp -a '/media/yu/D05C-759F/notice/src' .
+   13  cp -a '/media/yu/D05C-759F/notice/test' .
+   14  ls -l
+   15  mkdir lib
+   16  mkdir include
+   17  mkdir doc
+   18  ll
+   19  cp -a '/media/yu/D05C-759F/notice/doc' .
+   20  cd doc/
+   21  ls -l
+   22  cd ..
+   23  ls -l
+   24  gedit notice_env.sh &
+   25  ls -l /usr/local/include/libusb-1.0
+   26  ls -l /usr/include/libusb-1.0
+   27  ls -l /usr/local/lib/libusb*
+   28  ls -l /usr/lib/x86_64-linux-gnu/libusb*
+   29  source notice_env.sh 
+   30  root
+   31  cd src/
+   32  ls -l
+   33  mkdir cal_daq
+   34  cd cal_daq/
+   35  lsusb
+   36  ls -l
+   37  mkdir cal_daq
+   38  mkdir cal_tcb
+   39  mv cal_daq cal_daqB
+   40  mv cal_tcb cal_tcbB
+   41  cd cal_tcbB
+   42  ls -l
+   43  cp /usr/local/notice/src/sipm_daq_v2/sipm_tcb/* .
+   44  ls -l
+   45  rm *~
+   46  make clean
+   47  ls -l
+   48  synaptic&
+   49  l
+   50  ll
+   51  l
+   52  gedit Makefile &
+   53  make clean
+   54  l
+   55  ll
+   56  mv NoticeSIPMTCB.c NoticeCALTCB.c
+   57  mv NoticeSIPMTCB.h NoticeCALTCB.h
+   58  gedit NoticeCALTCB.c
+   59  gedit NoticeCALTCB.h
+   60  make
+   61  ls -l
+   62  lsusb
+   63  cd ..
+   64  cd cal_daqB/
+   65  ls -l
+   66  cp /usr/local/notice/src/sipm_daq_v2/sipm_daq/* .
+   67  ls -l
+   68  rm *~
+   69  make clean
+   70  ls -l
+   71  mv NoticeSIPMDAQ.c NoticeCALDAQ.c
+   72  mv NoticeSIPMDAQ.h NoticeCALDAQ.h
+   73  gedit Makefile 
+   74  gedit NoticeCALDAQ.c
+   75  gedit NoticeCALDAQ.h
+   76  make
+   77  lsusb
+   78  cd ..
+   79  ls -l
+   80  cd programmer/
+   81  ls -l
+   82  cd sipm_daq_v2/
+   83  la -l
+   84  make -f Makefile_tcb clean
+   85  make -f Makefile_tcb 
+   86  source /usr/local/notice/notice_env.sh 
+   87  make -f Makefile_tcb 
+   88  synaptic
+   89  make -f Makefile_tcb 
+   90  ls -l
+   91  gedit programmer_sipm_tcb.cpp&
+   92  ./programmer_sipm_tcb.exe 
+   93  ./programmer_sipm_tcb.exe -dev all -info
+   94  ./programmer_sipm_tcb.exe -dev all -sid 0
+   95  ./programmer_sipm_tcb.exe -dev all -info
+   96  cd ..
+   97  cd src/
+   98  cd cal_daq/
+   99  cd cal_tcbB/
+  100  ls -l
+  101  top
+  102  l
+  103  lsusb
+  104  make clean
+  105  make
+  106  make |more
+  107  make
+  108  more ../cal_daqB/NoticeCALDAQ.h
+  109  make
+  110  make install
+  111  ls -l ../../../lib/
+  112  ls -l ../../../include/
+  113  make 
+  114  make install
+  115  make
+  116  cd ..
+  117  cd cal_daqB/
+  118  make clean
+  119  make
+  120  make install
+  121  ls -l ../../../lib/
+  122  cd ..
+  123  cd test/
+  124  ls
+  125  mkdir cal_daq
+  126  cd cal_daq/
+  127  cd ../sipm_daq_kaist/Makefile_set .
+  128  cp ../sipm_daq_kaist/Makefile_set .
+  129  cp ../sipm_daq_kaist/Makefile_run .
+  130  ls -l ../sipm_daq_kaist/Makefile_*
+  131  more ../sipm_daq_kaist/init_SIPMDAQ.c
+  132  more ../sipm_daq_kaist/set_SIPMDAQ.c
+  133  ls -l ../sipm_daq_kaist/Makefile_*
+  134  ls -l
+  135  cp ../sipm_daq_kaist/set_SIPMDAQ.c set_CAL.C
+  136  cp ../sipm_daq_kaist/run_SIPMDAQ.c run_CAL.C
+  137  ls -l 
+  138  gedit Makefile_set &
+  139  ls -l ../../lib/
+  140  gedit Makefile_run 
+  141  gedit set_CAL.C &
+  142  make -f Makefile_set 
+  143  ls -l /usr/local/notice/include/
+  144  gedit Makefile_set &
+  145  echo $NKHOME
+  146  ls -l /usr/local/notice/include/
+  147  make -f Makefile_set 
+  148  make -f Makefile_set lean
+  149* clea
+  150  make -f Makefile_set clean
+  151  make -f Makefile_set 
+  152  echo $NKHOME
+  153  cp /usr/local/notice/include/NoticeCALTCB.h .
+  154  make -f Makefile_set 
+  155  source /usr/local/notice/notice_env.sh 
+  156  make -f Makefile_set 
+  157  ls -l $(LIBUSB_INC)
+  158  echo $LIBUSB_INC
+  159  ls -l /usr/include/libusb-1.0
+  160  rm NoticeCALTCB.h 
+  161  ls -l
+  162  cd ..
+  163  cd src/
+  164  cd sipm_daq_v2/
+  165  ls -l
+  166  cd sipm_tcb
+  167  make install
+  168  cd ..
+  169  cd test/
+  170  cd sipm_daq_kaist/
+  171  make -f Makefile_set 
+  172  make -f Makefile_set clean
+  173  make -f Makefile_set 
+  174  cd ..
+  175  cd test/
+  176  cd cal_daq/
+  177  ls -l
+  178  ls -l ../sipm_daq_kaist/
+  179  ls -l /usr/local/notice/include/
+  180  more ../sipm_daq_kaist/Makefile_set 
+  181  make -f Makefile_set 
+  182  ls -l
+  183  gcc -fPIC -Wall -I/usr/local/notice/include -I/usr/include/libusb-1.0 -c -o set_CAL.o set_CAL.c
+  184  mv run_CAL.C run_CAL.c
+  185  mv set_CAL.C set_CAL.c
+  186  make
+  187  make -f Makefile_set 
+  188  mv set_CAL.C set_CAL.c
+  189  make -f Makefile_set 
+  190  cp Makefile_set Makefile_start
+  191  cp Makefile_set Makefile_stop
+  192  rm Makefile_start 
+  193  rm Makefile_stop 
+  194  gedit Makefile_run &
+  195  gedit run_CAL.c &
+  196  gedit set_CAL.c&
+  197  gedit set_CAL.c
+  198  make -f Makefile_set 
+  199  make -f Makefile_run 
+  200  cd ..
+  201  cd programmer/
+  202  ls -l
+  203  cd sipm_daq_v2/
+  204  ls -l
+  205  gedit programmer_sipm_daq.h&
+  206  make -f Makefile_daq 
+  207  make -f Makefile_daq clean
+  208  make -f Makefile_daq 
+  209  ./programmer_sipm_tcb.exe -dev all -info
+  210  cp /usr/local/notice/doc/ys_sipm_tcb_fpga/*.bit .
+  211  ls -l
+  212* cp /usr/local/notice/doc/ys_sipm_daq_fpga/*.bi
+  213  ls -l *.bit
+  214  ./programmer_sipm_tcb.exe -dev all -fpga ys_sipm_tcb_fpga.bit
+  215  ls -l
+  216  ./programmer_sipm_daq.exe -dev all -info
+  217  ./programmer_sipm_daq.exe -dev all -sid 1
+  218  ./programmer_sipm_daq.exe -dev all -info
+  219  ./programmer_sipm_daq.exe -dev all -sid 1
+  220  ./programmer_sipm_daq.exe -dev all -info
+  221  ./programmer_sipm_daq.exe -dev all -sid 1
+  222  ./programmer_sipm_daq.exe -dev all -info
+  223  history >> history.txt

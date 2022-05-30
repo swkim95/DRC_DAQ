@@ -1,0 +1,98 @@
+Pin Freeze File:  version P.40xd
+
+2C128100 XC2C128-7-VQ100
+p_clk S:PIN22
+p_cpld_cs S:PIN13
+p_cpld_sck S:PIN12
+p_cpld_sdi S:PIN11
+p_fpga_done S:PIN7
+p_fpga_init S:PIN94
+p_mgt_def S:PIN56
+p_mgt_loss S:PIN58
+p_mgt_txdis_l S:PIN8
+p_prom_sdo S:PIN85
+p_spi_cs S:PIN61
+p_spi_sck S:PIN64
+p_spi_sdi S:PIN63
+p_bias_cs<0> S:PIN23
+p_bias_cs<1> S:PIN32
+p_bias_cs<2> S:PIN28
+p_bias_cs<3> S:PIN17
+p_bias_sck<0> S:PIN19
+p_bias_sck<1> S:PIN30
+p_bias_sck<2> S:PIN27
+p_bias_sck<3> S:PIN16
+p_bias_sdi<0> S:PIN18
+p_bias_sdi<1> S:PIN29
+p_bias_sdi<2> S:PIN24
+p_bias_sdi<3> S:PIN15
+p_dac_cs<0> S:PIN39
+p_dac_cs<1> S:PIN42
+p_dac_cs<2> S:PIN46
+p_dac_cs<3> S:PIN52
+p_dac_cs<4> S:PIN33
+p_dac_sck<0> S:PIN37
+p_dac_sck<1> S:PIN41
+p_dac_sck<2> S:PIN44
+p_dac_sck<3> S:PIN50
+p_dac_sck<4> S:PIN34
+p_dac_sdi<0> S:PIN36
+p_dac_sdi<1> S:PIN40
+p_dac_sdi<2> S:PIN43
+p_dac_sdi<3> S:PIN49
+p_dac_sdi<4> S:PIN35
+p_fpga_cclk S:PIN90
+p_fpga_din S:PIN92
+p_fpga_prog S:PIN96
+p_mgt_def_l S:PIN10
+p_mgt_loss_l S:PIN9
+p_mgt_txdis S:PIN54
+p_prom_cs S:PIN82
+p_prom_sck S:PIN81
+p_prom_sdi S:PIN80
+p_prom_wp S:PIN86
+p_spi_sdo S:PIN60
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 u5/cpld_cs u3/cnt<3> u5/cpld_sck u5/cpld_sdi
+		 p_mgt_def_l p_mgt_loss_l u3/cnt<2> u3/cnt<1>
+		 u3/cnt<0> rprom_cs u3/cnt<8> u3/cnt<7>
+		 u3/cnt<6> down_done u3/cnt<5> u3/cnt<4>
+		
+PARTITION FB2_1 u5/mux<3> u3/cnt<9> p_bias_sdi<3> p_bias_sck<3>
+		 p_bias_cs<3> p_bias_sdi<0> u5/mux<2> u5/mux<1>
+		 u5/mux<0> u5/d2cpld_sck p_bias_sck<0> u5/set_mux
+		 rprom_sck p_bias_cs<0> p_bias_sdi<2> p_bias_sck<2>
+		
+PARTITION FB3_1 u2/ccnt<1> wprom_sck wprom_cs wprom_sdi
+		 u2/enflag p_fpga_prog u2/sdat u2/ccnt<2>
+		 u2/mux<1> u2/mux<0> u2/scom download
+		 u2/cpld_sdo p_fpga_din u2/ccnt<0> p_fpga_cclk
+		
+PARTITION FB4_1 p_bias_cs<2> u2/ecs u2/bcs p_bias_sdi<1>
+		 p_bias_sck<1> p_bias_cs<1> p_dac_cs<4> u2/d3spi_cs
+		 u2/d2spi_sck u2/d2spi_cs p_dac_sck<4> p_dac_sdi<4>
+		 p_dac_sdi<0> p_dac_sck<0> p_dac_cs<0> p_dac_sdi<1>
+		
+PARTITION FB5_1 u3/cnt<13> u3/cnt<14> u3/cnt<15> rprom_sdi
+		 u3/cnt<16> u3/cnt<23> u3/cnt<17> u3/sdown
+		 u3/clr u3/cnt<24> u3/cnt<18> u3/cnt<19>
+		 u3/cnt<20> u3/cnt<21> u3/cnt<22> u3/cnt<25>
+		
+PARTITION FB6_1 u2/dspi_sck calib u2/dspi_cs p_spi_sdo
+		 u5/dcpld_sck u5/dcpld_cs u3/cnt<10> u3/cen
+		 u3/dclr u2/sclk u2/eclk u3/cnt<12>
+		 u2/d3spi_sck u3/cnt<11> u2/dat_sck p_mgt_txdis
+		
+PARTITION FB7_5 p_prom_sdi p_prom_sck
+PARTITION FB7_8 u3/endown u2/dcen u2/ccen p_prom_cs
+		 u5/dcpld_sdi prom_rdat p_prom_wp
+
+PARTITION FB8_3 p_dac_cs<3> p_dac_sck<3>
+PARTITION FB8_6 p_dac_sdi<3>
+PARTITION FB8_12 p_dac_cs<2> p_dac_sck<2> p_dac_sdi<2> p_dac_cs<1>
+		 p_dac_sck<1>
+

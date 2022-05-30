@@ -1,0 +1,26 @@
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.syr" 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc ys_sipm_daq_cpld.ucf -p xc2c128-VQ100-7 ys_sipm_daq_cpld.ngc ys_sipm_daq_cpld.ngd  
+cpldfit -intstyle ise -p xc2c128-7-VQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 36 -unused keeper -terminate keeper -iostd LVCMOS18 ys_sipm_daq_cpld.ngd 
+XSLTProcess ys_sipm_daq_cpld_build.xml 
+tsim -intstyle ise ys_sipm_daq_cpld ys_sipm_daq_cpld.nga 
+taengine -intstyle ise -f ys_sipm_daq_cpld -w --format html1 -l ys_sipm_daq_cpld_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i ys_sipm_daq_cpld 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc ys_sipm_daq_cpld.ucf -p xc2c128-VQ100-7 ys_sipm_daq_cpld.ngc ys_sipm_daq_cpld.ngd  
+cpldfit -intstyle ise -p xc2c128-7-VQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 36 -unused keeper -terminate keeper -iostd LVCMOS18 ys_sipm_daq_cpld.ngd 
+XSLTProcess ys_sipm_daq_cpld_build.xml 
+tsim -intstyle ise ys_sipm_daq_cpld ys_sipm_daq_cpld.nga 
+hprep6 -s IEEE1149 -i ys_sipm_daq_cpld 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc ys_sipm_daq_cpld.ucf -p xc2c128-VQ100-7 ys_sipm_daq_cpld.ngc ys_sipm_daq_cpld.ngd  
+cpldfit -intstyle ise -p xc2c128-7-VQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 36 -unused keeper -terminate keeper -iostd LVCMOS18 ys_sipm_daq_cpld.ngd 
+XSLTProcess ys_sipm_daq_cpld_build.xml 
+tsim -intstyle ise ys_sipm_daq_cpld ys_sipm_daq_cpld.nga 
+hprep6 -s IEEE1149 -i ys_sipm_daq_cpld 
+xst -intstyle ise -ifn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.xst" -ofn "D:/sykim/notice/yk_sipm_daq/xilinx/ys_sipm_daq_cpld/ys_sipm_daq_cpld.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc ys_sipm_daq_cpld.ucf -p xc2c128-VQ100-7 ys_sipm_daq_cpld.ngc ys_sipm_daq_cpld.ngd  
+cpldfit -intstyle ise -p xc2c128-7-VQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 36 -unused keeper -terminate keeper -iostd LVCMOS18 ys_sipm_daq_cpld.ngd 
+XSLTProcess ys_sipm_daq_cpld_build.xml 
+tsim -intstyle ise ys_sipm_daq_cpld ys_sipm_daq_cpld.nga 
+hprep6 -s IEEE1149 -i ys_sipm_daq_cpld 

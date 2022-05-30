@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">tcb_clkp</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS1</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lx2clk = PERIOD &quot;u1_lx2clk&quot; TS1 / 2 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">tcb_clkp</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS1</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lrefclk = PERIOD &quot;u1_lrefclk&quot; TS1 / 2.222222222 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">tcb_clkp</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS1</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT2</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lclk = PERIOD &quot;u1_lclk&quot; TS1 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">tcb_clkn</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS2</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lx2clk_0 = PERIOD &quot;u1_lx2clk_0&quot; TS2 / 2 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">tcb_clkn</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS2</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lrefclk_0 = PERIOD &quot;u1_lrefclk_0&quot; TS2 / 2.222222222 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">tcb_clkn</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS2</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT2</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lclk_0 = PERIOD &quot;u1_lclk_0&quot; TS2 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT3</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lclk45_dram = PERIOD &quot;u1_lclk45_dram&quot; TS_u1_lclk / 2 PHASE 0.694375 ns HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lx2clk90_dram = PERIOD &quot;u1_lx2clk90_dram&quot; TS_u1_lclk / 4 PHASE 0.694375 ns HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lx2clk_dram = PERIOD &quot;u1_lx2clk_dram&quot; TS_u1_lclk / 4 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT2</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lclk_dram = PERIOD &quot;u1_lclk_dram&quot; TS_u1_lclk / 2 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk_0</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk_0</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT3</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lclk45_dram_0 = PERIOD &quot;u1_lclk45_dram_0&quot; TS_u1_lclk_0 / 2 PHASE 0.694375 ns HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk_0</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk_0</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lx2clk90_dram_0 = PERIOD &quot;u1_lx2clk90_dram_0&quot; TS_u1_lclk_0 / 4 PHASE 0.694375 ns HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk_0</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk_0</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lx2clk_dram_0 = PERIOD &quot;u1_lx2clk_dram_0&quot; TS_u1_lclk_0 / 4 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u1_lclk_0</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u1_lclk_0</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">u1/mmcme2_dram_clk</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT2</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u1_lclk_dram_0 = PERIOD &quot;u1_lclk_dram_0&quot; TS_u1_lclk_0 / 2 HIGH 50% INPUT_JITTER 300 ps&gt;</arg>
+</msg>
+
+</messages>
+

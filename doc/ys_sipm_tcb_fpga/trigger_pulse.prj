@@ -1,0 +1,3 @@
+vhdl work "ys_sipm_tcb_fpga_type.vhd"
+vhdl work "trigger_pulse_ch.vhd"
+vhdl work "trigger_pulse.vhd"
